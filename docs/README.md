@@ -43,6 +43,7 @@
 - [Formats, safe areas and captions](reference/formats.md) · [Voices](reference/voices.md)
 - [Publication ledger](reference/publication-ledger.md) · [Media policy](reference/media-policy.md)
 - [Repository layout](reference/repository-layout.md) · [What is installed on this machine](reference/local-setup.md) (`npm run storage`)
+- [Football starter kit on Marina's workstation](reference/football-starter-setup.md): restored inputs, exact OmniVoice B, offline synthesis and preparation checks (1 November 2026).
 
 ## Explanation
 
