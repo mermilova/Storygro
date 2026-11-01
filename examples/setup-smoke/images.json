@@ -1,0 +1,21 @@
+{
+  "images": 1,
+  "files": {
+    "shots/hello.png": {
+      "prompt": "Flat comic book illustration with clean black ink outlines and soft cel shading, warm muted palette of cream, teal, mustard and terracotta, gentle daylight, uncluttered wide composition with space around the subject. A cheerful small orange fox wearing a teal scarf waves in a sunny forest clearing, a friendly original cartoon character for children, full body in the lower half, portrait composition with empty sky above. No text, no letters, no numbers, no logos, no watermark.",
+      "generationPrompt": "Use case: illustration-story. Asset type: single technical-test illustration for a children's Instagram Reel, vertical portrait 9:16, ideally 1152x2048. Flat comic book illustration with clean black ink outlines and soft cel shading, warm muted palette of cream, teal, mustard and terracotta, gentle daylight, uncluttered composition with space around the subject. A cheerful small orange fox wearing a teal scarf waves in a sunny forest clearing, a friendly original cartoon character for children, full body in the lower half, portrait composition with empty sky above for a headline added later. Clear charming character design, expressive eyes, polished children's storybook finish. No text, no letters, no numbers, no logos, no watermark.",
+      "seed": 8901,
+      "seedReproducible": false,
+      "provider": "codex",
+      "tool": "image_gen (built-in)",
+      "model": "OpenAI GPT Image; underlying model version not exposed by the tool",
+      "width": 1152,
+      "height": 2048,
+      "steps": 0,
+      "licence": "OpenAI image generation output; subject to applicable OpenAI terms",
+      "sha256": "7ee7352e93d0ff8df3755b9472ebc447358b79f0b10dfd0c98a84c295cd73531",
+      "originalSha256": "d98802b5702d3f380a1c1aef86af7dede685409788bdf701aa0b450436c4f14b",
+      "createdAt": "2026-11-01T09:18:32.400Z"
+    }
+  }
+}

@@ -9,6 +9,7 @@
 | Decide what kind of video to make: business explainer, cartoon, high-quality cartoon, kinetic short… | [Video formats](explanation/video-formats.md) · [From an idea to a video on the phone](explanation/workflow.md#from-an-idea-to-a-video-on-the-phone) |
 | See every method and tool for making content, by stage | [Toolkit](reference/toolkit.md) — the bank of methods, tools, styles, scenes and providers |
 | Render my first storyboard and video | [Start here](start-here.md) |
+| Set up the Instagram Reels workstation and review its smoke test | [Workstation setup](reference/smart-little-toons-setup.md) · [Setup smoke test](../examples/setup-smoke/README.md) |
 | See everything Storygro can do, with pictures | [What Storygro can do](features.md) |
 | See finished videos and copy an example | [Examples and finished videos](examples.md) |
 | Make an explainer from a topic, end to end | [Tutorial: an explainer from a topic](tutorials/explainer-from-a-topic.md) |

@@ -1,0 +1,34 @@
+reel: 1
+style: cartoon
+title: Проверка локальной студии
+lang: ru
+format: { preset: vertical, fps: 30 }
+safe: reels
+voice:
+  engine: qwen3
+  voice: ../ai-jobs/assets/voice/narrator-ru.wav
+  speed: 1.12
+  stress: auto
+images:
+  provider: codex
+  model: gpt-6-astra
+  width: 1152
+  height: 2048
+  seed: 7
+captions: { show: true, maxWords: 4 }
+music: { bpm: 92, key: D, progression: [I, V, vi, IV], gain: 0.12 }
+post:
+  title: Проверка локальной студии
+  text: 'Техническая проверка для Instagram Reels. Озвучка синтезирована Qwen3; иллюстрация создана онлайн с GPT Image.'
+  tags: []
+scenes:
+  - id: hello
+    scene: illustration
+    say: 'Привет! Здесь рождаются маленькие истории. Яркие картинки, выразительный голос и немного музыки.'
+    pad: [0.3, 0.8]
+    props:
+      shots:
+        - image: shots/hello.png
+          prompt: 'A cheerful small orange fox wearing a teal scarf waves in a sunny forest clearing, a friendly original cartoon character for children, full body in the lower half, portrait composition with empty sky above'
+          move: in
+      title: { text: 'Маленькие истории', at: -1 }

@@ -4,7 +4,7 @@
 
 > **Audience:** anyone choosing what to reuse · generated from the reel specs, styles, scene and runtime sources
 
-One page for what exists: every reel script and its scene sequence, the story structure of each style, and every visual component with the reels that use it. It lists 18 reels, 4 styles, 23 scenes and the runtime helpers. For methods and tools see the [toolkit](toolkit.md); for scene props see the [scene catalog](scenes.md); for episode status see `content/TRACKER.md`.
+One page for what exists: every reel script and its scene sequence, the story structure of each style, and every visual component with the reels that use it. It lists 19 reels, 4 styles, 23 scenes and the runtime helpers. For methods and tools see the [toolkit](toolkit.md); for scene props see the [scene catalog](scenes.md); for episode status see `content/TRACKER.md`.
 
 ## Contents
 
@@ -42,6 +42,7 @@ Storyboard approval is the role recorded in the folder's `review.yaml` (`owner`,
 | [editorial-collage/ru.reel.yaml](../../examples/editorial-collage/ru.reel.yaml) | Код пишет ИИ. Кто отвечает за ошибку? | ru | — | 1080×1920@30 | kokoro | 6 | collage ×6 | — |
 | [scene-gallery/en.reel.yaml](../../examples/scene-gallery/en.reel.yaml) | Storygro scene gallery | en | — | 1080×1920@30 | none | 5 | chart → collage → screencast ×3 | — |
 | [scene-gallery/kinetic.reel.yaml](../../examples/scene-gallery/kinetic.reel.yaml) | Storygro kinetic gallery | en | kinetic-type | 1080×1920@30 | none | 4 | kinetic → timeline → process → scale | — |
+| [setup-smoke/ru.reel.yaml](../../examples/setup-smoke/ru.reel.yaml) | Проверка локальной студии | ru | cartoon | 1080×1920@30 | qwen3 | 1 | illustration | — |
 | [slidecraft-launch/reel.yaml](../../examples/slidecraft-launch/reel.yaml) | SlideCraft — editable PowerPoint decks from one prompt | en | — | 1920×1080@30 | kokoro | 11 | night ×2 → statement → logo-reveal → chat → stack → grid → spotlight → pins → night → end-card | — |
 
 ## Story structures
@@ -99,7 +100,7 @@ Status: pilot. Pacing: 140–175 words/min, 15–45 s long.
 | `end-card` | Landscape product scenes | end-card — the call to act: a slow, tilted wall of real slides behind the mark + name, the tagline on a cue, | [props](scenes.md#end-card) | 1: slidecraft-launch |
 | `grid` | Landscape product scenes | grid — real slides are dealt from a deck into a grid, scanned row by row, then all checked at once. | [props](scenes.md#grid) | 1: slidecraft-launch |
 | `headline` | Cut-paper scenes | headline — one big claim on cut paper, revealed word by word, with an optional marker on a key | [props](scenes.md#headline) | 4: ai-agent-checks, ai-jobs, future-of-work, slidecraft-demo |
-| `illustration` | Illustration scene | illustration — a cartoon-explainer beat: full-frame illustrations that change on cues, each with a | [props](scenes.md#illustration) | 7: agents-open-door, ai-buys-work-knowledge, ballon-dor-kids, football-stars-kids, inter-miami-magic-pass, matvey-mimo-vorot, spartak-cska-derby |
+| `illustration` | Illustration scene | illustration — a cartoon-explainer beat: full-frame illustrations that change on cues, each with a | [props](scenes.md#illustration) | 8: agents-open-door, ai-buys-work-knowledge, ballon-dor-kids, football-stars-kids, inter-miami-magic-pass, matvey-mimo-vorot, setup-smoke, spartak-cska-derby |
 | `kinetic` | Kinetic and diagram scenes | kinetic — kinetic typography on a dark field: each word lands when the narrator says it, on a spring. | [props](scenes.md#kinetic) | 4: agent-motion-studio, football-stars-kids, matvey-mimo-vorot, scene-gallery |
 | `ladder` | Cut-paper scenes | ladder — a career as a paper ladder: rungs are levels (or the tasks people learn on), figures stand | [props](scenes.md#ladder) | 1: ai-jobs |
 | `logo-reveal` | Landscape product scenes | logo-reveal — a line of light grows, slides converge from the edges, snap into the stacked-cards mark | [props](scenes.md#logo-reveal) | 1: slidecraft-launch |
