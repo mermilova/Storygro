@@ -1,188 +1,101 @@
-<h1 align="center">Storygro</h1>
+# smart_little_toons
 
-<p align="center"><b>Turn stories into growth.</b><br>
-A toolkit for AI agents to turn ideas into reels, videos, carousels and social posts — researched, narrated, rendered and checked on your own machine.</p>
+**Маленькие большие дела — футбольные истории с Софией и Матвеем.**
 
-<p align="center">
-  <a href="https://github.com/eiler2005/Storygro/actions/workflows/check.yml"><img alt="Check" src="https://img.shields.io/github/actions/workflow/status/eiler2005/Storygro/check.yml?branch=main&label=check&style=flat&labelColor=1d2230&color=d54c40"></a>
-  <a href="#license"><img alt="PolyForm Shield license" src="https://img.shields.io/badge/license-PolyForm_Shield_1.0.0-d54c40?style=flat&labelColor=1d2230"></a>
-  <img alt="Node 22.12+" src="https://img.shields.io/badge/node-%E2%89%A522.12-d54c40?style=flat&labelColor=1d2230">
-  <img alt="Works with Claude Code, Codex and any agent with a shell" src="https://img.shields.io/badge/agents-Claude_Code_·_Codex_·_any_shell_agent-d54c40?style=flat&labelColor=1d2230">
-</p>
+Производственный репозиторий [Instagram-канала smart_little_toons](https://www.instagram.com/smart_little_toons/reels/): сценарии, проверенные факты, персонажи, раскадровки и история версий наших выпусков. Мы рассказываем о мировом футболе через подробные иллюстрации, узнаваемых игроков и живые реакции героев. Основной формат — вертикальные Reels на русском языке для семейного просмотра.
 
-<p align="center">
-  <a href="docs/start-here.md">Start here</a> · <a href="docs/features.md">Features</a> · <a href="docs/examples.md">Examples</a> · <a href="docs/explanation/video-formats.md">Formats</a> · <a href="docs/explanation/pipeline.md">Pipeline</a> · <a href="docs/README.md">Docs</a> · <a href="ROADMAP.md">Roadmap</a> · <a href="CHANGELOG.md">Changelog</a>
-</p>
+[Выпуски и версии](content/videos/README.md) · [Правила производства](docs/how-to/football-series.md) · [Материалы проекта](content/README.md) · [Техническая документация](docs/README.md)
 
-<p align="center"><img src="docs/media/hero.jpg" alt="Five vertical frames Storygro rendered: a cut-paper headline, a stat card with sourced numbers, a career ladder, an editorial collage and a recorded website in a phone" width="100%"></p>
+## Наши рубрики
 
----
-
-## The easiest way: ask your agent
-
-Open this repository in an agent that can run commands — Claude Code, Codex or any other with a shell — and fill in the brackets:
-
-```text
-Read AGENTS.md and docs/explanation/workflow.md. Make a 60–90 second vertical explainer
-about "[topic]" for "[audience]" in [English / Russian]. After watching, a viewer should
-understand "[one idea]". Research current primary sources first and keep every number with
-its source and a quote. Show the mechanism with recurring objects, not a list of facts.
-Stop after the storyboard so I can approve it.
-```
-
-The agent researches, writes the script and facts, narrates, builds a storyboard and waits. You approve; it renders, runs QA and packages a release. Every step leaves a file you can open. [The tutorial](docs/tutorials/explainer-from-a-topic.md) shows each one.
-
-## What Storygro is
-
-**Videos as code, with an editor's checks.** A video is a YAML script plus a facts file. The voice sets the timing; small JavaScript scenes draw every frame deterministically in headless Chrome; ffmpeg encodes. Gates sit where mistakes are expensive: a storyboard you approve before rendering, a facts gate that rejects any on-screen number not traceable to a source, and technical QA on the finished file — including Whisper listening to the narration.
-
-**Local and accountless.** No server, no account, no API keys for the core. Voices run on your machine (Kokoro, Kokoro-RU, Qwen3-TTS, Silero), with a shared Russian pronunciation dictionary whose names are looked up in ru.wikipedia and checked by ear. The one optional online step is GPT Image through a signed-in Codex CLI, for pictures of recognisable people. Publishing is a person's act; Storygro keeps the ledger.
-
-**Made for agents and for the people who direct them.** [AGENTS.md](AGENTS.md) holds the rules; [how we work](docs/explanation/how-we-work.md) says who decides what, and which model fits which job.
-
-## How it works
-
-<p align="center"><img src="docs/media/diagrams/pipeline.svg" alt="Storygro pipeline: choose, write, make, check, ship — with the commands of each stage and the four points where a person decides" width="100%"></p>
-
-| Stage | You get | Read |
+| Рубрика | О чём рассказываем | Правила |
 |---|---|---|
-| **Choose** | trend signals without API keys, a watchlist per idea, an editorial ranking | [choose a topic](docs/how-to/choose-a-topic.md) |
-| **Write** | `sources.md` with a quote per number, `facts.json`, a script per language, an optional real-site recording | [write a script](docs/how-to/write-a-script.md) |
-| **Make** | narration and timings, a storyboard PDF to approve, master and web MP4, subtitles, stills | [workflow](docs/explanation/workflow.md) |
-| **Check** | `QA.md`: codec, loudness, black frames, safe areas, facts, speech, brand rules | [quality gates](docs/explanation/quality.md) |
-| **Ship** | a release folder with checksums; a manual publication ledger and metric snapshots | [carousel and release](docs/how-to/carousel-and-release.md) |
+| **Легенды футбола** | Люди, поступки и важные моменты в истории футбола | [Библия серии](content/series/football-legends.md) |
+| **Футбольный вау-факт!** | Необычные футбольные истории с понятным действием и эмоциональным финалом | [Библия серии](content/series/football-wow.md) |
+| **Обзор матчей** | Голы, опасные моменты, значимые замены, травмы и карточки — как короткая история матча | [Библия рубрики](content/series/match-review.md) |
 
-See [the pipeline](docs/explanation/pipeline.md) for one real run, from a trend scan on 19 October 2026 to a packaged video the same day. Every method and tool by stage, in one bank: [**the toolkit**](docs/reference/toolkit.md).
-
-## Twenty-three scenes
+София — любознательная белка, Матвей — увлечённый футболом енот. Их внешность и выбранные голоса сохраняются между выпусками. В обзорах они болеют за соперников: клубные цвета должны сразу различаться на экране телефона. Футболисты остаются главными героями игровых сцен. Отдельные версии без ведущих отмечаются явно.
 
 <table>
-  <tr>
-    <td align="center" width="20%"><a href="docs/reference/scenes.md#headline"><img src="docs/media/scenes/headline.jpg" alt="headline scene"></a><br><sub><b>headline</b></sub></td>
-    <td align="center" width="20%"><a href="docs/reference/scenes.md#crowd"><img src="docs/media/scenes/crowd.jpg" alt="crowd scene"></a><br><sub><b>crowd</b></sub></td>
-    <td align="center" width="20%"><a href="docs/reference/scenes.md#task-stack"><img src="docs/media/scenes/task-stack.jpg" alt="task-stack scene"></a><br><sub><b>task-stack</b></sub></td>
-    <td align="center" width="20%"><a href="docs/reference/scenes.md#ladder"><img src="docs/media/scenes/ladder.jpg" alt="ladder scene"></a><br><sub><b>ladder</b></sub></td>
-    <td align="center" width="20%"><a href="docs/reference/scenes.md#stat"><img src="docs/media/scenes/stat.jpg" alt="stat scene"></a><br><sub><b>stat</b></sub></td>
-  </tr>
-  <tr>
-    <td align="center"><a href="docs/reference/scenes.md#chart"><img src="docs/media/scenes/chart.jpg" alt="chart scene"></a><br><sub><b>chart</b></sub></td>
-    <td align="center"><a href="docs/reference/scenes.md#steps"><img src="docs/media/scenes/steps.jpg" alt="steps scene"></a><br><sub><b>steps</b></sub></td>
-    <td align="center"><a href="docs/reference/scenes.md#outro"><img src="docs/media/scenes/outro.jpg" alt="outro scene"></a><br><sub><b>outro</b></sub></td>
-    <td align="center"><a href="docs/reference/scenes.md#collage"><img src="docs/media/scenes/collage.jpg" alt="collage scene"></a><br><sub><b>collage</b></sub></td>
-    <td align="center"><a href="docs/reference/scenes.md#screencast"><img src="docs/media/scenes/screencast.jpg" alt="screencast scene"></a><br><sub><b>screencast</b></sub></td>
-  </tr>
+<tr>
+<td align="center"><a href="content/videos/football-legends-10-charlton-solo/README.md"><img src="content/videos/football-legends-10-charlton-solo/preview/plan/ru/hook.jpg" width="180" alt="Бобби Чарльтон: Легенды футбола"></a><br>Легенды футбола</td>
+<td align="center"><a href="content/videos/football-wow-ronaldo-ovation-v4/README.md"><img src="content/videos/football-wow-ronaldo-ovation-v4/preview/plan/ru/hook.jpg" width="180" alt="Роналду: овация соперников"></a><br>Футбольный вау-факт!</td>
+<td align="center"><a href="content/videos/match-review-01-liverpool-arsenal-v2/README.md"><img src="content/videos/match-review-01-liverpool-arsenal-v2/preview/plan/ru/hook.jpg" width="180" alt="Обзор матчей: София в жёлто-синем, Матвей в красном"></a><br>Обзор матчей</td>
+</tr>
 </table>
 
-Ten vertical-first scenes above, `illustration` for generated pictures, four typographic scenes on springs and the beat (`kinetic`, `timeline`, `process`, `scale`), and eight landscape product scenes from the SlideCraft launch film: `statement`, `logo-reveal`, `chat`, `stack`, `grid`, `spotlight`, `pins`, `end-card`. Every frame is a pure function of time, so stills, storyboards and the video always agree. [All scenes with pictures](docs/features.md#twenty-three-animated-scenes) · [props](docs/reference/scenes.md) · [add your own](docs/how-to/add-a-scene.md)
+## Подготовленные выпуски
 
-## Styles
+Срез на **2 ноября 2026 года**. В таблице — версии для просмотра; техническая проверка не означает разрешения на публикацию. Источники, ограничения и подробный статус находятся внутри каждого выпуска.
 
-A style is a reusable way of making videos — defaults, theme, scenes, pacing, script structure and, for illustrated styles, the picture model and a recurring cast. Start a project in one with `storygro new <folder> --style <id>`.
-
-<p align="center"><img src="docs/media/styles/cartoon.jpg" alt="Frames of the one-minute cartoon explainer: generated comic illustrations of a procurement manager and a small robot, with headline bands and sourced numbers drawn on top" width="100%"></p>
-
-| Style | For | Pictures |
+| Выпуск | Текущая версия | Длительность |
 |---|---|---|
-| **cartoon** | narrated explainers told through comic illustrations with a recurring cast, 16:9 or 9:16 — from a one-minute short to a long-form episode, children's list cartoons included | generated locally with mflux + Z-Image-Turbo, or with GPT Image through the Codex CLI for recognisable, drawing-like pictures; prompt, model and checksum of each in `images.json` |
-| **cut-paper** | vertical explainers on paper: cards, figures, marker, stamps | drawn by code |
-| **editorial-collage** | vertical explainers on graph paper with cut-outs, torn labels and panels | cut-outs you supply |
-| **kinetic-type** | vertical shorts made of words that land as they are spoken, with a timeline, a process and a comparison of sizes in the same type; motion blur | drawn by code |
+| [Ливерпуль — Арсенал, 01.11.2026](content/videos/match-review-01-liverpool-arsenal-v2/README.md) | V2: контрастные клубные костюмы, подписи клубов и понятная вступительная реплика | 79,7 с |
+| [Роналду — овация соперников](content/videos/football-wow-ronaldo-ovation-v4/README.md) | V4: прыжок согласован со стилем фильма; финальный диалог удалён | 66,2 с |
+| [Бобби Чарльтон](content/videos/football-legends-10-charlton/README.md) | С ведущими; отдельно [версия без ведущих](content/videos/football-legends-10-charlton-solo/README.md) | 87,5 / 87,3 с |
+| [Роналдиньо — овация «Реала»](content/videos/football-wow-ronaldinho-ovation/README.md) | Полная история с Софией и Матвеем | 69,4 с |
+| [Златан — удар через себя](content/videos/football-wow-zlatan-bicycle/README.md) | Полная история гола в ворота Англии | 80,8 с |
+| [Петр Чех — хоккейный вратарь](content/videos/football-wow-cech-hockey/README.md) | Полный выпуск с выбранными голосами ведущих | 91,7 с |
+| [Харри Кейн — из нападения в ворота](content/videos/football-wow-kane-goalkeeper/README.md) | V3: новый портрет, гербы команд и исправление произношения | 79,5 с |
 
-The cartoon style grew out of [a frame-by-frame analysis](content/research/references/cYlePq4WQsk.md) of an 18-minute illustrated finance explainer, made with `storygro transcript`. Storygro keeps what works (a recurring character, a new picture every few seconds, burned-in captions) and fixes what does not: headlines and numbers are drawn on cue from the facts file, not baked into generated pictures. [Use a style](docs/how-to/use-a-style.md) · [cartoon tutorial](docs/tutorials/cartoon-explainer.md) · [which format for which job](docs/explanation/video-formats.md)
+Более ранние легенды, короткие выпуски и предыдущие версии собраны в [каталоге](content/videos/README.md). Исходные версии сохраняются: исправление выпуска не стирает его историю.
 
-## Finished videos
+## Как устроен выпуск
 
-| Video | What it shows | Length · QA | Watch |
-|---|---|---|---|
-| [**Football stars: filling the album**](content/videos/football-stars-kids/README.md) (RU, for children) | 14 footballers, one checked cheerful fact each, recognisable drawing-like caricatures made with GPT Image, chapter cards and an album progress rail | 117.5 s · 14/14 | local render |
-| [**The Ballon d'Or: who is the best?**](content/videos/ballon-dor-kids/README.md) (RU, for children) | The award's story for 6–10-year-olds: the first winner, Yashin, Messi's record, the women's award | 89.1 s · 14/14 | local render |
-| [**How an agent builds a video from code**](content/videos/agent-motion-studio/README.md) (RU) | The `kinetic-type` pilot: words land as they are spoken, a process with a travelling token, sizes compared; motion blur | 31.3 s · 12/12 | local render |
-| [**The AI industry is buying what you know about your job**](content/videos/ai-buys-work-knowledge/README.md) (EN) | The first `cartoon`-style short: micro1's $1B data programme, a buyer whose reasons are not in the price table | 62.3 s · 11/11 | local render |
-| [**Where to check an AI agent's work**](content/videos/ai-agent-checks/README.md) (RU) | The first topic picked from the trend watchlist: τ-bench numbers, where to put checks, who is liable | 51.6 s · 12/12 | [release](https://github.com/eiler2005/Storygro/releases/tag/ai-agent-checks-2026-10-19) |
-| [**SlideCraft demo**](content/videos/slidecraft-demo/README.md) (RU) | A product demo on a real screen recording: finger, taps, magnifier | 43.7 s · 12/12 | [release](https://github.com/eiler2005/Storygro/releases/tag/slidecraft-demo-2026-10-19) |
-| [**Why micro1 buys companies' work data**](content/videos/micro1-work-data/README.md) (RU) | An editorial collage explainer checked against micro1's primary sources | 94.2 s · 11/11 | [release](https://github.com/eiler2005/Storygro/releases/tag/micro1-work-data-qwen-2026-10-19) |
-| [**AI and jobs**](examples/ai-jobs/README.md) (RU + EN) | The reference bilingual explainer with carousels | 84–85 s | [release](https://github.com/eiler2005/Storygro/releases/tag/business-explainers-2026-10-19) |
+Каждый выпуск живёт в `content/videos/<id>/`. Для существенной новой версии создаётся отдельная папка либо сохраняется явно обозначенная история версии.
 
-None is published to social accounts yet; each needs the owner's viewing and listening first. More, including the historical SlideCraft launch film: [examples](docs/examples.md).
+| Файл | Для чего нужен |
+|---|---|
+| `README.md` | Суть выпуска, текущая версия и где искать результат |
+| `SCRIPT-ORIGINAL.txt`, `SCRIPT-PRODUCTION.txt` | Предоставленный текст и фактически подготовленная озвучка, если эти файлы заведены в выпуске |
+| `ru.reel.yaml`, `facts.json`, `sources.md` | Сценарий, события, числа и подтверждающие источники |
+| `DIRECTION.md` | Замысел, драматургия, открытия, действие и эмоциональный финал |
+| `images.json`, `photos.json`, `CREDITS.md` | Промпты, происхождение материалов, права и контрольные суммы |
+| `PLAN.ru.md`, `preview/plan/` | Раскадровка и небольшие кадры для просмотра прямо в GitHub |
+| `review.yaml` | Вопросы и отдельно записанные одобрения |
+| `VOICE-REVIEW*.md`, `VERIFICATION.json` | Проверки голоса, итогового файла и известные ограничения |
 
-## Quick start
+Набор файлов зависит от возраста выпуска. `VERIFICATION.json` описывает конкретный проверенный экспорт; `review.yaml` хранит решения владельца. Техническое одобрение агента позволяет собрать версию для просмотра и не подменяет редакционное одобрение.
 
-Requirements: Node.js ≥ 22.12, Chrome or Chromium, [uv](https://docs.astral.sh/uv/), macOS or Linux. Qwen3 voices and the Whisper speech check need Apple silicon; elsewhere Kokoro and Silero work and QA reports the speech check as skipped.
+## Как мы делаем видео
+
+1. Называем рубрику и тему, сохраняем полный исходный текст.
+2. Проверяем события, даты, внешний вид игроков, форму и права на фотографии. Расхождения источников оставляем видимыми в материалах исследования.
+3. Строим историю в `DIRECTION.md`: обещание зрителю, действие, препятствие, реакция и развязка.
+4. Создаём подробные иллюстрации встроенным `image_gen`, сохраняем точные промпты и SHA-256. Синтезируем речь выбранными голосами и монтируем по её реальному времени.
+5. Проверяем MP4, субтитры, произношение, первый и последний кадры, обложку и кадрирование Instagram. Владелец смотрит и слушает весь выпуск.
+6. Собираем комплект с контрольными суммами. Публикация — отдельное действие по решению владельца.
+
+Общий стандарт: **1080×1920, 9:16, 30 fps**, субтитры и безопасные зоны Reels. Для новых историй о футболистах ориентир — около 80–90 секунд с гибкостью; полный текст и спокойная речь важнее секундомера. Конкретный бриф может задавать иной формат. Подлинные фото имеют собственную дату и атрибуцию. Движение камеры и смену иллюстрированных состояний описываем именно так, без заявления о полной анимации персонажей.
+
+## Что хранится в Git
+
+В репозитории находятся сценарии, факты, инструкции, provenance, небольшие превью и производственный код. **MP4, WAV, полные иллюстрации, PDF, архивы и веса моделей в Git не попадают.**
+
+Готовые экспорты находятся локально в `.reel/ru/`, комплекты для просмотра — в отдельных папках выдачи. Путь к конкретному комплекту записан в README и `VERIFICATION.json` выпуска. Наличие локальной выдачи не означает, что она загружена в GitHub Releases или опубликована в Instagram.
+
+Чистый клон позволяет изучать сценарии и запускать проверки кода. Для повторного рендера нужны соответствующие исходные медиа, точные голосовые эталоны и модели. `assets:fetch` восстанавливает только материалы, перечисленные в существующем manifest; новые локальные выдачи он автоматически не скачивает. [Политика хранения](docs/reference/media-policy.md) · [Проверенная локальная настройка](docs/reference/football-starter-setup.md).
+
+## Локальная работа
+
+Для проверок кода нужен Node.js ≥ 22.12. Для рендера дополнительно используются Chrome, Python-окружения, голосовые модели и FFmpeg; подробности — в [документации](docs/README.md).
 
 ```sh
-git clone https://github.com/eiler2005/Storygro && cd Storygro
-npm ci && npm run hooks:install && npm run check
+npm ci
+npm run hooks:install
+npm run check
 
-# frames and a storyboard in seconds, no voice model needed
-npm run storygro -- board examples/ai-jobs/en.reel.yaml --no-voice
+# Проверить сценарий и построить план конкретного выпуска
+npm run storygro -- plan content/videos/match-review-01-liverpool-arsenal-v2/ru.reel.yaml
 
-# voices, then a real render
-npm run setup:ru && npm run assets:fetch
-npm run storygro -- board   examples/ai-jobs/ru.reel.yaml
-npm run storygro -- approve examples/ai-jobs/ru.reel.yaml
-npm run storygro -- render  examples/ai-jobs/ru.reel.yaml
+# Собрать MP4 после подготовки медиа и технического одобрения раскадровки
+npm run storygro -- render content/videos/match-review-01-liverpool-arsenal-v2/ru.reel.yaml
 ```
 
-Step by step: [start here](docs/start-here.md). Every command: [CLI reference](docs/reference/cli.md).
+Используйте CLI текущего checkout через `npm run storygro -- …`: глобально установленная команда может указывать на другую копию движка. [Все команды](docs/reference/cli.md) · [Правила для агента](AGENTS.md) · [Профиль канала](content/brand-smart-little-toons.yaml).
 
-## What you get
+## Техническая основа и права
 
-| File | What it is |
-|---|---|
-| `<name>.mp4`, `<name>-web.mp4` | master (H.264, CRF 16) and a web copy ≤ 25 MB, −14 LUFS |
-| `<name>.srt`, `<name>.vtt` | subtitles from the word timings |
-| `board.pdf` | the storyboard: key frame, narration, on-screen text, sound, warnings per scene |
-| `stills/`, `carousel/` | cover and key frames; 1080×1350 carousel cards |
-| `QA.md`, `qa.json` | every check with pass, fail or skip — skipped is never reported as passed |
-| `post.md` | title, text with the synthetic-voice disclosure, tags |
-| `manifest.json` | SHA-256 of every file, engine commit, voice providers, QA verdicts |
+Проект использует [Storygro](https://github.com/eiler2005/Storygro) как производственный движок. Исходный код CLI, сцен и голосовых провайдеров сохранён в `production/`; универсальные примеры и техническая документация остаются справочным материалом. Этот fork посвящён нашим выпускам, а название Storygro продолжает обозначать движок.
 
-Outputs live in ignored `.reel/` folders; public copies go to GitHub Releases, never into Git.
-
-## Repository
-
-```text
-production/   the engine: CLI (src/), browser player (runtime/), 23 scenes, styles/, Python voices and audio
-content/      what we make: videos/<id>/, ideas, research, brand, series
-examples/     reference and regression reels: ai-jobs, scene-gallery, editorial-collage, slidecraft-launch
-docs/         tutorials, how-to, reference, explanation, ADRs; planning in Russian
-tests/        node:test suites          agents/  director, scene-builder, qa roles
-```
-
-Full map and where to change what: [repository layout](docs/reference/repository-layout.md). Heavy media stays out of Git by rule and by check: [media policy](docs/reference/media-policy.md).
-
-## Principles
-
-- **Every number has a source.** Numbers live in data files with a quote; scenes never type them.
-- **Voice first, picture second.** The storyboard is approved on real timings.
-- **Deterministic frames.** Any moment renders the same, in any order.
-- **A person decides.** The topic, the voice, the storyboard, the final watch and the upload.
-- **Skipped is not passed, and a pass is not approval.**
-- **Disclose synthetic voices.** Never clone a real person's voice without written consent.
-
-## Honest limits
-
-- Uploading to Instagram, YouTube or TikTok and reading their analytics through APIs are [planned](ROADMAP.md), not implemented; `publish` only records what a person did.
-- Research is an agent workflow, not an unattended fact-checking service.
-- Safe-area profiles are estimates; check a real upload on a phone.
-- QA finds technical defects; it does not judge whether the story works.
-- The stress check hears only dictionary words with a measured pattern; stress on a final syllable is not audible to it. Listen to every Russian episode.
-- GPT Image pictures need a signed-in Codex CLI and the network, are not reproducible by seed, and the tool may decline a prompt; local pictures stay the default.
-
-## Privacy and network access
-
-Storygro runs on your machine with no account and no telemetry. It goes online only when you ask: `npm ci`; `setup` (Python packages via uv, model weights from Hugging Face); `assets:fetch` (render inputs from this repository's GitHub Releases, checksum-verified); `trends` (public Google Trends RSS, Wikipedia and Hacker News); `capture` (the URL in your capture spec, in local Chrome); `stress --lookup` (ru.wikipedia and ru.wiktionary, for the stress of names); `images` with `provider: codex` (the shot prompts go to OpenAI through your Codex CLI). The preview server binds to loopback. See [SECURITY.md](SECURITY.md).
-
-## Contributing
-
-Issues and pull requests are welcome — scenes, voice providers, QA checks and how-to guides especially. Start with [CONTRIBUTING.md](CONTRIBUTING.md); `npm run check` runs the media policy, the doc link check, TypeScript and the tests.
-
-## License
-
-Storygro is **source-available** (not OSI open source) under the [PolyForm Shield License 1.0.0](LICENSE), following the SlideCraft licensing model:
-
-- **Free for individuals and companies** to make content — for yourself, your employer or paying clients — and to adapt the software for permitted uses.
-- **Don't compete with it** — no competing hosted content-generation service or white-label product built from Storygro.
-- **Commercial licence** for competing or embedding uses: [denis.ermilov@gmail.com](mailto:denis.ermilov@gmail.com). Details: [COMMERCIAL.md](COMMERCIAL.md).
-
-Third-party models, voices and fonts keep their own terms ([NOTICE](NOTICE), [technology](docs/explanation/technology.md), [voices](docs/reference/voices.md)). `reel: 1`, `.reel/`, `npm run reel` and `REELCRAFT_*` remain supported from the engine's earlier name.
+Storygro — **source-available** под [PolyForm Shield 1.0.0](LICENSE), не OSI open source. Авторство, обязательные уведомления и условия коммерческого использования сохранены в [NOTICE](NOTICE) и [COMMERCIAL.md](COMMERCIAL.md). Фотографии, шрифты, модели и голосовые материалы имеют отдельные условия; лицензия движка их не заменяет. Права и атрибуция конкретного выпуска находятся в его `CREDITS.md`, `photos.json` и других provenance-файлах.

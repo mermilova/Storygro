@@ -1,0 +1,288 @@
+{
+  "images": 1,
+  "generation": "Built-in image_gen,no nested workers;selected assets saved in episode.",
+  "files": {
+    "shots/cover.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Cover scene. Ronaldinho central from knees up, face centered x.5 y.52 and headband no higher than.47. His open hand acknowledges spectators while other hand is relaxed. Small Matvey left x.18 and Sofia right x.82, all face centers y.56; ears below.48. Behind them clearly visible row of a few Real supporters in white scarves applauding with hands at chest height, other spectators seated. The contrast of blue-red hero and white fans reads instantly. Leave large quiet upper title area y.18–.46. No hands/face above.47.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 916,
+      "height": 1717,
+      "sha256": "22cdc928a65d06d9debb33498365787f753c6e50a73bb9584434234e579162de",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/arena-wide.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Wide establishing view from low sideline across the OLD open Bernabeu. Ronaldinho foreground right centered face y.45, white opponents and striped teammates walking onto pitch diagonally, the two tiny hosts lower left watching. Tall stands visible, dramatic scale, no city skyline. Distinct from cover.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "1913751e75b60e3b742c60293a6b496b2304d10f02dc7288466b38c9fcf2d189",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/faceoff.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Medium wide dynamic football encounter: Ronaldinho approaches two alert white-clad defenders, one low stance extending a leg, yellow ball just before his right boot. Hosts very small at distant sideline, not on pitch. Players faces y.40–.55. Strong diagonal composition makes the contested route clear.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "118a0451831c015f10abdd7e77d4ad6b73f8f498b492fbad4c27b5b9996adb23",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/celebrate.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Ronaldinho central smiling and raising one fist at chest level, two blue-burgundy teammates behind joyfully converge after scoring; white opponents farther back disappointed. No trophy. Full bodies on green field and yellow ball at feet, faces y.39–.53. Hosts watching from side.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "a503b5b10b9412cd8216cad277c13334f2905c538303fdfbdebb62de762a2c2f",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/first-approach.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. First goal setup. Ronaldinho driving with yellow ball diagonally from left foreground towards right middle, TWO white defenders closing from ahead and right. Side-on medium-wide lens with room beyond defenders. Alert concentrated expression, curls flying, ball close to foot. No hosts in active pitch.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "69c3fad2a895694137edb6ee9d45a5800721771d2f8f01096d5a1a28cfbca814",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/first-beat.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Continuation of first goal. Ronaldinho has threaded past TWO distinct white defenders: one behind reaching, other left wrong-footed with feet planted. Yellow ball at right boot, his body leaning forward into open green lane to right. Face y.43. Same kit and light, clear causal change, no duplicated limbs.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 940,
+      "height": 1673,
+      "sha256": "dfc3541729a7ff992b27a4e617716bd134fc013358ce7df0cbbd065381aca693",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/first-shot.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. First goal completion: side-on wide action Ronaldinho left-center striking yellow ball low toward white goal at right background; young Casillas grey top/black shorts reaching across goalmouth. Ball clearly separated from boot in flight. One ball, one goal correctly oriented, no impossible perspective. Faces not near top.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "04e8419706c24e38e0ed64d7b05f11ca13e9761748b5129233ee49c6f5ff9959",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/second-run.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Second goal setup. Original wider frontal three-quarter angle of Ronaldinho bursting down the LEFT attacking channel, a young long-haired Sergio Ramos-like white defender a step behind at his right shoulder. Yellow ball just ahead; penalty box line and distant goal provide spatial clarity. Determination on young Ronaldinho face, dynamic cloth.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "59a17ddb233452d5209f05bbe10a8879767895278a5d1679e455f4f5fc33ca2e",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/second-finish.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Second goal decisive moment from a new side-on camera outside penalty area, not copied photo. Ronaldinho left side has placed yellow ball beyond diving keeper Casillas grey/black towards net RIGHT side. Keeper body stretched on grass, ball near net at right. White defender behind Ronaldinho stops. Anatomically coherent, all meaningful action center band.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "df7b1ed1271a23ec514b51501ae02ed09d141ee99608a2e8e9e948868054cb72",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/fans-seated.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Crowd reaction beginning: foreground THREE distinct adult Real fans wearing ordinary winter coats with plain white scarves, seated and astonished at the pitch; one middle-aged moustached man starts to lift his hands apart. No anger. Ronaldinho recognisable in middle ground right walking past with ball. Faces y.39–.55. Rich layered old stands, other fans mostly seated.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "a4ef0e62ff8505eb6953509f16c95fa9e978cc988d4ab6fc1bd9c961a7c6edcf",
+      "selected": false,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/fans-rise.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Crowd reaction continuation. Two of those distinct white-scarf supporters stand halfway from seats while a third remains seated and smiles, hands approaching for applause. Ronaldinho on field in lower right background looking up. Medium shot from pitch toward seating, faces center band. Show individual choices, not synchronized stadium.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "68b543c0ff7f2fa2322cb24819cdb7e684817e136ebc4ec81495e440b468803e",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/applause.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Payoff. Several Real supporters in white scarves now fully standing and visibly CLAPPING, open smiling admiration, while many seated background fans watch. Ronaldinho large foreground left three-quarter back, recognisable profile y.45, one hand on heart at chest level acknowledging applause. Clear line of sight from fans to hero. No hosts.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "9be73c72c103b63c0813299f00c8782ccffbe65e8556f41fb28804a46cd874bf",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/matvey.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Dialogue shot. Matvey blue raccoon foreground left face x.27 y.50 eyes widened, one palm raised in disbelief; Ronaldinho central-right larger than host, face y.43 smiling kindly, resting hands at hips. Sofia slightly behind right listens. Behind them white-scarf fans applaud. Matvey is child proportions and precise reference identity, hero remains central.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "113cbeccf8f0f5899c64246744d36506665753593a0adc8225ac20bfe1f19dcb",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/sofia.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed premium stylized family 3D animated-film illustration, vertical 9:16 1088x1920 full bleed, no borders. Original staging, not a broadcast frame copy. Madrid Santiago Bernabeu evening19 November2005: old steep multi-tier open stadium with separate cantilever roofs, dark sky above field, no modern enclosed silver shell. Green grass, cool floodlights, warm expressive faces, rich fabric and crowd details. Ronaldinho age25 is recognisable: dark Brazilian skin, wide smile with prominent front teeth, strong cheeks, wide nose, long curly black hair tied back, thin black headband, clean shaven. Accurate2005 Barcelona broad blue/burgundy vertical striped long sleeves, BURGUNDY shorts, blue socks, white boots; no sponsors/logos/letters/numbers. Real outfield players all white. Iker Casillas young short dark-haired keeper in GREY shirt, BLACK shorts and socks, white gloves. One YELLOW ball with dark blue/purple curved panels. Any hosts must preserve attached approved identities: Matvey small grey raccoon boy in blue football kit white trim; Sofia slightly taller orange squirrel child in plum tracksuit, tufted ears ponytail, fluffy tail. Footballer leads, hosts smaller. Critical composition: all faces/ears at y34–59% of full frame; ball/action y53–72%; top24% atmospheric stadium, bottom23% uncluttered grass for captions. No text, typography, numbers, emblems, watermarks. Closing warm medium group. Ronaldinho central face x.52 y.43 with characteristic broad smile; Sofia right face x.78 y.53 points gently with open palm toward white-scarf applauding supporters; Matvey left face x.22 y.54 smiles with newfound understanding. Faces cleanly separated, child proportions, tiny compared to athlete, all ears inside square. Quiet bottom grass for final caption.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "13ebc3667a3f97cf2aac8de519ff29c8748213bf54e99b23b7df8235f7b39e5f",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {
+        "content/series/football-legends/cast/hosts-full.png": "49c92b4bca5df88e90d529034e158fb7a48a79de4c7f98d49ccf764944d2be35",
+        "content/videos/football-wow-ronaldinho-ovation/shots/ronaldinho-2006.jpg": "3430206518b8597a0eadc553ea671357430592a1c2126fddcaf007a3f6c6eb9f"
+      },
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    },
+    "shots/fans-seated-v2.png": {
+      "prompt": "Use case illustration-story. One vertical9:16 detailed stylized3D family animated-film shot, single unified camera, no montage no collage no panels. Close medium shot of THREE ADULT HUMAN REAL MADRID SUPPORTERS seated side-by-side in old Bernabeu stadium November2005. Winter coats, plain white scarves with no writing. Central moustached man in brown coat, left bald man navy coat, right curly-haired woman cream coat. All three faces centered at y.40–.50 of whole frame, hands at y.58 looking offscreen toward football pitch with stunned admiration, mouths slightly open. Hands apart, they have not yet started clapping. Many other supporters seated behind, old concrete blue seating terraces, cantilever stadium roof and night sky. Do not show footballers, Ronaldinho or animal hosts; this is a dedicated crowd reaction shot. Full bleed, rich expressive faces, warm light on skin against cool blue stands, sophisticated3D film not live photograph. Upper25% background stands, lower25% simple seats/coat texture for captions. No text numbers logos watermark.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "seed": null,
+      "seedReproducible": false,
+      "width": 941,
+      "height": 1672,
+      "sha256": "498356b9fef4b5f03dee5effef501fce7327056e45ca7bff6ba4d7b234bf1b46",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "refs": {},
+      "referenceRoles": "Approved fictional host identities;licensed2006 photo P1 for athlete likeness,not copied photographic composition. Official2005 match image consulted privately for kit facts,not a tool input.",
+      "terms": "OpenAI account output terms;P1 photograph retains CC BY-SA3.0."
+    }
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "text": "Мяч перелетел через вратаря и оказался в сетке!",
+  "duration": 3.3315,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "df429f5d6153a0c1d6e47073de2a9225e4990aef9fc35018e7a592182f2bb71a",
+  "speed": 0.9,
+  "scene": "net",
+  "originalSynthesisText": "Мяч перелетел через вратаря и оказался в сетке!",
+  "displayText": "Мяч перелетел через вратаря и оказался в сетке!",
+  "file": "assets/voice/net.wav",
+  "sourceSha256": "91d8ad1719619d24e48562b6a5e18e07035c37a6911e26abf0fe3a1d849483af"
+}

@@ -1,10 +1,12 @@
 import assert from 'node:assert/strict';
-import { mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
+import { createHash } from 'node:crypto';
+import { execFileSync } from 'node:child_process';
+import { existsSync, mkdirSync, mkdtempSync, readFileSync, rmSync, writeFileSync } from 'node:fs';
 import { tmpdir } from 'node:os';
 import { join, resolve } from 'node:path';
 import { test } from 'node:test';
 import { specInputs } from '../production/src/board.ts';
-import { generateImages, imageJobs, styleImages } from '../production/src/images.ts';
+import { generateImages, imageJobs, imageState, styleImages } from '../production/src/images.ts';
 import { loadSpec } from '../production/src/spec.ts';
 import { applyStyle, expandCast, listStyles, loadStyle, scaffold, shotPrompt } from '../production/src/style.ts';
 import { buildTimeline } from '../production/src/timeline.ts';
@@ -97,6 +99,49 @@ test('new Russian projects receive the selected voice; existing episodes keep th
   assert.equal(old.speed, 0.96);
 });
 
+test('Instagram Reels target builds native vertical timelines for every style and retains voice and kinetic choices', async (t) => {
+  const dir = mkdtempSync(join(tmpdir(), 'storygro-reels-target-'));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  for (const style of listStyles()) {
+    const project = join(dir, style.def.id);
+    scaffold(project, style, { lang: 'ru', target: 'instagram-reels' });
+    const l = loadSpec(join(project, 'ru.reel.yaml'));
+    assert.equal(l.spec.voice.engine, 'omnivoice');
+    assert.equal(l.spec.voice.speed, 0.9);
+    const tl = await buildTimeline({ ...l, spec: { ...l.spec, voice: { ...l.spec.voice, engine: 'none' } } }, { voice: false });
+    assert.deepEqual([tl.width, tl.height, tl.fps, tl.safe.profile], [1080, 1920, 30, 'reels']);
+    assert.equal(tl.captions.maxWords, 4);
+    assert.equal(tl.stills.cover, 0, 'the first frame is the explicit cover');
+    assert.equal(tl.captions.show, style.def.id !== 'kinetic-type');
+    if (style.def.id === 'kinetic-type') assert.equal(tl.blur, 4);
+    if (style.def.id === 'cartoon') {
+      const images = styleImages(l)!;
+      assert.deepEqual([images.width, images.height], [1088, 1920]);
+      const jobs = imageJobs(l);
+      assert.equal(jobs.length, 4);
+      assert.match(jobs[0]!.prompt, /Full-frame vertical 9:16/);
+      assert.match(jobs[0]!.prompt, /top fifth of the frame .* no heads, faces/);
+      assert.doesNotMatch(jobs[0]!.prompt, /wide composition|\{subject\}|@host/);
+      assert.match(jobs[0]!.prompt, /Flat comic book illustration/);
+      assert.equal((l.spec.scenes[1]!.props.badge as { size: number }).size, 0.085);
+    }
+  }
+  const normal = join(dir, 'normal-cartoon');
+  scaffold(normal, loadStyle('cartoon'));
+  assert.equal(loadSpec(join(normal, 'en.reel.yaml')).spec.format.width, 1920);
+});
+
+test('new CLI forwards the Reels target and refuses unsupported targets before creating files', (t) => {
+  const dir = mkdtempSync(join(tmpdir(), 'storygro-reels-cli-'));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  const project = join(dir, 'cli-reel');
+  execFileSync(process.execPath, ['--import', 'tsx', join(root, 'production/src/cli.ts'), 'new', project, '--style', 'cartoon', '--target', 'instagram-reels'], { cwd: root });
+  assert.equal(loadSpec(join(project, 'en.reel.yaml')).spec.safe, 'reels');
+  const invalid = join(dir, 'invalid');
+  assert.throws(() => scaffold(invalid, loadStyle('cartoon'), { target: 'square-ish' }), /unknown target/);
+  assert.equal(existsSync(invalid), false);
+});
+
 test('a kinetic-type project scaffolds and builds: dark tokens, captions off, motion blur on', async (t) => {
   const dir = mkdtempSync(join(tmpdir(), 'storygro-style-'));
   t.after(() => rmSync(dir, { recursive: true, force: true }));
@@ -168,4 +213,38 @@ test('an episode can switch its pictures to the codex provider with its own mode
   assert.equal(images.base, undefined);
   assert.match(images.licence ?? '', /Codex image tool|OpenAI/);
   assert.equal(images.width, 1088);
+});
+
+test('cast reference pictures go with the shots that name them and mark a picture changed when they change', async (t) => {
+  const dir = mkdtempSync(join(tmpdir(), 'storygro-style-'));
+  t.after(() => rmSync(dir, { recursive: true, force: true }));
+  writeFileSync(join(dir, 'host.png'), 'one');
+  const path = join(dir, 'reel.yaml');
+  writeFileSync(
+    path,
+    `reel: 1\nstyle: cartoon\ntitle: x\nimages: { provider: codex, cast: { host: 'a raccoon', guest: 'a fox' }, refs: { host: host.png } }\n` +
+      `scenes: [{ id: a, scene: illustration, props: { shots: [{ image: shots/a.jpg, prompt: '@host and @guest' }, { image: shots/b.jpg, prompt: '@guest alone' }] } }]\n`,
+  );
+  const l = loadSpec(path);
+  const [a, b] = imageJobs(l);
+  assert.deepEqual(a.refs, [{ file: 'host.png', who: ['host'] }]);
+  assert.deepEqual(b.refs, []);
+
+  // a stand-in for the Codex CLI: records its arguments and the task, saves nothing
+  const fake = join(dir, 'codex.sh');
+  writeFileSync(fake, `#!/bin/sh\necho "$@" >> "${dir}/args.txt"\ncat >> "${dir}/task.txt"\n`, { mode: 0o755 });
+  process.env.STORYGRO_CODEX = fake;
+  t.after(() => delete process.env.STORYGRO_CODEX);
+  await assert.rejects(generateImages(l, { log: () => {} }), /not made: .*shots\/a\.jpg/);
+  const calls = readFileSync(join(dir, 'args.txt'), 'utf8').trim().split('\n');
+  assert.equal(calls.length, 2, 'shots with and without references go in separate batches');
+  assert.equal(calls.filter((c) => c.includes(`-i ${join(dir, 'host.png')}`)).length, 1);
+  assert.match(readFileSync(join(dir, 'task.txt'), 'utf8'), /character reference from our own series: it shows host/);
+
+  mkdirSync(join(dir, 'shots'));
+  writeFileSync(join(dir, 'shots/a.jpg'), 'picture');
+  const ledger = { images: 1 as const, files: { 'shots/a.jpg': { prompt: a.prompt, seed: a.seed, provider: 'codex', width: 1, height: 1, steps: 0, refs: { 'host.png': createHash('sha256').update('one').digest('hex') }, sha256: '', createdAt: '' } } };
+  assert.equal(imageState(l, a, ledger), 'ok');
+  writeFileSync(join(dir, 'host.png'), 'two');
+  assert.equal(imageState(l, a, ledger), 'changed');
 });

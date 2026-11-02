@@ -32,6 +32,7 @@ scenes:
     say: >-
       It's already in the data. {#a}Employment … fell about [11%](=eleven percent). {#b}…
     caption: …                             # optional caption text instead of `say`
+    captions: { maxWords: 3 }              # optional shorter caption phrases in this scene
     pad: [0.25, 0.8]                       # silence before/after the voice
     min: 4                                 # optional minimum length
     energy: 0.4                            # music intensity 0..1
@@ -95,6 +96,8 @@ Write each variant for its audience; do not translate word for word. Russian nee
 Every number on screen belongs in a data file with its source, and scenes receive it through props (`valueFrom: facts.stanford.exposedChange`). The narration may say a number (it is part of the facts corpus), but the source line and caveats travel with it. Keep a `sources.md` with the quotes and dates.
 
 ## Direction
+
+For new/remade Instagram Reels, use the [retention worksheet](reels-retention.md#direction-worksheet): viewer promise, opening alternatives, early result, causal beats, payoff and one measurement hypothesis. Existing `hooks:` and narration cues support the method; no new reel schema is required. Preserve supplied text when verbatim is requested.
 
 Write `DIRECTION.md` next to the reel before scene code when several people or models build scenes: the feeling, the arc, the visual language, then per scene what is on screen at each cue. The director reviews stills (`storygro still <spec> scene@cue --guides`) and the storyboard.
 

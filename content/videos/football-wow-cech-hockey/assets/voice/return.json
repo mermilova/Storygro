@@ -1,0 +1,22 @@
+{
+  "text": "В две тысячи девятнадцатом году, завершив профессиональную футбольную карьеру, Чех наконец вернулся к своей детской мечте.",
+  "duration": 7.644166666666667,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-cech-hockey/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "ca679d1f14e25ae22b73189988ece29bd32981e67c8c371a704cc6b21b2dd304",
+  "speed": 0.96,
+  "scene": "return",
+  "originalSynthesisText": "В две тысячи девятнадцатом году, завершив профессиональную футбольную карьеру, Чех наконец вернулся к своей детской мечте.",
+  "displayText": "В 2019 году, завершив профессиональную футбольную карьеру, Чех наконец вернулся к своей детской мечте.",
+  "file": "assets/voice/return.wav",
+  "sourceSha256": "e67b463f2a8d6fac55d3f8728f33c09c1bb3adde5331190b370e900e4386bf6c"
+}

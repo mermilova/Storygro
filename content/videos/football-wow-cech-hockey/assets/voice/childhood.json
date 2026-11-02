@@ -1,0 +1,22 @@
+{
+  "text": "Но самое интересное: хоккей не был для него совершенно новым увлечением. В детстве Петр тоже занимался хоккеем, но в тринадцать лет ему пришлось выбирать между футболом и хоккеем.",
+  "duration": 11.3735,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-cech-hockey/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "8378b2ba65c5b220ffb62dcc0c8f5d2c880ebfbfc6f511d7246622f424520f68",
+  "speed": 0.96,
+  "scene": "childhood",
+  "originalSynthesisText": "Но самое интересное: хоккей не был для него совершенно новым увлечением. В детстве Петр тоже занимался хоккеем, но в тринадцать лет ему пришлось выбирать между футболом и хоккеем.",
+  "displayText": "Но самое интересное: хоккей не был для него совершенно новым увлечением. В детстве Петр тоже занимался хоккеем, но в 13 лет ему пришлось выбирать между футболом и хоккеем.",
+  "file": "assets/voice/childhood.wav",
+  "sourceSha256": "f30d7eddaa919567e3ab51479313ace0e73b8f622753307b0855c410e564f280"
+}

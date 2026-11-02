@@ -1,0 +1,22 @@
+{
+  "id": "sofia-A",
+  "text": "Именно! Петр Чех доказал, что даже после завершения одной спортивной карьеры можно осуществить мечту из детства!",
+  "provider": {
+    "engine": "qwen3",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/series/football-legends/cast/voices/sofia-A/reference.wav",
+    "language": "Russian",
+    "license": "Apache-2.0 (Qwen3-TTS), MIT (mlx-audio)"
+  },
+  "duration": 7.640916666666667,
+  "referenceSha256": "98ecd0076b6723ebb245ba18682944f5c21c6bd904e3780f3f8ff30533eb9840",
+  "sha256": "ea2bc63c4c7463eff0ae9081ea03912c765135a06e732a9116a915ffb96d90f5",
+  "newEpisodeReply": true,
+  "referenceUnchanged": true,
+  "scene": "sofia",
+  "originalSynthesisText": "Именно! Петр Чех доказал, что даже после завершения одной спортивной карьеры можно осуществить мечту из детства!",
+  "displayText": "Именно! Петр Чех доказал, что даже после завершения одной спортивной карьеры можно осуществить мечту из детства!",
+  "file": "assets/voice/sofia.wav",
+  "sourceSha256": "ea2bc63c4c7463eff0ae9081ea03912c765135a06e732a9116a915ffb96d90f5",
+  "speed": 1
+}

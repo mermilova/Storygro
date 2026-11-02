@@ -1,0 +1,22 @@
+{
+  "text": "Футбольный вау-факт! ЗлАтан ИбрагИмович забил невероятный гол через себя почти с тридцати метров!",
+  "duration": 6.952,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "25da42378702ee148197ac7d5629fd47f2dfac4150003914b2d72d49604ab7e4",
+  "speed": 0.9,
+  "scene": "hook",
+  "originalSynthesisText": "Футбольный вау-факт! ЗлАтан ИбрагИмович забил невероятный гол через себя почти с тридцати метров!",
+  "displayText": "ФУТБОЛЬНЫЙ ВАУ-ФАКТ! Златан Ибрагимович забил невероятный гол через себя почти с 30 метров!",
+  "file": "assets/voice/hook.wav",
+  "sourceSha256": "5807df13e7c5a5e0afd25ec8c9430d5e8810e85f6d9deee5836f10d69888e9ab"
+}

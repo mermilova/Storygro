@@ -20,6 +20,37 @@ stages:
   maintain: Keep the repository and its media healthy
 
 entries:
+  - id: reviewed-narration-clips
+    kind: method
+    stage: voice
+    title: Reviewed narration clips and local pace
+    what: Import a reviewed scene narration with voice.source, preserving its transcript/cues and source rights; clip bytes invalidate narration cache and storyboard approval. A local voice.speed changes only that scene, so a conclusion can slow without replacing the episode narrator.
+    when: A stubborn pronunciation needs a reviewed correction, or one narration beat needs a different pace.
+    status: pilot
+    docs: docs/reference/voices.md#reviewed-narration-clips-and-local-pace
+    examples: [content/videos/football-wow-02-zlatan/assets/voice/corrections/manifest.json]
+
+  - id: pronunciation-voice-conversion
+    kind: tool
+    stage: voice
+    title: Match reviewed pronunciation to a synthetic narrator
+    what: ChatterboxVC audio-to-audio conversion behind production/py/voice_convert.py; retain source content, match an authorised synthetic reference, write provenance and never overwrite an existing output. Listen after conversion; source and target terms remain separate.
+    when: A correctly pronounced synthetic source needs the established narrator's timbre. Never use an unconsented real-person target.
+    how: Run production/py/voice_convert.py with the isolated Chatterbox Python, source WAV, authorised target WAV and a new output path.
+    status: pilot
+    docs: docs/reference/voices.md#pronunciation-preserving-voice-conversion
+    examples: [content/videos/football-wow-02-zlatan/prepare-narration.py]
+
+  - id: football-wow-shorts
+    kind: method
+    stage: look
+    title: Detailed cartoon-led football shorts
+    what: A concise sourced football surprise with several connected illustrated action states, recognisable period players and supporting hosts; only 1–3 authentic photo inserts across the film.
+    when: The owner commissions a short Football Wow episode or deliberately remakes a football film under the cartoon-led rule. Keep calm speech, document original/adapted text and measure illustrated/photo screen time.
+    status: pilot
+    docs: docs/how-to/football-series.md#cartoon-led-short-stories
+    examples: [content/videos/football-wow-01-pele/DIRECTION.md, content/videos/football-wow-02-zlatan/DIRECTION.md]
+
   - id: editorial-ranking
     kind: tool
     stage: choose
@@ -280,11 +311,74 @@ entries:
     kind: scenes
     stage: look
     title: Illustration scene
-    what: Full-frame pictures that change on cues with a camera move, split frames, and DOM overlays (headline band, number badge, labels, source line, and an optional photograph fact card).
+    what: Full-frame pictures that change on cues with a camera move, split frames, and DOM overlays (headline band, scalable number badge, labels fitted into the safe area, source line, and an optional compact portrait fact card).
     when: The cartoon style or any piece built from pictures.
     scenes: [illustration]
     status: pilot
     docs: docs/reference/scenes.md#illustration
+
+  - id: football-series-retention
+    kind: method
+    stage: look
+    title: Illustrated series identity and retention pilot
+    what: Shared first-frame identity with episode-specific researched art, immediate narration, a factual curiosity hook, narrative image changes, a resolved opening question and an empathetic viewer question.
+    when: An illustrated recurring series; episode 6 is the owner-authorised retention experiment, not measured uplift.
+    status: pilot
+    docs: docs/how-to/football-series.md
+    examples: [content/videos/football-legends-06-masopust/README.md]
+
+  - id: reels-learning-loop
+    kind: method
+    stage: write
+    title: Reels story direction and measured experiments
+    what: Viewer promise, opening alternatives, early result, causal beats and payoff in DIRECTION.md; one-factor pilots with the exact published revision, comparable ages and distribution modes. Manual metrics separate missing values and calculate watch ratio and events per reach without inferring completion or causality.
+    when: Required for new or deliberately remade Reels under the owner-adopted workflow of 2026-10-31; the next Football Legends episode uses FL-R1. Audience effects remain pilot hypotheses.
+    status: pilot
+    docs: docs/how-to/reels-retention.md
+    examples: [content/research/reels-growth-2026-10-31/README.md]
+
+  - id: scenes-series-cover
+    kind: scenes
+    stage: look
+    title: Series opening cover
+    what: A readable project and series identity with an optional emblem over full-frame episode-specific art, visible from frame zero and composed inside the central preview square.
+    when: A recurring illustrated series needs a recognisable opening and distinct episode settings.
+    scenes: [series-cover]
+    status: pilot
+    docs: docs/reference/scenes.md#series-cover
+
+  - id: scenes-archive-photo
+    kind: scenes
+    stage: look
+    title: Dated authentic photo card
+    what: An authentic photograph with data-bound story title and concise photo date over a full-frame background. Optional explicit credit is omitted in children's episodes; full provenance stays in the post and documentation. Contain preserves the photo; a declared portrait crop can improve recognition. Deterministic seeking; no AI retouch.
+    when: Football Legends or another factual series includes a rights-checked real player or venue photo alongside generated illustrations. A later photo is visibly dated as later.
+    scenes: [archive-photo]
+    status: pilot
+    docs: docs/reference/scenes.md#archive-photo
+    examples: [content/videos/football-legends-09-eusebio/DIRECTION.md]
+
+  - id: scenes-photo-pair
+    kind: scenes
+    stage: look
+    title: Authentic photo pair with optional series identity
+    what: Two original photographs and data-bound short labels over full-frame artwork. Can reuse the existing series-cover identity and cue-driven reveal; original faces are never generatively retouched.
+    when: A paired football story needs actual player likenesses with fictional hosts supporting nearby; compose hosts below the photo cards and retain full provenance outside the children's frame.
+    scenes: [photo-pair]
+    status: pilot
+    docs: docs/reference/scenes.md#photo-pair
+    examples: [content/videos/football-now-01-messi-ronaldo/DIRECTION.md]
+
+  - id: scenes-photo-focus
+    kind: scenes
+    stage: look
+    title: Player-led authentic photo sequence
+    what: Cue-driven original photographs and short dated labels over a full-frame background; optional simple animated pass diagram sits beside the photograph. Data-bound titles stay above the photo and supporting hosts.
+    when: A factual sports story needs the real player as the main subject and an illustrative passing mechanism without generative face editing or a claimed match reconstruction.
+    scenes: [photo-focus]
+    status: pilot
+    docs: docs/reference/scenes.md#photo-focus
+    examples: [content/videos/football-now-02-madrid-playmakers/DIRECTION.md]
 
   - id: scenes-screencast
     kind: scenes
@@ -371,6 +465,17 @@ entries:
     status: pilot
     docs: docs/reference/styles.md
     examples: [content/videos/ai-buys-work-knowledge/en.reel.yaml]
+
+  - id: cast-reference-pictures
+    kind: method
+    stage: look
+    title: Reference pictures of recurring hosts
+    what: Generate the hosts' faces and a full-height sheet once, have the owner approve them, keep them beside the series with a provenance ledger, and attach them to every shot that names the hosts (images.refs); the codex provider passes them to GPT Image, so the hosts look the same in every shot and every episode.
+    when: A series with recurring characters drawn by GPT Image; text descriptions alone let the generator redraw them each time.
+    how: 'images: { provider: codex, refs: { matvey: [../../series/<id>/cast/matvey-face.png, ../../series/<id>/cast/hosts-full.png] } }'
+    status: pilot
+    docs: docs/reference/styles.md#in-the-reel
+    examples: [content/series/football-legends.md, content/videos/football-legends-01-matthews/ru.reel.yaml]
 
   - id: text-free-pictures
     kind: method
@@ -483,6 +588,17 @@ entries:
     status: pilot
     docs: docs/reference/voices.md
 
+  - id: complete-narration-beats
+    kind: method
+    stage: voice
+    title: Complete narration before scene cuts
+    what: Preserve question-answer pairs and conjunction-led clauses as complete narration beats when isolated takes truncate or full-file alignment loses words; change illustrations on cues inside the beat.
+    when: A short fragment fails speech QA despite a complete source script.
+    how: Retain every word, revoice with the selected narrator, inspect alignment and rerun full-file QA after rendering. Never lower the threshold or remove a word to hide the failure.
+    status: pilot
+    docs: docs/how-to/football-series.md
+    examples: [content/videos/football-legends-07-yashin/VOICE-REVIEW.md]
+
   - id: score
     kind: tool
     stage: voice
@@ -570,6 +686,41 @@ entries:
     status: stable
     docs: docs/how-to/carousel-and-release.md
 
+  - id: instagram-reels-native
+    kind: method
+    stage: make
+    title: Native full-frame Instagram Reels
+    what: Owner-approved 1080×1920 at 30 fps with edge-to-edge backgrounds, safe reels for text, short captions and individual overlay placement. Text and heads stay below the 4:5 feed crop (320 px), the cover inside the 1:1 preview; still --guides draws both, QA checks cover text and writes feed and cover sheets of the MP4. No padding around a shrunken edit. Upload as a Reel keeping Original / 9:16 (UPLOAD.txt), then instagram-check the post.
+    when: Every new or remade Instagram Reel, across styles and series.
+    commands: [new]
+    how: npm run storygro -- new content/videos/<id> --style cartoon --lang ru --target instagram-reels
+    status: stable
+    docs: docs/how-to/instagram-without-cropping.md
+    examples: [content/videos/football-legends-01-matthews/README.md]
+
+  - id: instagram-check
+    kind: tool
+    stage: ship
+    title: Check what Instagram stored
+    what: Reads a published post's public embed page and measures the full-size cover frame Instagram stored, which has the stored video's shape; 1080×1920 passes, a square or 4:5 means the upload cropped the Reel. Unofficial page; reports a deleted or private post.
+    when: Right after every Instagram upload, and before calling a published Reel cropped or fine.
+    commands: [instagram-check]
+    how: npm run storygro -- instagram-check https://www.instagram.com/p/<code>/
+    status: stable
+    docs: docs/how-to/instagram-without-cropping.md#upload
+
+  - id: social-fit
+    kind: tool
+    stage: ship
+    title: Preserve a complete video with padding
+    what: Fits an existing master inside Reels UI margins and a square canvas with navy padding, preserving the whole picture and copying AAC audio; verifies full decoding, frame count, size, duration and audio hash in a separate review manifest.
+    when: Visible borders are explicitly wanted to preserve every pixel of an existing edit. For native Reels, recompose the scenes full-frame instead.
+    commands: [social]
+    how: npm run storygro -- social content/videos/<id>/ru.reel.yaml <new-output-dir>
+    status: pilot
+    docs: docs/how-to/instagram-without-cropping.md
+    examples: [content/videos/football-legends-01-matthews/README.md]
+
   - id: technical-qa
     kind: tool
     stage: check
@@ -605,7 +756,7 @@ entries:
     kind: tool
     stage: ship
     title: Publication ledger and metrics
-    what: Records where and when a person posted a release (plan, approve, checklist, mark) and metric snapshots with source and window; uploads nothing.
+    what: Records manual publication and metric snapshots by source, window and distribution (including 72h); Instagram diagnostics use available same-snapshot operands, never infer completion, and separate trial, organic, paid, mixed and unknown exposure. Uploads nothing.
     when: After a manual upload; to compare results later.
     commands: [publish, metrics]
     how: npm run storygro -- publish plan <release-dir> --variant en --platform youtube --account @handle

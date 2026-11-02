@@ -1,4 +1,8 @@
-# Storygro documentation
+# Документация smart_little_toons и движка Storygro
+
+Редакционная точка входа — [главная страница проекта](../README.md), [каталог выпусков](../content/videos/README.md) и [правила футбольных серий](how-to/football-series.md). Новая рубрика — [«Обзор матчей»](../content/series/match-review.md); персонажи и выбранные голоса описаны в материалах серий.
+
+Ниже сохранена техническая документация Storygro: CLI, сцены, звук, рендер и проверки. Универсальные уроки и прежние деловые примеры относятся к возможностям движка; текущий производственный фокус этого fork — smart_little_toons.
 
 > Structured by [Diátaxis](adr/0004-docs-structure-and-media.md): learn, do, look up, understand. Technical documentation is in English; product planning in [`planning/`](planning/README.md) is in Russian.
 
@@ -20,13 +24,16 @@
 | Pick a topic worth a video | [Choose a topic](how-to/choose-a-topic.md) · [How we find ideas](explanation/research-approach.md) |
 | Read an episode before rendering, change it, approve it; see what waits for me | [Review and approve](how-to/review-and-approve.md) · [The content workflow](explanation/content-workflow.md) · [Tracker](../content/TRACKER.md) |
 | Write or edit a script | [Write a script](how-to/write-a-script.md) |
+| Improve a Reel's opening, story and learning from results | [Retention recipe and direction worksheet](how-to/reels-retention.md) · [Sivori research and successful examples](../content/research/reels-growth-2026-10-31/README.md) |
 | Ship Russian and English cuts | [Language variants](how-to/language-variants.md) |
 | Give the narrator a voice | [Design a voice](how-to/design-a-voice.md) · [Voices](reference/voices.md) |
 | Demo a product on its real website | [Product demo from a website](how-to/product-demo-from-a-website.md) |
 | Make a children's cartoon about a list of real people, with recognisable pictures | [Children's list cartoon](how-to/kids-list-cartoon.md) |
 | Add a new visual mechanism | [Add a scene](how-to/add-a-scene.md) · [Scene contract](reference/scene-contract.md) |
 | Make cards and a release folder | [Carousel and release](how-to/carousel-and-release.md) |
+| Make an Instagram Reel that fills the frame | [Repository standard and production recipe](how-to/instagram-without-cropping.md) · [ADR 0007](adr/0007-instagram-reels.md) |
 | Keep a rubric consistent | [Brand and series](how-to/brand-and-series.md) |
+| Produce Football Legends with a shared cover and distinct historical worlds | [Series production recipe and retention pilot](how-to/football-series.md) |
 | Publish and record metrics | [Publish manually](how-to/publish-manually.md) |
 | Understand who decides what and which model does which job | [How we work](explanation/how-we-work.md) |
 | Contribute a change | [CONTRIBUTING](../CONTRIBUTING.md) |
@@ -41,6 +48,7 @@
 - [Formats, safe areas and captions](reference/formats.md) · [Voices](reference/voices.md)
 - [Publication ledger](reference/publication-ledger.md) · [Media policy](reference/media-policy.md)
 - [Repository layout](reference/repository-layout.md) · [What is installed on this machine](reference/local-setup.md) (`npm run storage`)
+- [Football starter kit on Marina's workstation](reference/football-starter-setup.md): restored inputs, exact OmniVoice B, offline synthesis and preparation checks (1 November 2026).
 
 ## Explanation
 

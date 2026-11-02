@@ -1,0 +1,200 @@
+{
+  "images": 1,
+  "generation": "Built-in image_gen;no nested workers;11successful selected/edit outputs",
+  "files": {
+    "shots/cover.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Cristiano Ronaldo waist-up in foreground at x50%, face y49%, his right palm over heart, moved grateful smile, looking at Juventus fans beyond camera. Behind him distinct black-and-white scarves and adult rival supporters standing applauding, lush green pitch bottom. Warm skin against teal kit and cool rain. Small ball low foreground. Key visual paradox: rival colours and gratitude.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "c1146caa1d224870822cf27930d2fabf7bdce5d80ced5878148243fbd53486cb",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/arena.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Wide oblique pitch-level establishing view inside packed Juventus Stadium at rainy blue evening, Ronaldo central waist-up at y54%, Juventus defender in black-white at right, turquoise teammates moving in depth. Stadium seats and ring canopy correctly shaped, green field, dramatic white floodlights. No scoreboard.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "ea5de85f514ec2bbd23584da09cf3b39cae3f9d009172ea001f6c8dd973b4b31",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/cross.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Dani Carvajal recognisable Spanish face, short dark hair and beard in same teal kit, on right wing at right of composition follows through after lifting a cross towards left. One clearly visible ball floats upper left at y42%; Ronaldo at centre-left watches and judges the incoming cross, ready to jump, Juventus defenders turn. Camera from side of penalty box, not aerial.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "9d308ba9786a066d6774ec4117eb0d63a5650e0eec245d9de02ae22409465693",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/goal.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Consequence of bicycle kick from beside goal: ONE white star-panel ball pushes into far upper-right netting, white goal frame and realistic net tension; Gianluigi Buffon recognisable dark hair yellow goalkeeper jersey black shorts gloves, turning just too late towards ball. Ronaldo in teal landing on grass in middle distance to left, Juventus defender looks towards net. All heads midframe y45-60%, clear goal action.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "e46cdf42e379e07b09c87643fc205834e0ebc77a8f547fe1c19b1d9f1c7e9030",
+      "selected": false,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/rise.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Juventus supporters standing up from dark stadium seats: foreground middle aged man in black-and-white scarf half risen with hands beginning to clap, woman beside him already standing applauding, others rise behind. Ronaldo in teal visible below near pitch at bottom midframe, his face readable. Crisp individual humans, fingers natural.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "0f2e07b9007b2e23585d7797d9642022273c05feae8a3ad5cb02f651eaef251a",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/stunned.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Close medium crowd reaction: three adult Juventus supporters wearing black-and-white scarves look astonished at goal, one hand over mouth, one eyes wide, hands starting to lift. Behind them full stadium and on left distance Ronaldo in teal is visible looking back. Emotion amazement not anger. No duplicated faces or hands.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "cb4547f7a33a84a89b89fc92f48dfb287cc51b43b3b9eee6150297d7e9248e07",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/applause.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Medium shot Ronaldo in teal at centre with recognisable moved face y49%, back three-quarter but face visible, looking towards a packed standing Juventus crowd clapping in black-and-white scarves, diverse adults behind stadium barrier. Focus on respect, many natural individual gestures, not copy-pasted synchronized hands. He is main character.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "e06ca8b5b9a09749bbdc228652683d0301b0bdc486a71590dda45ac2a6f4fb88",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/thanks.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Intimate medium portrait Ronaldo in teal at centre, right palm flat over heart with five natural fingers, left hand lifted in modest thank you, emotional grateful smile, looking towards applauding Juventus stands. Short cropped hair, no beard, clear face likeness. Stadium bokeh and rain, rich fabric wet shoulder details, lower torso visible.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "a54dc291c639a3f60a0dedc24ac68dd06b8918dd3f13a5f7e34f8772e6b69596",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/celebrate.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Ronaldo in teal central waist-up, relieved happy expression, two recognisable adult teammates Marcelo with curly afro and Dani Carvajal dark beard nearby celebrating modestly, applause crowd black-white behind. Open stadium pitch, sense of 3-0 away win without written score, authentic human proportions.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "40b3a794b1a424bb3b3d023c75c8c38372241a62a2008cf50a3f94d828933081",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/ending.png": {
+      "prompt": "Use case: illustration-story. Asset: one detailed original vertical 9:16 frame for smart_little_toons children's football Reel. Premium family 3D animated feature illustration, highly detailed natural fabrics, wet emerald grass, realistic stadium geometry, expressive human faces, luminous cinematic rain under stadium floodlights, crisp foreground, atmospheric crowds. Turin Juventus Stadium 3 April 2018, open field with modern rectangular ring canopy. Cristiano Ronaldo age33, exceptionally recognisable Portuguese face, sharp eyebrows, short dark cropped hair faded sides, athletic lean muscular body, turquoise-teal blue Real Madrid 2017/18 long sleeve jersey and shorts, dark blue shoulder stripes, turquoise socks; Juventus opponents black-white vertical striped shirts white shorts. White Champions League style star-panel ball. Human football world ONLY, absolutely no Sofia, Matvey, animals, child hosts or presenters. No lettering, numbers, captions, logos, watermarks. Native portrait full bleed. Leave upper 18-32% calm atmospheric space for overlay headings; important faces between y40-65%, action and ball between y40-78%; full heads comfortably inside central square y22-78%. Scene: Wide warm closing portrait Ronaldo centre at y52%, palm on heart, in teal on glowing emerald pitch, Juventus black-white supporters applaud across background, one Juventus adult player in striped jersey respectfully nods beside him. Football low foreground. Shared love of beautiful football, moving human expressions, exceptionally detailed cinematic 3D, no trophies or fantasy objects.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "76a2d38d3b3692ebdcb81101b6462f7bccc26e73d1c61c5a0bb5cb06543da497",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": null,
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    },
+    "shots/goal-v2.png": {
+      "prompt": "Use case: precise-object-edit. Edit this original generated goal aftermath illustration. Change ONLY the goalkeeper's yellow shirt and yellow socks to very dark charcoal BLACK to match Juventus goalkeeper kit at Turin on 3 April2018; leave shorts black. Keep every person's exact face, pose, anatomy and location, all gloves, ONE ball in net, net and white goalposts, Ronaldo seated on ground, defender, pitch, stadium, rain, lighting, aspect ratio and composition unchanged. No text. No new objects or animals.",
+      "provider": "image_gen",
+      "tool": "image_gen.imagegen",
+      "model": "Exact image model identifier undisclosed",
+      "width": 941,
+      "height": 1672,
+      "sha256": "35ef6738c004246dbbe17aa3368feaf30a76fa0c9e9ee255bf65f8233584cc04",
+      "selected": true,
+      "createdDate": "2026-11-02",
+      "editSource": "shots/goal.png",
+      "referenceRoles": "Text described historical likeness and period;goal-v2 edits original generated goal illustration",
+      "terms": "OpenAI account output terms;no third party photo used as generation input",
+      "review": "Recognisable main player,period teal/black-white kit,no animal hosts;artistic staging not broadcast reconstruction"
+    }
+  },
+  "limitations": [
+    {
+      "jobs": [
+        "ready",
+        "kick"
+      ],
+      "result": "Parallel generation batch failed with safety rejection moderation_blocked/output/other;which asset failed unspecified,other pending promise discarded;no outputs recovered;neither retried",
+      "requestId": "1e54f0a1-6484-4a97-b515-450df51e5609",
+      "presentation": "Cross cuts to goal aftermath;no generated bicycle contact frame used"
+    },
+    {
+      "job": "question",
+      "result": "Not generated;existing applause illustration reused"
+    },
+    {
+      "historicalStaging": "Applauding Juventus players and foreground spectators are artistic representations;no claim these individual gestures or pitch locations are documented"
+    },
+    {
+      "style": "Highly realistic cinematic AI illustrations;not live match footage;full skeletal animation not claimed"
+    },
+    {
+      "revision": "V2",
+      "requested": "Add Ronaldo airborne bicycle contact frame",
+      "status": "unfulfilled:built-in image_gen rejected output again after explicit owner request;no workaround attempted",
+      "requestId": "b9eae3fc-5d68-469c-91a6-c1c7886c3cfa",
+      "search": "No freely licensed photograph of exact moment located;agency Getty/AFP/editorial assets require rights clearance",
+      "needed": "Owner-provided permitted frame or licensed photograph"
+    }
+  ]
+}

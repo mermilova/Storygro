@@ -2,7 +2,7 @@
 
 <!-- Generated from production/toolkit.yaml by `npm run docs:toolkit`. Edit the YAML, not this page. -->
 
-Every way Storygro makes content, in one bank: **21 methods**, **23 tools**, **4 styles**, **6 scene families** and **6 providers**, by production stage. Agents read [`production/toolkit.yaml`](../../production/toolkit.yaml) to pick an approach; this page is generated from it, and `npm test` fails when a command, style or scene is missing from the bank or a link is broken.
+Every way Storygro makes content, in one bank: **28 methods**, **26 tools**, **4 styles**, **10 scene families** and **6 providers**, by production stage. Agents read [`production/toolkit.yaml`](../../production/toolkit.yaml) to pick an approach; this page is generated from it, and `npm test` fails when a command, style or scene is missing from the bank or a link is broken.
 
 **Status:** *stable* — used across pieces · *pilot* — works, reviewed on one or two pieces · *planned* — not implemented.
 
@@ -10,12 +10,12 @@ Every way Storygro makes content, in one bank: **21 methods**, **23 tools**, **4
 |---|---|
 | **choose** — Pick a topic worth a piece | [Editorial ranking](#editorial-ranking) · [Trend scan and watchlist](#trend-scan-and-watchlist) · [Research scan with picks](#research-scan-with-picks) · [X digest through Grok](#x-digest-through-grok) · [Angles from a scan](#angles-from-a-scan) |
 | **research** — Find and check what is true | [Primary-source research](#primary-source-research) · [Facts as data](#facts-as-data) · [Reference analysis](#reference-analysis) · [Transcript and pace statistics](#transcript-and-pace-statistics) · [Whisper (mlx-whisper)](#whisper-mlx-whisper) |
-| **write** — Turn it into a script as data | [Script as data](#script-as-data) · [Story structures](#story-structures) · [One worked example](#one-worked-example) · [Language variants](#language-variants) · [Brand profile and series](#brand-profile-and-series) · [Children's list cartoon](#childrens-list-cartoon) |
-| **look** — Decide how it looks | [Cartoon explainer](#cartoon-explainer) · [Cut-paper explainer](#cut-paper-explainer) · [Editorial collage](#editorial-collage) · [Cut-paper scenes](#cut-paper-scenes) · [Kinetic typography](#kinetic-typography) · [Kinetic and diagram scenes](#kinetic-and-diagram-scenes) · [Springs, beat grid and motion blur](#springs-beat-grid-and-motion-blur) · [Collage scene](#collage-scene) · [Illustration scene](#illustration-scene) · [Screencast scene](#screencast-scene) · [Landscape product scenes](#landscape-product-scenes) · [Generated illustrations](#generated-illustrations) · [Z-Image-Turbo via mflux](#z-image-turbo-via-mflux) · [Recognisable caricatures, overlays off faces](#recognisable-caricatures-overlays-off-faces) · [GPT Image through the Codex CLI](#gpt-image-through-the-codex-cli) · [Recurring cast](#recurring-cast) · [No text in pictures](#no-text-in-pictures) · [Screen capture](#screen-capture) · [A new scene module](#a-new-scene-module) |
-| **voice** — Narration, sound and timing | [Local narration and timing](#local-narration-and-timing) · [Narrator design](#narrator-design) · [Pronunciation and say-as](#pronunciation-and-say-as) · [Russian stress and homographs](#russian-stress-and-homographs) · [Pronunciation dictionary and stress lookup](#pronunciation-dictionary-and-stress-lookup) · [Voice bench](#voice-bench) · [Chatterbox Multilingual](#chatterbox-multilingual) · [OmniVoice Russian narrator](#omnivoice-russian-narrator) · [Music and sound effects](#music-and-sound-effects) |
-| **make** — Storyboard, approval and rendering | [Stills and live preview](#stills-and-live-preview) · [Storyboard and approval](#storyboard-and-approval) · [Plan document and stepped approvals](#plan-document-and-stepped-approvals) · [Render](#render) · [Formats, safe areas and captions](#formats-safe-areas-and-captions) · [Carousel cards](#carousel-cards) |
+| **write** — Turn it into a script as data | [Script as data](#script-as-data) · [Story structures](#story-structures) · [One worked example](#one-worked-example) · [Language variants](#language-variants) · [Brand profile and series](#brand-profile-and-series) · [Reels story direction and measured experiments](#reels-story-direction-and-measured-experiments) · [Children's list cartoon](#childrens-list-cartoon) |
+| **look** — Decide how it looks | [Detailed cartoon-led football shorts](#detailed-cartoon-led-football-shorts) · [Cartoon explainer](#cartoon-explainer) · [Cut-paper explainer](#cut-paper-explainer) · [Editorial collage](#editorial-collage) · [Cut-paper scenes](#cut-paper-scenes) · [Kinetic typography](#kinetic-typography) · [Kinetic and diagram scenes](#kinetic-and-diagram-scenes) · [Springs, beat grid and motion blur](#springs-beat-grid-and-motion-blur) · [Collage scene](#collage-scene) · [Illustration scene](#illustration-scene) · [Illustrated series identity and retention pilot](#illustrated-series-identity-and-retention-pilot) · [Series opening cover](#series-opening-cover) · [Dated authentic photo card](#dated-authentic-photo-card) · [Authentic photo pair with optional series identity](#authentic-photo-pair-with-optional-series-identity) · [Player-led authentic photo sequence](#player-led-authentic-photo-sequence) · [Screencast scene](#screencast-scene) · [Landscape product scenes](#landscape-product-scenes) · [Generated illustrations](#generated-illustrations) · [Z-Image-Turbo via mflux](#z-image-turbo-via-mflux) · [Recognisable caricatures, overlays off faces](#recognisable-caricatures-overlays-off-faces) · [GPT Image through the Codex CLI](#gpt-image-through-the-codex-cli) · [Recurring cast](#recurring-cast) · [Reference pictures of recurring hosts](#reference-pictures-of-recurring-hosts) · [No text in pictures](#no-text-in-pictures) · [Screen capture](#screen-capture) · [A new scene module](#a-new-scene-module) |
+| **voice** — Narration, sound and timing | [Reviewed narration clips and local pace](#reviewed-narration-clips-and-local-pace) · [Match reviewed pronunciation to a synthetic narrator](#match-reviewed-pronunciation-to-a-synthetic-narrator) · [Local narration and timing](#local-narration-and-timing) · [Narrator design](#narrator-design) · [Pronunciation and say-as](#pronunciation-and-say-as) · [Russian stress and homographs](#russian-stress-and-homographs) · [Pronunciation dictionary and stress lookup](#pronunciation-dictionary-and-stress-lookup) · [Voice bench](#voice-bench) · [Chatterbox Multilingual](#chatterbox-multilingual) · [OmniVoice Russian narrator](#omnivoice-russian-narrator) · [Complete narration before scene cuts](#complete-narration-before-scene-cuts) · [Music and sound effects](#music-and-sound-effects) |
+| **make** — Storyboard, approval and rendering | [Stills and live preview](#stills-and-live-preview) · [Storyboard and approval](#storyboard-and-approval) · [Plan document and stepped approvals](#plan-document-and-stepped-approvals) · [Render](#render) · [Formats, safe areas and captions](#formats-safe-areas-and-captions) · [Carousel cards](#carousel-cards) · [Native full-frame Instagram Reels](#native-full-frame-instagram-reels) |
 | **check** — Technical QA and the human review | [Technical QA](#technical-qa) · [Human review](#human-review) |
-| **ship** — Release, publication record and metrics | [Episode tracker](#episode-tracker) · [Release package](#release-package) · [Publication ledger and metrics](#publication-ledger-and-metrics) · [Platform upload and analytics APIs](#platform-upload-and-analytics-apis) |
+| **ship** — Release, publication record and metrics | [Episode tracker](#episode-tracker) · [Check what Instagram stored](#check-what-instagram-stored) · [Preserve a complete video with padding](#preserve-a-complete-video-with-padding) · [Release package](#release-package) · [Publication ledger and metrics](#publication-ledger-and-metrics) · [Platform upload and analytics APIs](#platform-upload-and-analytics-apis) |
 | **maintain** — Keep the repository and its media healthy | [Local environments](#local-environments) · [Repository checks](#repository-checks) · [Documentation previews, the toolkit page and the registry](#documentation-previews-the-toolkit-page-and-the-registry) · [CLI help](#cli-help) |
 
 A new piece usually takes one entry per stage: a topic (choose), sources and facts (research), a script in a style (write, look), narration (voice), storyboard and render (make), QA and your own review (check), a package (ship).
@@ -200,6 +200,16 @@ Audience, voices, the disclosure every post must carry and avoided phrases (chec
 
 **See:** [docs](../../docs/how-to/brand-and-series.md) · [content/brand.yaml](../../content/brand.yaml) · [series/business-explainers.yaml](../../content/series/business-explainers.yaml)
 
+### Reels story direction and measured experiments
+
+*method · pilot*
+
+Viewer promise, opening alternatives, early result, causal beats and payoff in DIRECTION.md; one-factor pilots with the exact published revision, comparable ages and distribution modes. Manual metrics separate missing values and calculate watch ratio and events per reach without inferring completion or causality.
+
+**Use when:** Required for new or deliberately remade Reels under the owner-adopted workflow of 2026-10-31; the next Football Legends episode uses FL-R1. Audience effects remain pilot hypotheses.
+
+**See:** [docs](../../docs/how-to/reels-retention.md) · [reels-growth-2026-10-31/README.md](../../content/research/reels-growth-2026-10-31/README.md)
+
 ### Children's list cartoon
 
 *method · pilot*
@@ -213,6 +223,16 @@ Hosts promise a collection, chapter cards group the list, one card per person wi
 **See:** [docs](../../docs/how-to/kids-list-cartoon.md) · [football-stars-kids/README.md](../../content/videos/football-stars-kids/README.md) · [series/kids-football.yaml](../../content/series/kids-football.yaml)
 
 ## 4 · Look — Decide how it looks
+
+### Detailed cartoon-led football shorts
+
+*method · pilot*
+
+A concise sourced football surprise with several connected illustrated action states, recognisable period players and supporting hosts; only 1–3 authentic photo inserts across the film.
+
+**Use when:** The owner commissions a short Football Wow episode or deliberately remakes a football film under the cartoon-led rule. Keep calm speech, document original/adapted text and measure illustrated/photo screen time.
+
+**See:** [docs](../../docs/how-to/football-series.md#cartoon-led-short-stories) · [football-wow-01-pele/DIRECTION.md](../../content/videos/football-wow-01-pele/DIRECTION.md) · [football-wow-02-zlatan/DIRECTION.md](../../content/videos/football-wow-02-zlatan/DIRECTION.md)
 
 ### Cartoon explainer
 
@@ -314,13 +334,71 @@ One layered scene — text, labels, image cut-outs, panels, arrows — composed 
 
 *scenes · pilot*
 
-Full-frame pictures that change on cues with a camera move, split frames, and DOM overlays (headline band, number badge, labels, source line, and an optional photograph fact card).
+Full-frame pictures that change on cues with a camera move, split frames, and DOM overlays (headline band, scalable number badge, labels fitted into the safe area, source line, and an optional compact portrait fact card).
 
 **Scenes:** `illustration`
 
 **Use when:** The cartoon style or any piece built from pictures.
 
 **See:** [docs](../../docs/reference/scenes.md#illustration)
+
+### Illustrated series identity and retention pilot
+
+*method · pilot*
+
+Shared first-frame identity with episode-specific researched art, immediate narration, a factual curiosity hook, narrative image changes, a resolved opening question and an empathetic viewer question.
+
+**Use when:** An illustrated recurring series; episode 6 is the owner-authorised retention experiment, not measured uplift.
+
+**See:** [docs](../../docs/how-to/football-series.md) · [football-legends-06-masopust/README.md](../../content/videos/football-legends-06-masopust/README.md)
+
+### Series opening cover
+
+*scenes · pilot*
+
+A readable project and series identity with an optional emblem over full-frame episode-specific art, visible from frame zero and composed inside the central preview square.
+
+**Scenes:** `series-cover`
+
+**Use when:** A recurring illustrated series needs a recognisable opening and distinct episode settings.
+
+**See:** [docs](../../docs/reference/scenes.md#series-cover)
+
+### Dated authentic photo card
+
+*scenes · pilot*
+
+An authentic photograph with data-bound story title and concise photo date over a full-frame background. Optional explicit credit is omitted in children's episodes; full provenance stays in the post and documentation. Contain preserves the photo; a declared portrait crop can improve recognition. Deterministic seeking; no AI retouch.
+
+**Scenes:** `archive-photo`
+
+**Use when:** Football Legends or another factual series includes a rights-checked real player or venue photo alongside generated illustrations. A later photo is visibly dated as later.
+
+**See:** [docs](../../docs/reference/scenes.md#archive-photo) · [football-legends-09-eusebio/DIRECTION.md](../../content/videos/football-legends-09-eusebio/DIRECTION.md)
+
+### Authentic photo pair with optional series identity
+
+*scenes · pilot*
+
+Two original photographs and data-bound short labels over full-frame artwork. Can reuse the existing series-cover identity and cue-driven reveal; original faces are never generatively retouched.
+
+**Scenes:** `photo-pair`
+
+**Use when:** A paired football story needs actual player likenesses with fictional hosts supporting nearby; compose hosts below the photo cards and retain full provenance outside the children's frame.
+
+**See:** [docs](../../docs/reference/scenes.md#photo-pair) · [football-now-01-messi-ronaldo/DIRECTION.md](../../content/videos/football-now-01-messi-ronaldo/DIRECTION.md)
+
+### Player-led authentic photo sequence
+
+*scenes · pilot*
+
+Cue-driven original photographs and short dated labels over a full-frame background; optional simple animated pass diagram sits beside the photograph. Data-bound titles stay above the photo and supporting hosts.
+
+**Scenes:** `photo-focus`
+
+**Use when:** A factual sports story needs the real player as the main subject and an illustrative passing mechanism without generative face editing or a claimed match reconstruction.
+
+**See:** [docs](../../docs/reference/scenes.md#photo-focus) · [football-now-02-madrid-playmakers/DIRECTION.md](../../content/videos/football-now-02-madrid-playmakers/DIRECTION.md)
 
 ### Screencast scene
 
@@ -404,6 +482,18 @@ Describe each character once (images.cast) and use @name in every prompt; review
 
 **See:** [docs](../../docs/reference/styles.md) · [ai-buys-work-knowledge/en.reel.yaml](../../content/videos/ai-buys-work-knowledge/en.reel.yaml)
 
+### Reference pictures of recurring hosts
+
+*method · pilot*
+
+Generate the hosts' faces and a full-height sheet once, have the owner approve them, keep them beside the series with a provenance ledger, and attach them to every shot that names the hosts (images.refs); the codex provider passes them to GPT Image, so the hosts look the same in every shot and every episode.
+
+**Use when:** A series with recurring characters drawn by GPT Image; text descriptions alone let the generator redraw them each time.
+
+**How:** `images: { provider: codex, refs: { matvey: [../../series/<id>/cast/matvey-face.png, ../../series/<id>/cast/hosts-full.png] } }`
+
+**See:** [docs](../../docs/reference/styles.md#in-the-reel) · [series/football-legends.md](../../content/series/football-legends.md) · [football-legends-01-matthews/ru.reel.yaml](../../content/videos/football-legends-01-matthews/ru.reel.yaml)
+
 ### No text in pictures
 
 *method · pilot*
@@ -437,6 +527,28 @@ A deterministic mount() → draw(t) module when no existing scene and props can 
 **See:** [docs](../../docs/how-to/add-a-scene.md)
 
 ## 5 · Voice — Narration, sound and timing
+
+### Reviewed narration clips and local pace
+
+*method · pilot*
+
+Import a reviewed scene narration with voice.source, preserving its transcript/cues and source rights; clip bytes invalidate narration cache and storyboard approval. A local voice.speed changes only that scene, so a conclusion can slow without replacing the episode narrator.
+
+**Use when:** A stubborn pronunciation needs a reviewed correction, or one narration beat needs a different pace.
+
+**See:** [docs](../../docs/reference/voices.md#reviewed-narration-clips-and-local-pace) · [corrections/manifest.json](../../content/videos/football-wow-02-zlatan/assets/voice/corrections/manifest.json)
+
+### Match reviewed pronunciation to a synthetic narrator
+
+*tool · pilot*
+
+ChatterboxVC audio-to-audio conversion behind production/py/voice_convert.py; retain source content, match an authorised synthetic reference, write provenance and never overwrite an existing output. Listen after conversion; source and target terms remain separate.
+
+**Use when:** A correctly pronounced synthetic source needs the established narrator's timbre. Never use an unconsented real-person target.
+
+**How:** `Run production/py/voice_convert.py with the isolated Chatterbox Python, source WAV, authorised target WAV and a new output path.`
+
+**See:** [docs](../../docs/reference/voices.md#pronunciation-preserving-voice-conversion) · [football-wow-02-zlatan/prepare-narration.py](../../content/videos/football-wow-02-zlatan/prepare-narration.py)
 
 ### Local narration and timing
 
@@ -530,6 +642,18 @@ Isolated local OmniVoice through PyTorch; owner-selected synthetic B reference a
 
 **See:** [docs](../../docs/reference/voices.md)
 
+### Complete narration before scene cuts
+
+*method · pilot*
+
+Preserve question-answer pairs and conjunction-led clauses as complete narration beats when isolated takes truncate or full-file alignment loses words; change illustrations on cues inside the beat.
+
+**Use when:** A short fragment fails speech QA despite a complete source script.
+
+**How:** `Retain every word, revoice with the selected narrator, inspect alignment and rerun full-file QA after rendering. Never lower the threshold or remove a word to hide the failure.`
+
+**See:** [docs](../../docs/how-to/football-series.md) · [football-legends-07-yashin/VOICE-REVIEW.md](../../content/videos/football-legends-07-yashin/VOICE-REVIEW.md)
+
 ### Music and sound effects
 
 *tool · stable* · commands: `score`
@@ -614,6 +738,18 @@ One 1080×1350 card per scene at its key moment, from a carousel spec with its o
 
 **See:** [docs](../../docs/how-to/carousel-and-release.md)
 
+### Native full-frame Instagram Reels
+
+*method · stable* · commands: `new`
+
+Owner-approved 1080×1920 at 30 fps with edge-to-edge backgrounds, safe reels for text, short captions and individual overlay placement. Text and heads stay below the 4:5 feed crop (320 px), the cover inside the 1:1 preview; still --guides draws both, QA checks cover text and writes feed and cover sheets of the MP4. No padding around a shrunken edit. Upload as a Reel keeping Original / 9:16 (UPLOAD.txt), then instagram-check the post.
+
+**Use when:** Every new or remade Instagram Reel, across styles and series.
+
+**How:** `npm run storygro -- new content/videos/<id> --style cartoon --lang ru --target instagram-reels`
+
+**See:** [docs](../../docs/how-to/instagram-without-cropping.md) · [football-legends-01-matthews/README.md](../../content/videos/football-legends-01-matthews/README.md)
+
 ## 7 · Check — Technical QA and the human review
 
 ### Technical QA
@@ -652,6 +788,30 @@ One table across every episode and variant — stage, whose move, the three appr
 
 **See:** [docs](../../docs/explanation/content-workflow.md)
 
+### Check what Instagram stored
+
+*tool · stable* · commands: `instagram-check`
+
+Reads a published post's public embed page and measures the full-size cover frame Instagram stored, which has the stored video's shape; 1080×1920 passes, a square or 4:5 means the upload cropped the Reel. Unofficial page; reports a deleted or private post.
+
+**Use when:** Right after every Instagram upload, and before calling a published Reel cropped or fine.
+
+**How:** `npm run storygro -- instagram-check https://www.instagram.com/p/<code>/`
+
+**See:** [docs](../../docs/how-to/instagram-without-cropping.md#upload)
+
+### Preserve a complete video with padding
+
+*tool · pilot* · commands: `social`
+
+Fits an existing master inside Reels UI margins and a square canvas with navy padding, preserving the whole picture and copying AAC audio; verifies full decoding, frame count, size, duration and audio hash in a separate review manifest.
+
+**Use when:** Visible borders are explicitly wanted to preserve every pixel of an existing edit. For native Reels, recompose the scenes full-frame instead.
+
+**How:** `npm run storygro -- social content/videos/<id>/ru.reel.yaml <new-output-dir>`
+
+**See:** [docs](../../docs/how-to/instagram-without-cropping.md) · [football-legends-01-matthews/README.md](../../content/videos/football-legends-01-matthews/README.md)
+
 ### Release package
 
 *tool · stable* · commands: `package`, `deliver`
@@ -668,7 +828,7 @@ All variants with MP4, subtitles, cover, stills, storyboard PDF, QA report, post
 
 *tool · stable* · commands: `publish`, `metrics`
 
-Records where and when a person posted a release (plan, approve, checklist, mark) and metric snapshots with source and window; uploads nothing.
+Records manual publication and metric snapshots by source, window and distribution (including 72h); Instagram diagnostics use available same-snapshot operands, never infer completion, and separate trial, organic, paid, mixed and unknown exposure. Uploads nothing.
 
 **Use when:** After a manual upload; to compare results later.
 

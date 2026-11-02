@@ -1,0 +1,22 @@
+{
+  "text": "Именно так поступил Петр Чех — знаменитый чешский вратарь, который играл за «Челси» и «Арсенал».",
+  "duration": 5.96675,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-cech-hockey/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "30b03755b18a6da80e866495593f2232b2771df7d78959155bd239796ff56dfa",
+  "speed": 0.96,
+  "scene": "portrait",
+  "originalSynthesisText": "Именно так поступил Петр Чех — знаменитый чешский вратарь, который играл за «Челси» и «Арсенал».",
+  "displayText": "Именно так поступил Петр Чех — знаменитый чешский вратарь, который играл за «Челси» и «Арсенал».",
+  "file": "assets/voice/portrait.wav",
+  "sourceSha256": "343f7ab5f072f6884b26dafcd6f3f5e66984671e5b2ae0c18061fc7ac26f3628"
+}

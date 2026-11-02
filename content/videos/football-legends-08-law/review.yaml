@@ -1,0 +1,32 @@
+review: 1
+questions:
+  - id: voice
+    ask: Подходит ли произношение «эти мастера́ с разными умениями» в новой версии?
+    for: owner
+    open: true
+  - id: visual
+    ask: Подходят ли прозвище «Король» и шутливая корона на заставке?
+    for: owner
+    open: true
+notes: "Revision after owner listening/cover feedback, 31 October 2026: frame zero adds verified nickname The
+  King/«Король» with a playful crown, same hosts and historical backdrop. The supplied body is retained except
+  the team sentence: replace три разных мастера by эти мастера с разными умениями so plural мастера́ is
+  unambiguous; explicit hint мастерА, same OmniVoice B0.90/off. Original counted form три ма́стера was
+  grammatically valid; do not force plural stress onto count/singular forms globally. Prior V1 verification is
+  historical; rerender and regenerate current metrics. Owner listening of revised line remains open. No
+  publication. Current verification: 83.03s, QA15/15, both files decode 2488frames, 36 MP4 moments inspected,
+  163 caption samples/76 reverse seeks without failures. Only team narration changed; other12 voice file
+  hashes match V1. 21 image generations/12 selected. Current crown cover/feed preview checked. Owner listening
+  still open."
+approvals:
+  ru:
+    script:
+      hash: 4736a059b922
+      at: 2026-10-31T07:45:46.628Z
+      by: agent
+      role: agent
+    storyboard:
+      hash: d9a19eab2c93
+      at: 2026-10-31T07:45:46.997Z
+      by: agent
+      role: agent

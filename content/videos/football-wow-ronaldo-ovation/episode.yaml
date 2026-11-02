@@ -1,0 +1,9 @@
+episode: 1
+id: football-wow-ronaldo-ovation
+title: Роналду — овация фанатов «Ювентуса»
+sources: sources.md
+credits: CREDITS.md
+series: football-wow
+variants:
+  - id: ru
+    spec: ru.reel.yaml

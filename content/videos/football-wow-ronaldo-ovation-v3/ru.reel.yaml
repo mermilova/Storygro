@@ -1,0 +1,240 @@
+reel: 1
+style: cartoon
+title: Роналду — овация фанатов «Ювентуса» · V3
+lang: ru
+data:
+  facts: facts.json
+images:
+  provider: manual
+  model: OpenAI built-in image_gen (exact identifier undisclosed)
+  width: 1088
+  height: 1920
+  seed: 0
+  prompt: "{subject}. Original prompts and hashes:images.json."
+post:
+  title: Роналду — овация фанатов «Ювентуса» · V3
+  text: >-
+    Маленькие большие дела · ФУТБОЛЬНЫЙ ВАУ-ФАКТ! smart_little_toons.
+
+
+    3 апреля2018: «Ювентус»—«Реал»0:3. Гол Роналду через себя на64-й минуте и
+    овация соперников. Источники:UEFA и Juventus, ссылки в sources.md.
+
+
+    Художественные AI-иллюстрации созданы встроенным image_gen (точный ID модели
+    не раскрыт), движение камеры и смена состояний; это не документальная съёмка
+    и не полная анимация. Добавлен мультяшный кадр прыжка через себя по
+    фотографии,предоставленной владельцем;это стилизованная иллюстрация. Озвучка
+    синтетическая:OmniVoice B.
+
+
+    Подлинное фото:Анна Нэсси / soccer.ru,15июня2018,Португалия—Испания,не
+    матч3апреля.
+    https://commons.wikimedia.org/wiki/File:Cristiano_Ronaldo_2018.jpg ; CC
+    BY-SA3.0 https://creativecommons.org/licenses/by-sa/3.0/ . Фото показано
+    целиком,без ретуши. Фотография сохраняет собственную лицензию,другие
+    материалы имеют отдельные условия.
+  tags:
+    - Роналду
+    - футбол
+    - футбольныйвауфакт
+    - smart_little_toons
+scenes:
+  - id: hook
+    scene: series-cover
+    say: ФУТБОЛЬНЫЙ ВАУ-ФАКТ! Роналду заставил фанатов «Ювентуса» аплодировать!
+    voice:
+      source: assets/voice/hook.wav
+      speed: 1
+    pad:
+      - 0
+      - 0.35
+    props:
+      image: shots/cover.png
+      projectFrom: facts.series.project
+      titleFrom: facts.series.title
+      subtitleFrom: facts.series.episode
+      emblem: /rc/styles/cartoon/golden-ball.svg
+      reveal: shots/applause.png
+      revealAt: 3.2
+  - id: imagine
+    scene: illustration
+    say: "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол…
+      {#clap}и вдруг тысячи болельщиков другой команды встают и начинают тебе
+      аплодировать!"
+    voice:
+      source: assets/voice/imagine.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 0.35
+    props:
+      shots:
+        - image: shots/arena.png
+          move: in
+          zoom: 0.01
+        - image: shots/applause.png
+          move: in
+          zoom: 0.01
+          at: clap
+      fade: 0
+  - id: match
+    scene: archive-photo
+    say: "[3 апреля 2018](=третьего апреля две тысячи восемнадцатого) года «Реал
+      Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов."
+    voice:
+      source: assets/voice/match.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 0.35
+    props:
+      image: shots/ronaldo-2018.jpg
+      background: shots/arena.png
+      titleFrom: facts.archive.title
+      captionFrom: facts.archive.date
+      portrait: true
+      fit: contain
+  - id: cross
+    scene: illustration
+    say: На [64-й](=шестьдесят четвёртой) минуте Криштиану Роналду получил навес от
+      Карвахаля,
+    voice:
+      source: assets/voice/cross.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 0.35
+    props:
+      shots:
+        - image: shots/cross.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: kick
+    scene: illustration
+    say: высоко выпрыгнул и ударил через себя, {#goal}отправив мяч прямо в ворота
+      Джанлуиджи Буффона!
+    voice:
+      source: assets/voice/kick.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 1.25
+    props:
+      shots:
+        - image: shots/jump-cartoon.png
+          move: in
+          zoom: 0.01
+        - image: shots/goal-v2.png
+          move: in
+          zoom: 0.01
+          at: goal
+      fade: 0
+  - id: wonder
+    scene: illustration
+    say: Гол был настолько фантастическим, что даже фанаты «Ювентуса» не смогли
+      сдержать восхищения.
+    voice:
+      source: assets/voice/wonder.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 0.35
+    props:
+      shots:
+        - image: shots/stunned.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: ovation
+    scene: illustration
+    say: Весь стадион начал {#standing}аплодировать Роналду стоя!
+    voice:
+      source: assets/voice/ovation.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 1.25
+    props:
+      shots:
+        - image: shots/rise.png
+          move: in
+          zoom: 0.01
+        - image: shots/applause.png
+          move: in
+          zoom: 0.01
+          at: standing
+      fade: 0
+  - id: thanks
+    scene: illustration
+    say: Сам Криштиану приложил руку к сердцу и поблагодарил трибуны.
+    voice:
+      source: assets/voice/thanks.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 1.25
+    props:
+      shots:
+        - image: shots/thanks.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: result
+    scene: illustration
+    say: «Реал» выиграл матч со счётом [3:0](=три ноль), но этот гол запомнился не
+      только победой — {#respect}он подарил Роналду овацию от болельщиков
+      соперника.
+    voice:
+      source: assets/voice/result.wav
+      speed: 1
+    pad:
+      - 0.12
+      - 1.6
+    props:
+      shots:
+        - image: shots/celebrate.png
+          move: in
+          zoom: 0.01
+        - image: shots/ending.png
+          move: in
+          zoom: 0.01
+          at: respect
+      fade: 0
+voice:
+  engine: omnivoice
+  model: k2-fsa/OmniVoice
+  voice: assets/voice/narrator-ru.wav
+  speed: 0.9
+  stress: off
+theme: theme.css
+format:
+  preset: vertical
+  width: 1080
+  height: 1920
+  fps: 30
+safe: reels
+captions:
+  show: true
+  maxWords: 3
+transition:
+  kind: cut
+  dur: 0
+stills:
+  cover: hook@0
+music:
+  bpm: 110
+  key: D
+  progression:
+    - I
+    - V
+    - vi
+    - IV
+  gain: 0.06
+  drop: kick
+loudness: -14
+hooks:
+  - Роналду благодарит аплодирующих соперников — выбранное
+  - Удар через себя — генерация недоступна
+  - Удивлённый болельщик начинает хлопать

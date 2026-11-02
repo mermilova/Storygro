@@ -1,0 +1,40 @@
+{
+  "text": "Но в тысяча девятьсот пятьдесят восьмом году случилась страшная трагедия. Самолёт с командой потерпел катастрофу в МЮнхене после матча в БелгрАде.",
+  "duration": 10.0535,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "1acfe1a3b2f95c8facdf7303aed42e0e88814ca8d70cfb70c021cf95525a9c0b",
+  "speed": 0.9,
+  "scene": "tragedy",
+  "originalSynthesisText": "Но в тысяча девятьсот пятьдесят восьмом году случилась страшная трагедия. Самолёт с командой потерпел катастрофу в МЮнхене после матча в БелгрАде.",
+  "displayText": "Но в 1958 году случилась страшная трагедия. Самолёт с командой потерпел катастрофу в Мюнхене после матча в Белграде.",
+  "file": "assets/voice/tragedy.wav",
+  "sourceSha256": "f9e7c024a1b3fbab1887a3b632f369eba6287c4e3277a13312026f177aa25aeb",
+  "repair": {
+    "word": "Мюнхене",
+    "targetWindow": [
+      7.92,
+      8.44
+    ],
+    "candidateWindow": [
+      6.5,
+      6.94
+    ],
+    "candidate": "tragedy-take2-raw.wav",
+    "candidateSha256": "a337739cc2719dbb99e78cf5547103d043d0818e9edfcc11af8711e14eeb9ae7",
+    "originalImportedSha256": "98403064afb5d0e7283124b7763a70b33b2bf1cf02ffc3fbb037469dcd039631",
+    "sameLength": true,
+    "otherSamplesUnchangedBeforePCMWrite": true,
+    "fadeSeconds": 0.008,
+    "reason": "Original final ASR heard Юнхене;candidate full phrase ASR hears Мюнхене;phoneme evidence ambiguous,not auditory approval"
+  }
+}

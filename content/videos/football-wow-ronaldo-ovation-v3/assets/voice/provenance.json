@@ -1,0 +1,207 @@
+{
+  "date": "2026-11-02",
+  "narratorSpeed": 0.9,
+  "previousKaneNarratorSpeed": 0.82,
+  "reason": "Full supplied script and approximately90s timing;natural base performances slowed10%;no word deletions. New episode only,shared reference and global preferences unchanged.",
+  "records": [
+    {
+      "text": "Футбольный вау-факт! Роналду заставил фанатов «Ювентуса» аплодировать!",
+      "duration": 5.1306666666666665,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "d3cebfff98e8adce7d61d0181f29993f2d677de1effd3427c877057afedeaaaf",
+      "speed": 0.9,
+      "scene": "hook",
+      "originalSynthesisText": "Футбольный вау-факт! Роналду заставил фанатов «Ювентуса» аплодировать!",
+      "displayText": "ФУТБОЛЬНЫЙ ВАУ-ФАКТ! Роналду заставил фанатов «Ювентуса» аплодировать!",
+      "file": "assets/voice/hook.wav",
+      "sourceSha256": "a715b53989469aa9ad249dd1c84f74034a383d335a6d55455dcd685f2cdb5d12"
+    },
+    {
+      "text": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+      "duration": 10.776,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "ffde90a97ab0fe7a03c7478a2b99dae2665f2409ecd82873c392ed71c546afda",
+      "speed": 0.9,
+      "scene": "imagine",
+      "originalSynthesisText": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+      "displayText": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+      "file": "assets/voice/imagine.wav",
+      "sourceSha256": "7f69b30010da79f51f20f3c55b7c80648eeaafc00f998762444a5345b673a9ff"
+    },
+    {
+      "text": "третьего апреля две тысячи восемнадцатого года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+      "duration": 8.286416666666666,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "c5200cdc5fd30463f0f6c834c09b8b671cd6adf1fa960b0f66c74dc7567f7f79",
+      "speed": 0.9,
+      "scene": "match",
+      "originalSynthesisText": "третьего апреля две тысячи восемнадцатого года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+      "displayText": "3 апреля 2018 года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+      "file": "assets/voice/match.wav",
+      "sourceSha256": "f53280c442ea660f3f999762a4dd76d1e09d0258e6103ddd44d3cab081889633"
+    },
+    {
+      "text": "На шестьдесят четвёртой минуте Криштиану Роналду получил навес от КарвахАля,",
+      "duration": 5.531208333333334,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "3b24b06168a14e113cbb5845ea0993da418e3df90e1925dea675986115b73438",
+      "speed": 0.9,
+      "scene": "cross",
+      "originalSynthesisText": "На шестьдесят четвёртой минуте Криштиану Роналду получил навес от КарвахАля,",
+      "displayText": "На 64-й минуте Криштиану Роналду получил навес от Карвахаля,",
+      "file": "assets/voice/cross.wav",
+      "sourceSha256": "8e07d20c88a85b39228fc6706645aea0d822b7aa44999a0f35090b66abbf447e"
+    },
+    {
+      "text": "высоко выпрыгнул и ударил через себя, отправив мяч прямо в ворота ДжанлуИджи БуффОна!",
+      "duration": 5.764666666666667,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "23dbf2b1b4f944ae288cefff5b0731a24a2d88dbc164a077a81ba8fd47945ece",
+      "speed": 0.9,
+      "scene": "kick",
+      "originalSynthesisText": "высоко выпрыгнул и ударил через себя, отправив мяч прямо в ворота ДжанлуИджи БуффОна!",
+      "displayText": "высоко выпрыгнул и ударил через себя, отправив мяч прямо в ворота Джанлуиджи Буффона!",
+      "file": "assets/voice/kick.wav",
+      "sourceSha256": "ac9119598f3fe78d7162d51115177bb91a78aa546299fd7b461ed235ec39f9d7"
+    },
+    {
+      "text": "Гол был настолько фантастическим, что даже фанаты «Ювентуса» не смогли сдержать восхищения.",
+      "duration": 6.26375,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "60eb57d3f2aeb4bde999bfa9840028963f088c172ab9e9e04697ddd51507bbbc",
+      "speed": 0.9,
+      "scene": "wonder",
+      "originalSynthesisText": "Гол был настолько фантастическим, что даже фанаты «Ювентуса» не смогли сдержать восхищения.",
+      "displayText": "Гол был настолько фантастическим, что даже фанаты «Ювентуса» не смогли сдержать восхищения.",
+      "file": "assets/voice/wonder.wav",
+      "sourceSha256": "7c740d1803353ab925d262071563dbfb4262c60aba0ea069a2e67967eb61a209"
+    },
+    {
+      "text": "Весь стадион начал аплодировать Роналду стоя!",
+      "duration": 3.353625,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "fff44ca1ed65d693c4b655b7b3d030df80810a60561c84db28064c6bdfcb700d",
+      "speed": 0.9,
+      "scene": "ovation",
+      "originalSynthesisText": "Весь стадион начал аплодировать Роналду стоя!",
+      "displayText": "Весь стадион начал аплодировать Роналду стоя!",
+      "file": "assets/voice/ovation.wav",
+      "sourceSha256": "ab9860b0efe96d0eb8f65d43a357a619e183f6f95b58cb0136f794d3a2186413"
+    },
+    {
+      "text": "Сам Криштиану приложил руку к сердцу и поблагодарил трибуны.",
+      "duration": 4.186833333333333,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "4c5f0c703f51fc20b4fae28400b7b441892608d737726bfd058d0cdedd7d214a",
+      "speed": 0.9,
+      "scene": "thanks",
+      "originalSynthesisText": "Сам Криштиану приложил руку к сердцу и поблагодарил трибуны.",
+      "displayText": "Сам Криштиану приложил руку к сердцу и поблагодарил трибуны.",
+      "file": "assets/voice/thanks.wav",
+      "sourceSha256": "92b3e8c33d929ac9c4b5c9b33e88178bf3de8099c85d3b9be22d2ea6f1756666"
+    },
+    {
+      "text": "«Реал» выиграл матч со счётом три ноль, но этот гол запомнился не только победой — он подарил Роналду овацию от болельщиков соперника.",
+      "duration": 8.841875,
+      "sampleRate": 24000,
+      "provider": {
+        "engine": "omnivoice",
+        "model": "k2-fsa/OmniVoice",
+        "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+        "language": "ru",
+        "device": "mps",
+        "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+        "synthetic": true
+      },
+      "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+      "sha256": "83adc33dcb9c84c302bc22e17d964dbdbff99e8f689d638705aee58011b4fd14",
+      "speed": 0.9,
+      "scene": "result",
+      "originalSynthesisText": "«Реал» выиграл матч со счётом три ноль, но этот гол запомнился не только победой — он подарил Роналду овацию от болельщиков соперника.",
+      "displayText": "«Реал» выиграл матч со счётом 3:0, но этот гол запомнился не только победой — он подарил Роналду овацию от болельщиков соперника.",
+      "file": "assets/voice/result.wav",
+      "sourceSha256": "e843b347ba91db9f3e9206eccb45f9a41925375fe902729b4a620bb6b6bac458"
+    }
+  ],
+  "revision": "V2 reuses nine exact V1 speech files;closing dialogue scenes removed,no voice regeneration"
+}

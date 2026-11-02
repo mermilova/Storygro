@@ -26,7 +26,7 @@ Guide: [transcribe and analyse a reference](../how-to/transcribe-a-reference.md)
 | Command | Does | Writes |
 |---|---|---|
 | `styles` | lists the styles in `production/styles/` | — |
-| `new <folder> --style <id> [--lang en] [--title "…"]` | starts a content project in a style; refuses a folder with files | `episode.yaml`, `<lang>.reel.yaml`, `facts.json`, `sources.md`, `CREDITS.md` |
+| `new <folder> --style <id> [--lang en] [--title "…"] [--target instagram-reels]` | starts a content project in a style; the Reels target writes the [native vertical standard](../how-to/instagram-without-cropping.md); refuses a folder with files or an unknown target | `episode.yaml`, `<lang>.reel.yaml`, `facts.json`, `sources.md`, `CREDITS.md` |
 | `images <spec> [--dry-run] [--force] [--only <scene>]` | generates the pictures the shots ask for — missing ones and those whose prompt or seed changed; keeps hand-made files; `--dry-run` lists prompts and states. Provider from the style or `images.provider`: `mflux` (local), `codex` (GPT Image through the Codex CLI, batched, online), `manual` | pictures at their paths, `images.json` (prompt, seed, model, licence, SHA-256); `prompts.md` with the `manual` provider |
 
 Guides: [use a style](../how-to/use-a-style.md), [cartoon tutorial](../tutorials/cartoon-explainer.md). Fields: [styles reference](styles.md).
@@ -68,12 +68,14 @@ Gates and checks: [quality](../explanation/quality.md).
 | Command | Does | Writes |
 |---|---|---|
 | `deliver <spec> [dir]` | copies one variant's complete set + manifest; refuses gaps | `~/Downloads/<name>/` by default |
+| `instagram-check <link>` | after an upload: measures the cover frame Instagram stored (via the public embed page) and fails unless it is 9:16 | prints e.g. `1080×1920 (9:16)`; exit 1 for a square or 4:5 |
+| `social <spec> <new-dir>` | optional explicitly requested exports with padding; preserves the entire master and AAC audio, verifies decoding and hashes; native Reels use scene composition and `render` | two bordered MP4s and `social-manifest.json`; [guide](../how-to/instagram-without-cropping.md) |
 | `package <episode.yaml> [dir]` | all variants of an episode → one release folder + manifest; refuses gaps | `.reel/releases/<episode>-<date>/` |
 | `series <series.yaml> [--md f]` | episodes of a series: length, approval, QA verdict, latest package | Markdown table |
 | `tracker <videos-dir> [--md f] [--ledger f]` | every episode and variant: stage, whose move, approvals, length, QA, sourced facts, open questions, publications | `content/TRACKER.md` |
 | `publish plan <release-dir> --variant ru --platform instagram --account @handle` | adds a `draft` publication for one variant and one named account | `content/publishing/publications.json` |
 | `publish approve <id>` · `mark <id> <state> [--url …] [--note …]` · `checklist <id>` · `list` | manual ledger; records uploads, uploads nothing | same ledger |
-| `metrics add <id> --window 7d --source "…" views=1200 likes=80` · `metrics report` | metric snapshots with source and window | `content/publishing/metrics.json` |
+| `metrics add <id> --window 72h --distribution organic --source "…" views=1200 likes=80` · `metrics report` | manual snapshots by source/window/distribution; Instagram diagnostics from available inputs | `content/publishing/metrics.json` |
 
 Guides: [carousel and release](../how-to/carousel-and-release.md), [brand and series](../how-to/brand-and-series.md), [publish manually](../how-to/publish-manually.md). Ledger format: [publication ledger](publication-ledger.md).
 
@@ -93,6 +95,7 @@ Guides: [carousel and release](../how-to/carousel-and-release.md), [brand and se
 | `--out <dir>` | output folder for `capture` |
 | `--port <n>` | preview server port |
 | `--ledger <f>`, `--metrics <f>` | other ledger / metrics files for `publish` and `metrics` |
+| `--distribution <mode>` | `metrics add`: `organic`, `trial`, `paid`, `mixed`, `unknown`; omitted records remain unknown |
 
 ## Environment
 

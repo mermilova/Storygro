@@ -33,6 +33,8 @@ export interface TimedScene {
   cues: Record<string, number>;
   /** scene seconds, caption spelling */
   words: Word[];
+  /** this scene's words per caption phrase, when it overrides `captions.maxWords` */
+  maxWords?: number;
   energy: number;
   /** `snap` only while the timeline is built; the written timeline has snapped times */
   sfx: { t: number; kind: string; gain: number; dur?: number; snap?: keyof typeof SNAP_BEATS }[];
@@ -48,6 +50,11 @@ export interface SafeArea {
   left: number;
   right: number;
   caption: number;
+  /**
+   * centred windows the platform also shows: `feed` (how the video plays in the feed) and `cover`
+   * (how its cover appears in link previews); `cut` px are hidden above and below
+   */
+  crops?: { name: string; ratio: string; cut: number }[];
 }
 export interface Timeline {
   title: string;
@@ -84,7 +91,7 @@ const hash = (s: string) => createHash('sha1').update(s).digest('hex').slice(0, 
 export function safeArea(l: LoadedSpec): SafeArea {
   const zones = JSON.parse(readFileSync(join(REEL_ROOT, 'runtime', 'safe-zones.json'), 'utf8')) as Record<
     string,
-    { ref: [number, number]; top: number; bottom: number; left: number; right: number; caption: number }
+    { ref: [number, number]; top: number; bottom: number; left: number; right: number; caption: number; crops?: Record<string, [number, number]> }
   >;
   const { width, height } = l.spec.format;
   const profile =
@@ -93,22 +100,38 @@ export function safeArea(l: LoadedSpec): SafeArea {
   if (!z || profile.startsWith('_')) throw new Error(`unknown safe-area profile "${profile}" (runtime/safe-zones.json)`);
   const k = width / z.ref[0];
   const r = (v: number) => Math.round(v * k);
-  return { profile, top: r(z.top), bottom: r(z.bottom), left: r(z.left), right: r(z.right), caption: r(z.caption) };
+  const safe: SafeArea = { profile, top: r(z.top), bottom: r(z.bottom), left: r(z.left), right: r(z.right), caption: r(z.caption) };
+  // a crop keeps the full width, so it only hides rows when its window is shorter than the stage
+  const crops = Object.entries(z.crops ?? {})
+    .map(([name, [w, h]]) => ({ name, ratio: `${w}:${h}`, cut: Math.round((height - (width * h) / w) / 2) }))
+    .filter((c) => c.cut > 0);
+  return crops.length ? { ...safe, crops } : safe;
 }
 
 /** Engines whose Russian stress comes from py/stress.py; bump the version when its output changes. */
 const STRESSED_ENGINES = new Set(['qwen3', 'silero', 'chatterbox', 'yandex', 'omnivoice']);
 const STRESS_VERSION = 'stress-1';
 
+/** A source clip is already paced; an explicit speed can still retime it. */
+export function sceneVoice(l: LoadedSpec, s: SceneSpec): LoadedSpec['spec']['voice'] {
+  return s.voice?.source
+    ? { ...l.spec.voice, engine: 'audio', model: undefined, voice: s.voice.source, speed: s.voice.speed ?? 1, stress: 'off' }
+    : { ...l.spec.voice, speed: s.voice?.speed ?? l.spec.voice.speed };
+}
+
 /** Narrate every scene, reusing cached lines whose text, provider and settings did not change. */
 export async function narrate(l: LoadedSpec): Promise<Map<string, { meta: VoiceMeta; wav: string | null }>> {
   const dir = join(workDir(l), 'voice');
   mkdirSync(dir, { recursive: true });
-  const v = l.spec.voice;
   const out = new Map<string, { meta: VoiceMeta; wav: string | null }>();
-  const todo: { id: string; say: string; wav: string; json: string }[] = [];
-  const lex = l.spec.lang === 'ru' && STRESSED_ENGINES.has(v.engine) ? loadLexicon() : null;
+  const jobs = new Map<string, { voice: LoadedSpec['spec']['voice']; lines: { id: string; say: string; wav: string; json: string }[] }>();
   for (const s of l.spec.scenes) {
+    const v = sceneVoice(l, s);
+    const lex = l.spec.lang === 'ru' && STRESSED_ENGINES.has(v.engine) ? loadLexicon() : null;
+    if (v.engine === 'audio') {
+      if (!s.say.trim()) throw new Error(`${s.id}: imported narration needs its transcript in say`);
+      if (/\{\+[\d.]+\}/.test(s.say)) throw new Error(`${s.id}: imported narration is already timed; remove pause directives`);
+    }
     if (!s.say.trim() || v.engine === 'none') {
       out.set(s.id, { meta: estimate(s), wav: null });
       continue;
@@ -126,17 +149,27 @@ export async function narrate(l: LoadedSpec): Promise<Map<string, { meta: VoiceM
       for (const path of [resolve(l.dir, v.voice), resolve(l.dir, v.voice.replace(/\.wav$/, '.txt'))])
         settings.push(existsSync(path) ? hash(readFileSync(path).toString('base64')) : 'missing-reference');
     }
+    if (v.engine === 'audio') {
+      const source = resolve(l.dir, v.voice);
+      if (!existsSync(source)) throw new Error(`${s.id}: narration source missing: ${v.voice}`);
+      settings.push('audio-source-1', hash(readFileSync(source).toString('base64')));
+    }
     const key = hash(JSON.stringify(settings));
     const wav = join(dir, `${s.id}-${key}.wav`);
     const json = join(dir, `${s.id}-${key}.json`);
-    if (!existsSync(json)) todo.push({ id: s.id, say: s.say, wav, json });
+    if (!existsSync(json)) {
+      const group = JSON.stringify(v);
+      if (!jobs.has(group)) jobs.set(group, { voice: v, lines: [] });
+      jobs.get(group)!.lines.push({ id: s.id, say: s.say, wav, json });
+    }
     out.set(s.id, { meta: undefined as never, wav });
   }
-  if (todo.length) {
-    const job = join(dir, 'job.json');
+  for (const [group, { voice: v, lines }] of jobs) {
+    const lex = l.spec.lang === 'ru' && STRESSED_ENGINES.has(v.engine) ? loadLexicon() : null;
+    const job = join(dir, jobs.size === 1 ? 'job.json' : `job-${hash(group)}.json`);
     writeFileSync(
       job,
-      JSON.stringify({ engine: v.engine, model: v.model, voice: v.voice, speed: v.speed, lang: v.lang, stress: v.stress, language: l.spec.lang, dir: l.dir, lines: todo, ...(lex ? { lexicon: lexiconJob(lex) } : {}) }),
+      JSON.stringify({ engine: v.engine, model: v.model, voice: v.voice, speed: v.speed, lang: v.lang, stress: v.stress, language: l.spec.lang, dir: l.dir, lines, ...(lex ? { lexicon: lexiconJob(lex) } : {}) }),
     );
     await run(python(), [join(REEL_ROOT, 'py', 'voice.py'), job]);
   }
@@ -257,6 +290,7 @@ export async function buildTimeline(l: LoadedSpec, opts: { voice?: boolean } = {
       voice: meta,
       cues,
       words: captionWords(s, meta).map((w) => ({ ...w, start: w.start + voiceAt, end: w.end + voiceAt })),
+      ...(s.captions ? { maxWords: s.captions.maxWords } : {}),
       energy,
       sfx: s.sfx.map((x) => ({ t: t + at(x.at), kind: x.kind, gain: x.gain, dur: x.dur, snap: x.snap })),
       transition: i === 0 ? null : (s.transition ?? spec.transition),

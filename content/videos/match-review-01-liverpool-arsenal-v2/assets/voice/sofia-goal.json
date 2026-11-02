@@ -1,0 +1,21 @@
+{
+  "text": "Райс прострелил — Хаверц замкнул! Вот это начало!",
+  "duration": 3.52,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "qwen3",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/series/football-legends/cast/voices/sofia-A/reference.wav",
+    "language": "Russian",
+    "license": "Apache-2.0 (Qwen3-TTS), MIT (mlx-audio)"
+  },
+  "referenceSha256": "98ecd0076b6723ebb245ba18682944f5c21c6bd904e3780f3f8ff30533eb9840",
+  "sha256": "cd4ef917fd2c94683b2f1cfc3357fa37b863292c7c2ed159a565926cf38f4196",
+  "speed": 1,
+  "role": "sofia",
+  "scene": "sofia-goal",
+  "originalSynthesisText": "Райс прострелил — Хаверц замкнул! Вот это начало!",
+  "displayText": "Райс прострелил — Хаверц замкнул! Вот это начало!",
+  "file": "assets/voice/sofia-goal.wav",
+  "sourceSha256": "cd4ef917fd2c94683b2f1cfc3357fa37b863292c7c2ed159a565926cf38f4196"
+}

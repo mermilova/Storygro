@@ -1,0 +1,295 @@
+reel: 1
+style: cartoon
+title: Златан Ибрагимович — гол через себя почти с 30 метров!
+lang: ru
+data:
+  facts: facts.json
+images:
+  provider: manual
+  model: OpenAI built-in image_gen (exact identifier undisclosed)
+  width: 1088
+  height: 1920
+  seed: 0
+  prompt: "{subject}. Exact original prompts, reference roles and hashes in
+    images.json."
+post:
+  title: Златан Ибрагимович — гол через себя почти с 30 метров!
+  text: |-
+    Маленькие большие дела · ФУТБОЛЬНЫЙ ВАУ-ФАКТ! smart_little_toons, София и Матвей.
+
+    14 ноября 2012, Швеция — Англия, Friends Arena: четыре гола Златана и знаменитый удар через себя. Премия Пушкаша2013 присуждена за гол2012; церемония13 января2014. Источники: UEFA, Svensk Fotboll, FIFA, Puskas.com.
+
+    Рисунки созданы встроенным image_gen (точный ID модели не раскрыт); оригинальная художественная интерпретация,не архивное видео. Голоса синтетические: OmniVoice B, выбранные Матвей C и София A через Qwen3-TTS.
+
+    Настоящее фото: Илья Хохлов / Football.ua, июнь2012, CC BY-SA3.0, https://commons.wikimedia.org/wiki/File:Zlatan_Ibrahimovi%C4%87_Euro_2012_vs_England.JPG ; https://creativecommons.org/licenses/by-sa/3.0/ . Фото сохранено без ретуши и показано целиком. Это Евро2012,не ноябрьский гол. Архитектурный референс: Richard Matthews, Friends Arena14.11.2012,CC BY2.0, https://commons.wikimedia.org/wiki/File:Friends_Arena,_Stockholm.jpg . Сам снимок арены в фильм не включён. Отдельные условия сторонних материалов сохраняются.
+  tags:
+    - Златан
+    - футбол
+    - мультфильм
+    - футбольныйвауфакт
+    - smart_little_toons
+scenes:
+  - id: hook
+    scene: series-cover
+    say: ФУТБОЛЬНЫЙ ВАУ-ФАКТ! Златан Ибрагимович забил невероятный гол через себя
+      почти с [30](=тридцати) метров!
+    voice:
+      source: assets/voice/hook.wav
+      speed: 1
+    pad:
+      - 0
+      - 0.23
+    props:
+      image: shots/cover-final.png
+      projectFrom: facts.series.project
+      titleFrom: facts.series.title
+      subtitleFrom: facts.series.episode
+      emblem: /rc/styles/cartoon/golden-ball.svg
+      reveal: shots/bicycle-correct.png
+      revealAt: 3.2
+  - id: arena
+    scene: illustration
+    say: "[14 ноября 2012](=четырнадцатого ноября две тысячи двенадцатого) года
+      сборная Швеции принимала Англию в товарищеском матче {#venue}на открытии
+      нового национального стадиона [Friends Arena](=Френдс Арена) в городе
+      Сольна, недалеко от Стокгольма."
+    voice:
+      source: assets/voice/arena.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/arrival-safe.png
+          move: in
+          zoom: 0.012
+        - image: shots/arena-wide.png
+          move: in
+          zoom: 0.012
+          at: venue
+      fade: 0
+  - id: crowd
+    scene: illustration
+    say: На трибунах собрались почти [50](=пятьдесят) тысяч зрителей.
+    voice:
+      source: assets/voice/crowd.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/crowd.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: england
+    scene: illustration
+    say: "Матч получился напряжённым: Англия даже вышла вперёд со счётом [2:1](=два
+      один)."
+    voice:
+      source: assets/voice/england.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.65
+    props:
+      shots:
+        - image: shots/england-safe.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: four
+    scene: illustration
+    say: Но Златан Ибрагимович устроил настоящее шоу {#four}и забил все четыре гола
+      Швеции!
+    voice:
+      source: assets/voice/four.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/strike.png
+          move: in
+          zoom: 0.012
+        - image: shots/celebrate.png
+          move: in
+          zoom: 0.012
+          at: four
+      fade: 0
+  - id: hart
+    scene: illustration
+    say: А теперь самое невероятное. На последних минутах английский вратарь Джо
+      Харт вышел далеко из ворот {#header}и головой выбил мяч.
+    voice:
+      source: assets/voice/hart.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/hart-run.png
+          move: in
+          zoom: 0.012
+        - image: shots/header.png
+          move: in
+          zoom: 0.012
+          at: header
+      fade: 0
+  - id: bicycle
+    scene: illustration
+    say: Златан оказался рядом, развернулся спиной к воротам {#kick}и пробил через
+      себя примерно с [30](=тридцати) метров!
+    voice:
+      source: assets/voice/bicycle.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/turn.png
+          move: in
+          zoom: 0.012
+        - image: shots/bicycle-correct.png
+          move: in
+          zoom: 0.012
+          at: kick
+      fade: 0
+  - id: net
+    scene: illustration
+    say: Мяч перелетел через вратаря {#net}и оказался в сетке!
+    voice:
+      source: assets/voice/net.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 1.25
+    props:
+      shots:
+        - image: shots/flight.png
+          move: in
+          zoom: 0.012
+        - image: shots/net.png
+          move: in
+          zoom: 0.012
+          at: net
+      fade: 0
+  - id: result
+    scene: archive-photo
+    say: Швеция победила со счётом [4:2](=четыре два), а этот гол стал одним из
+      самых знаменитых в карьере Ибрагимовича.
+    voice:
+      source: assets/voice/result.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      image: shots/zlatan-2012.jpg
+      background: shots/celebrate.png
+      titleFrom: facts.archive.title
+      captionFrom: facts.archive.date
+      portrait: true
+      fit: contain
+  - id: award
+    scene: illustration
+    say: Позже он получил премию ФИФА имени Пушкаша за лучший гол [2013](=две тысячи
+      тринадцатого) года.
+    voice:
+      source: assets/voice/award.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/award-safe.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: matvey
+    scene: illustration
+    say: Он что, решил забить гол через себя почти с центра поля?!
+    voice:
+      source: assets/voice/matvey.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 0.23
+    props:
+      shots:
+        - image: shots/matvey.png
+          move: in
+          zoom: 0.012
+      fade: 0
+      labels:
+        - textFrom: facts.cast.matvey
+          x: 0.25
+          y: 0.29
+          at: -1
+          tone: navy
+    caption: "Матвей: «Он что, решил забить гол через себя почти с центра поля?!»"
+  - id: sofia
+    scene: illustration
+    say: И ведь получилось! Настоящая футбольная магия!
+    voice:
+      source: assets/voice/sofia.wav
+      speed: 1
+    pad:
+      - 0.06
+      - 1.4
+    props:
+      shots:
+        - image: shots/sofia.png
+          move: in
+          zoom: 0.012
+      fade: 0
+      labels:
+        - textFrom: facts.cast.sofia
+          x: 0.75
+          y: 0.29
+          at: -1
+          tone: navy
+    caption: "София: «И ведь получилось! Настоящая футбольная магия!»"
+voice:
+  engine: omnivoice
+  model: k2-fsa/OmniVoice
+  voice: assets/voice/narrator-ru.wav
+  speed: 0.9
+  stress: off
+format:
+  preset: vertical
+  width: 1080
+  height: 1920
+  fps: 30
+safe: reels
+captions:
+  show: true
+  maxWords: 4
+stills:
+  cover: hook@0
+theme: theme.css
+transition:
+  kind: cut
+  dur: 0
+music:
+  bpm: 110
+  key: D
+  progression:
+    - I
+    - V
+    - vi
+    - IV
+  gain: 0.06
+  drop: bicycle
+loudness: -14
+hooks:
+  - Удар через себя под полной идентичностью — выбранная картинка, исходная
+    первая фраза
+  - Пустые ворота далеко за Хартом
+  - Златан замечает мяч — крупный план

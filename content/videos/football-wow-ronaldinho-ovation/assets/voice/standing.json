@@ -1,0 +1,22 @@
+{
+  "text": "И вот случилось невероятное: болельщики «Реала» начали вставать со своих мест и аплодировать футболисту главного соперника!",
+  "duration": 7.642416666666667,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldinho-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "298110554aaacd0a430a8280a8a6c07d7feb09b042208d11e9b39c4e0cf0a345",
+  "speed": 0.9,
+  "scene": "standing",
+  "originalSynthesisText": "И вот случилось невероятное: болельщики «Реала» начали вставать со своих мест и аплодировать футболисту главного соперника!",
+  "displayText": "И вот случилось невероятное: болельщики «Реала» начали вставать со своих мест и аплодировать футболисту главного соперника!",
+  "file": "assets/voice/standing.wav",
+  "sourceSha256": "857e774b0bce41b4f6541658c4a6ec042a707fa06b6d5752ec03879560e15e65"
+}

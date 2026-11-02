@@ -1,0 +1,9 @@
+episode: 1
+id: football-wow-ronaldinho-ovation
+title: Роналдиньо — овация болельщиков «Реала»
+sources: sources.md
+credits: CREDITS.md
+series: football-wow
+variants:
+  - id: ru
+    spec: ru.reel.yaml

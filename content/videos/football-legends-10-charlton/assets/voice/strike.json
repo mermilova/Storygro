@@ -1,0 +1,22 @@
+{
+  "text": "Он прославился мощными ударами издалека и стал настоящей звездой «Манчестер Юнайтед».",
+  "duration": 5.29775,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "4ea987f25c4092bb689d75a3c7a532f81693795d68348e550d25843bba9b578c",
+  "speed": 0.9,
+  "scene": "strike",
+  "originalSynthesisText": "Он прославился мощными ударами издалека и стал настоящей звездой «Манчестер Юнайтед».",
+  "displayText": "Он прославился мощными ударами издалека и стал настоящей звездой «Манчестер Юнайтед».",
+  "file": "assets/voice/strike.wav",
+  "sourceSha256": "64d50cadb48f187f76dd21aab6fdfbd93e04ee012d37bd0b91446901eecde637"
+}

@@ -1,0 +1,22 @@
+{
+  "text": "БОбби ЧАрльтон был одним из самых талантливых футболистов Англии.",
+  "duration": 4.730166666666666,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "3a2836c96f2995e46c10725dac2ef66bdb0e4e88041a2428c343713cecf769ee",
+  "speed": 0.9,
+  "scene": "talent",
+  "originalSynthesisText": "БОбби ЧАрльтон был одним из самых талантливых футболистов Англии.",
+  "displayText": "Бобби Чарльтон был одним из самых талантливых футболистов Англии.",
+  "file": "assets/voice/talent.wav",
+  "sourceSha256": "36ad3892d66280772c3530f113f24d44e57fe765de3b502dbbc7ade7190fcf79"
+}

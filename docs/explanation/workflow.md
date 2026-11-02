@@ -30,6 +30,8 @@ The three approvals are recorded in each episode's `review.yaml` in Git; the pla
 
 The recipe every format shares, as it was run for the October 2026 episodes. [Video formats](video-formats.md) says which look to pick; the commands are `npm run storygro -- <command>`.
 
+**Instagram Reels:** use the owner-approved [full-frame standard](../adr/0007-instagram-reels.md) throughout this workflow. Start with `new … --target instagram-reels`; compose the background edge to edge and keep important text inside `safe: reels`. The [Reels recipe](../how-to/instagram-without-cropping.md) covers face/overlay collisions, caption review and retaining Original / 9:16 during upload. Safe margins must not turn into visible padding around a shrunken edit.
+
 | # | Step | Who | Commands | Move on when |
 |---|---|---|---|---|
 | 1 | **Brief:** topic, audience, language, length, format | owner | — | the folder name, the target length and the format are agreed |
@@ -68,6 +70,7 @@ Since 25 October 2026, new Russian scaffolds use the owner's selected OmniVoice 
 | Pick a topic worth a video | [Choose a topic](../how-to/choose-a-topic.md) | `trends`, `ideas` |
 | Make an explainer from a topic, end to end | [Tutorial](../tutorials/explainer-from-a-topic.md) | `voice`, `still`, `board`, `approve`, `render` |
 | Write or edit the script | [Write a script](../how-to/write-a-script.md) | — |
+| Improve Reels story and compare published outcomes | [Retention recipe and direction worksheet](../how-to/reels-retention.md) | `hooks:`, cues, `metrics` |
 | Review an episode, answer questions, approve step by step | [Review and approve](../how-to/review-and-approve.md) | `plan`, `approve --step`, `tracker` |
 | Ship Russian and English cuts | [Language variants](../how-to/language-variants.md) | `voice` per spec |
 | Give the narrator a voice | [Design a voice](../how-to/design-a-voice.md) | `design_voice.py` |

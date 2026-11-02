@@ -6,7 +6,60 @@ A reel.yaml entry sets `scene:` to one of the modules below and passes its props
 
 A **cue** is a named marker in the `say:` text, such as `{#claim}`. A cue prop accepts either a cue name or a number of seconds from the start of the scene.
 
+## series-cover
+
+Full-frame episode art with a project/series title and optional emblem, readable at frame zero. Import `production/styles/cartoon/football-legends.css` in the episode theme (or supply the equivalent `.fl-series-*` layout). The identity stays inside the safe box and central square preview. Optional `reveal` changes to story artwork and hides the title at `revealAt`; the switch is deterministic for arbitrary seeking. See [the series recipe](../how-to/football-series.md).
+
+| Prop | Meaning |
+|---|---|
+| `image` | Required initial artwork, relative to the episode |
+| `project`, `title` | Required text; use `projectFrom` / `titleFrom` fact bindings |
+| `subtitle` | Optional episode label from data |
+| `emblem` | Optional image URL, such as `/rc/styles/cartoon/golden-ball.svg` |
+| `reveal` | Optional story image to replace the initial artwork |
+| `revealAt` | Cue name or scene seconds; default 1.8 |
+
+## photo-pair
+
+Two authentic photographs with concise data-bound labels over full-frame artwork. Optional `project` and `title` reuse `series-cover` internally, including its frame-zero identity, emblem, subtitle and deterministic `revealAt` switch. Without identity props, it provides a simple paired photo insert. Keep the original photographic content; no AI face editing. Hosts in the background must sit below the photo cards, with faces inside the opening square. See the [modern football special](../../content/videos/football-now-01-messi-ronaldo/DIRECTION.md).
+
+| Prop | Meaning |
+|---|---|
+| `image` | Required full-frame background |
+| `portraits` | Exactly two objects with required `image` and short `label`; use nested `labelFrom` bindings |
+| `project`, `title`, `subtitle`, `emblem` | Optional shared identity; project/title required together |
+| `reveal`, `revealAt` | Optional identity/story switch; photos hide on the same cue and reappear on backward seeks |
+| `heading` | Optional data-bound heading for a photo insert without series identity |
+| `portraits[].fit`, `position`, `zoom`, `origin` | Native display crop; contain/1 is the default, originals stay unchanged |
+| `backgroundCaption` | Optional short date for a real venue background |
+
+Photos use separate cards; `contain` preserves the whole file, while explicit crop/zoom can give faces more space. Authors, licences, date/upload distinctions and file hashes remain in episode records and the delivered post. No production metadata or guides enter the children's cut.
+
+## photo-focus
+
+A player-led sequence of authentic photos over a full-frame background. Each shot has an original `image` and data-bound `caption` for its date; optional `at` switches on a narration cue. Use `titleFrom` or the usual data-bound `labels` with `at`/`until` for the story heading. Photos retain their original pixels; native `fit`, `position`, `zoom` and `origin` declare any presentation crop. Preserve source files and describe the presentation in `photos.json`.
+
+Required props: `background`, nonempty `shots` (`image`, `caption`). Optional: `title`, `labels`, `backgroundCaption` for a dated venue backdrop, and `diagram` (`kind: switch|curve`, `label`, optional cue `at`). The diagram is a simple illustrative passing example beside the real photograph, not a traced trajectory from that photo or a named-match reconstruction. All visible labels use facts. The ball position and photo selection depend only on `t`, including backward seeking. Text and dates stay inside Reels margins, above the supporting hosts and lower UI.
+
+## archive-photo
+
+An authentic photograph inside a dated card over a full-frame background. The photo remains still while the background moves gently. Every visible label comes from data; changing the order of seeks preserves the same frame. Used by [Football Legends9](../../content/videos/football-legends-09-eusebio/DIRECTION.md) for a1963 player portrait and a clearly dated2003 stadium view. Children's episodes show a story title and a short date; authors, usernames and licence codes belong in the post and documentation. Follow the [series photo workflow](../how-to/football-series.md).
+
+| Prop | Meaning |
+|---|---|
+| `image` | Required authentic photo, relative to the episode |
+| `background` | Required full-frame backdrop; the whole Reel is never letterboxed |
+| `title` | Required heading; bind with `titleFrom` |
+| `caption` | Required photo date/context; bind with `captionFrom` |
+| `credit` | Optional explicitly requested credit; omitted in the children's series |
+| `fit` | `contain` (default, complete image) or explicit `cover` presentation crop |
+| `position` | CSS object position for a declared crop; default `50% 50%` |
+| `portrait` | Narrower photo frame, default `false` |
+
+Preserve originals, source/licence URLs, dates, hashes and crop notes in `photos.json`. A label must distinguish the photo date from the narrated historical event, especially when the venue photo is later. Do not generatively retouch an archive photograph.
+
 ## collage
+
 
 <img src="../media/scenes/collage.jpg" width="180" alt="A frame of the collage scene">
 
@@ -669,10 +722,10 @@ The scene of the [`cartoon` style](../../production/styles/cartoon/README.md): f
 | `shots[].prompt`, `splitPrompt` | string | No | What the picture shows, for `storygro images`; `@name` comes from the cast. The scene ignores them. |
 | `fade` | seconds | No (default 0) | Cross-fade between shots; 0 is a cut. |
 | `title` | `{ text, at?, until?, size? }` | No | Headline band at the top, upper-case in the style's display font. `size` is a fraction of stage height (default 0.075, clamped to 0.025–0.12). |
-| `badge` | `{ value, label?, at?, until?, tone?, side?, y? }` | No | A big number on a card, right (default) or left; `y` (0..1, default 0.22) is its top within the text area — lower it to keep a face clear. The number shrinks to fit its card. Bind with `valueFrom` / `labelFrom`. |
-| `labels` | `[{ text, x, y, at?, until?, tone? }]` | No | Small tags pinned to the picture; `x`, `y` are fractions of the stage. |
+| `badge` | `{ value, label?, at?, until?, tone?, side?, y?, size? }` | No | A number on a card, right (default) or left; `y` (0..1, default 0.22) is its top within the text area. `size` is number font size / stage height (default 0.13, clamped to 0.04–0.15); label and padding scale with it. The number also shrinks to fit. Bind with `valueFrom` / `labelFrom`. |
+| `labels` | `[{ text, x, y, at?, until?, tone? }]` | No | Small tags; requested `x`, `y` are fractions of the stage. Long labels shrink and the complete tag is clamped inside the safe content box above captions. |
 | `source` | string or `{ text }` | No | Small source line, bottom left; bind with `sourceFrom` or `{ textFrom: … }`. |
-| `portrait` | `{ image, name, country?, value?, label?, at?, until?, y?, width?, height? }` | No | A separate animated photograph card. `image` and `name` are required. Text supports `From` bindings; `y`, `width`, `height` are fractions of stage height, safe width and stage height. Defaults: 0.13, 1, 0.255. Keep photograph rights and provenance with the episode. |
+| `portrait` | `{ image, name, country?, value?, label?, at?, until?, y?, width?, height?, compact? }` | No | A separate animated portrait card. `image` and `name` are required. Text supports `From` bindings; `y`, `width`, `height` are fractions of stage height, safe width and stage height. Defaults: 0.13, 1, 0.255. Placement stays within the safe content box above captions. `compact: true` scales type and gaps to a shorter card (default false). Keep image rights and provenance with the episode. With `portrait.prompt`, `storygro images` generates the picture like a shot. |
 
 **Cue names:** `shots[].at`, `title.at/until`, `badge.at/until`, `labels[].at/until`, `portrait.at/until`. Tones: `accent`, `teal`, `mustard`, `red`, `green`, `blue` or any CSS colour.
 

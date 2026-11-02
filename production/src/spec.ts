@@ -13,7 +13,7 @@ export const FORMAT_PRESETS = {
 type FormatPreset = keyof typeof FORMAT_PRESETS;
 
 /** Narration providers; each has a module in py/voices/. `none` estimates timings without audio. */
-export const VOICE_ENGINES = ['kokoro', 'silero', 'qwen3', 'chatterbox', 'omnivoice', 'yandex', 'none'] as const;
+export const VOICE_ENGINES = ['kokoro', 'silero', 'qwen3', 'chatterbox', 'omnivoice', 'yandex', 'audio', 'none'] as const;
 
 export const SFX_KINDS = [
   'whoosh',
@@ -53,6 +53,10 @@ const SceneSpec = z.object({
   say: z.string().default(''),
   /** caption text when it should differ from `say` */
   caption: z.string().optional(),
+  /** shorter caption phrases in this scene, e.g. so a two-line caption does not cover a face */
+  captions: z.object({ maxWords: z.number().int().min(1) }).optional(),
+  /** A reviewed narration clip, or a local pace override; other scenes retain the selected narrator. */
+  voice: z.object({ source: z.string().min(1).optional(), speed: z.number().positive().optional() }).optional(),
   /** silence before and after the voice, seconds */
   pad: z.tuple([z.number(), z.number()]).default([0.25, 0.45]),
   /** minimum length, seconds */
@@ -150,6 +154,11 @@ export const ReelSpec = z.object({
   images: z
     .object({
       cast: z.record(z.string(), z.string()).default({}),
+      /**
+       * reference pictures of cast members, paths relative to the reel: a shot that names @name hands
+       * them to the image tool so faces and clothes stay the same from shot to shot (codex only)
+       */
+      refs: z.record(z.string(), z.union([z.string(), z.array(z.string()).min(1)])).default({}),
       seed: z.number().int().default(7),
       /** the episode's own art direction instead of the style's picture prompt; must contain {subject} */
       prompt: z.string().includes('{subject}', { message: 'images.prompt must contain {subject}' }).optional(),

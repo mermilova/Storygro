@@ -1,0 +1,91 @@
+{
+  "date": "2026-11-01",
+  "status": "Owner selected Matvey C with previously selected Sofia A; full Kane V2 commissioned.",
+  "feedback": "Earlier Matvey sounded feminine; requested a rougher masculine boyish voice.",
+  "designModel": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-bf16",
+  "designRevision": "7d3824abff87e49756bb0f83fb5411de75d160c4",
+  "candidates": [
+    {
+      "id": "matvey-C",
+      "character": "matvey",
+      "seed": 83,
+      "instruct": "A distinctly MASCULINE BOY voice for an original young male raccoon character in a premium family cartoon. Native Russian, clear standard Russian diction. Compact lower-middle boyish register, solid chest resonance, a little dry sandy grain, firm consonants, rounded vowels. Clearly the voice of a smart football-loving BOY, with warmth, curious excitement and thoughtful little pauses. The owner found previous light voices too feminine: create a NEW deeper, fuller, slightly rough boyish identity with unmistakably male resonance. Keep youthful energy, not an adult announcer, not a deep old man. Natural medium pace, no falsetto, no squeak, no breathy softness. One original synthetic speaker, dry close studio recording, no music.",
+      "referenceText": "Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?! Получается, один игрок попробовал две разные роли. Интересно, как он решил, куда полетит мяч!",
+      "auditionText": "Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?!",
+      "reference": "private/host-voice-auditions-matvey-v2-2026-11-01/matvey-C/reference.wav",
+      "audition": "private/host-voice-auditions-matvey-v2-2026-11-01/matvey-C/reply.wav",
+      "referenceSha256": "a60c25c663b0c55288c4339a07ea5f404a2a32410e54985b80d5dd9163c51357",
+      "auditionSha256": "2cc0f2d30fda2c657e53720a9fc313ea2a7500a4a817aa05057fb6b56123dfa1",
+      "selected": true,
+      "auditionSeconds": 5.04,
+      "checks": [
+        {
+          "kind": "reference",
+          "wordSequenceMatches": false,
+          "heard": " Подожди! Он сначала забил три гола, а потом еще и в ворота встал! Получается, один игрок попробовал две разные роли. Интересно, как он решил, куда полетит мяч? Продолжение следует..."
+        },
+        {
+          "kind": "audition",
+          "wordSequenceMatches": true,
+          "heard": " Подожди! Он сначала забил три гола, а потом еще и в ворота встал!"
+        }
+      ],
+      "referenceAsrNote": "ASR adds «Продолжение следует» in the final0.12s after the complete scripted text; likely a tail hallucination. Not treated as listening approval or an exact full-reference ASR pass."
+    },
+    {
+      "id": "matvey-D",
+      "character": "matvey",
+      "seed": 107,
+      "instruct": "An original MASCULINE YOUNG MALE animated-character voice, boyish but noticeably huskier and more grounded. Native Russian with precise natural diction. Lower-mid pitch, dense woody chest resonance, lightly raspy edge and a warm gravelly texture, sturdy confident sound. An exceptionally clever young football fan with an engineering mind: he notices the mechanism, thinks for a beat, then asks with genuine wonder. Expressive friendly BOY delivery, firm attacks and a little smile. Strong masculine vocal colour rather than a bright thin child voice. Keep the character youthful and approachable, no adult documentary baritone, no shouting, no growl, no falsetto. One entirely synthetic voice in a clean dry studio, no music or background sounds.",
+      "referenceText": "Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?! Получается, один игрок попробовал две разные роли. Интересно, как он решил, куда полетит мяч!",
+      "auditionText": "Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?!",
+      "reference": "private/host-voice-auditions-matvey-v2-2026-11-01/matvey-D/reference.wav",
+      "audition": "private/host-voice-auditions-matvey-v2-2026-11-01/matvey-D/reply.wav",
+      "referenceSha256": "57fb351ac188017e3aa2701f51d5c42e371ca664f4e2d22503b6b413c6bafdca",
+      "auditionSha256": "96ac9941d93ab69eb6ec3b113f22c91cbc40f2d2bbf6b00d913858f6215317ec",
+      "selected": false,
+      "auditionSeconds": 5.84,
+      "checks": [
+        {
+          "kind": "reference",
+          "wordSequenceMatches": true,
+          "heard": " Подожди! Он сначала забил три гола, а потом еще и в ворота встал! Получается, один игрок попробовал две разные роли. Интересно, как он решил, куда полетит мяч?"
+        },
+        {
+          "kind": "audition",
+          "wordSequenceMatches": true,
+          "heard": " Подожди! Он сначала забил три гола, а потом еще и в ворота встал!"
+        }
+      ]
+    }
+  ],
+  "sofiaSelected": {
+    "id": "sofia-A",
+    "character": "sofia",
+    "selectedBy": "owner",
+    "selectedDate": "2026-11-01",
+    "ownerQuote": "первый голос софии в варианте А окей",
+    "synthetic": true,
+    "reference": "reference.wav",
+    "sha256": "98ecd0076b6723ebb245ba18682944f5c21c6bd904e3780f3f8ff30533eb9840",
+    "transcript": "reference.txt",
+    "sourceAudition": "private/host-voice-auditions-2026-11-01/sofia-A",
+    "designModel": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-bf16",
+    "designRevision": "7d3824abff87e49756bb0f83fb5411de75d160c4",
+    "seed": 23,
+    "instruct": "Original synthetic voice for a fictional child character in a warm premium family animation. Native Russian, standard contemporary Russian pronunciation, clean close studio recording, one speaker, no music or effects. Natural human child voice, clear diction, medium unhurried pace, not a squeaky mascot, no baby talk, no adult announcer performance, no breathy whisper or exaggerated caricature. An eight-year-old girl with a bright, light, clear childlike feminine timbre and natural moderately high pitch. She has a lively active mind, notices connections quickly, curious and delighted to share a discovery. Animated melodic intonation, sparkling friendly energy, a smile in the voice. Speak clearly with small thoughtful pauses, never shrill, rushed or condescending.",
+    "terms": "Qwen3-TTS Apache-2.0; mlx-audio MIT",
+    "episodeApplication": "Not yet applied to production Kane master; Matvey selection pending."
+  },
+  "sofiaReplySha256": "0de942eb0a17322ffe38a4dae0e1cba3b853c48e47be28bccf5a612417f04bad",
+  "previousAudioPreserved": true,
+  "previewVideo": "isolated540x960/15fps drafts with existing narrator, new Matvey and exact unchanged Sofia A; not a production release",
+  "voiceLicence": "Qwen3-TTS Apache-2.0; mlx-audio MIT; original synthetic identities, no real person cloned",
+  "checks": "Both short replies match exact words by ASR; both MP4s fully decode. Subjective masculinity, timbre, age and acting require owner listening.",
+  "ownerSelection": {
+    "date": "2026-11-01",
+    "matvey": "matvey-C",
+    "sofia": "sofia-A",
+    "quote": "давай сделаем версию c"
+  }
+}

@@ -1,0 +1,14 @@
+review: 1
+questions:
+  - id: revision-watch-listen
+    ask: "Просмотреть исправленную версию: София жёлто-тёмно-синяя/Арсенал, Матвей красный/Ливерпуль. Новая реплика: «Я за Ливерпуль… Как же мы пропустили?» Полный просмотр/слушание и решение о релизе владельцу."
+    for: owner
+    open: true
+notes: Owner requested distinguishable club clothes and questioned unclear opening. Technical render only;no owner approval inferred;no publication.
+approvals:
+  ru:
+    storyboard:
+      hash: 9ab6143d081e
+      at: 2026-11-02T16:52:49.292Z
+      by: agent
+      role: agent

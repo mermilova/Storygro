@@ -1,0 +1,19 @@
+review: 1
+questions:
+  - id: watch-and-listen
+    ask: Просмотреть и прослушать полный фильм:сходство Роналду,темп,ударения;генерация кадра удара недоступна,навес сменяется результатом гола. Решение о релизе за владельцем.
+    for: owner
+    open: true
+notes: Explicitly commissioned without hosts. All narrative words retained. No owner approvals inferred;no publication.
+approvals:
+  ru:
+    script:
+      hash: 9d1a82e3f248
+      at: 2026-11-02T16:03:24.349Z
+      by: agent
+      role: agent
+    storyboard:
+      hash: 98211a9ffcd2
+      at: 2026-11-02T16:03:24.606Z
+      by: agent
+      role: agent

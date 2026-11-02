@@ -1,28 +1,31 @@
-# Контент Storygro
+# Материалы smart_little_toons
 
-Здесь находятся конкретные материалы для аудитории. [Производственные инструменты](../production/README.md) хранятся отдельно.
+Редакционная часть проекта: футбол, София и Матвей, сценарии, исследования, раскадровки и версии выпусков. Начните с [каталога выпусков](videos/README.md) или [главной страницы проекта](../README.md).
 
-| Каталог | Что внутри |
+## Рубрики и персонажи
+
+- [Легенды футбола](series/football-legends.md) — истории выдающихся игроков.
+- [Футбольный вау-факт!](series/football-wow.md) — необычные события и футбольные истории.
+- [Обзор матчей](series/match-review.md) — эмоциональная история конкретной игры с ведущими за разные команды.
+- [Утверждённые персонажи](series/football-legends/cast/cast.json), [выбранные голоса Матвея](series/football-legends/cast/voices/matvey-C/selection.json) и [Софии](series/football-legends/cast/voices/sofia-A/selection.json).
+- [Профиль smart_little_toons](brand-smart-little-toons.yaml) и [единые правила производства](../docs/how-to/football-series.md).
+
+## Где что искать
+
+| Каталог или файл | Содержимое |
 |---|---|
-| [videos/](videos/README.md) | Ролики: один проект на тему, сценарии, факты, источники, credits, выбранные assets |
-| [ideas/](ideas/README.md) | Идеи и редакционный [backlog.yaml](ideas/backlog.yaml) |
-| [research/](research/) | Проверки источников и выводы для конкретных материалов, например [история выбора по трендам](research/ai-agent-checks/README.md) |
-| [brand.yaml](brand.yaml) | Профиль бренда: аудитория, голоса, обязательное раскрытие синтеза, нежелательные фразы (проверяется QA) |
-| [series/](series/) | Рубрики, их выпуски и библии серий ([«Открытая дверь»](series/open-door.md)); `storygro series` показывает статус |
-| [TRACKER.md](TRACKER.md) | Все выпуски: этап, чей ход, одобрения, длительность, QA, вопросы — и список «ждут тебя» (`storygro tracker`) |
-| `publishing/` | Журнал ручных публикаций и снимки метрик (`storygro publish`, `storygro metrics`); создаётся при первой записи |
-| `.signals/` | Игнорируемые снимки сигналов интереса, не доказательства и не прогнозы охвата |
-| `videos/<id>/.reel/` | Локальные рендеры, аудио, storyboard, QA и пакеты |
-| [media-assets.json](media-assets.json) | Ссылки, размер и SHA-256 исходников, хранящихся вне Git |
+| [videos/](videos/README.md) | Один проект на выпуск или отдельную версию; сценарии, источники и проверки |
+| [series/](series/) | Библии рубрик, планы серий, персонажи и голосовые эталоны |
+| [research/](research/) | Исследования, проверка источников и редакционные эксперименты |
+| [ideas/](ideas/README.md) | Исторический банк идей и редакционные заготовки |
+| [media-assets.json](media-assets.json) | Существующий manifest внешних медиа для `assets:fetch`; новые локальные выдачи не добавляются в него автоматически |
+| `videos/<id>/.reel/` | Локальный монтаж, звук, экспорт и результаты QA, вне Git |
+| `publishing/` | Журнал ручных публикаций и метрик, когда такие записи заведены |
 
-Последний выпуск — мультфильм [agents-open-door](videos/agents-open-door/README.md), первый по [контент-процессу](../docs/explanation/content-workflow.md): план `PLAN.ru.md`, вопросы и одобрения в `review.yaml`. Ранее: [ai-agent-checks](videos/ai-agent-checks/README.md) — тема выбрана по сканированию трендов; [slidecraft-demo](videos/slidecraft-demo/README.md) — демо на записи экрана. Ранее: [micro1-work-data](videos/micro1-work-data/README.md) и [future-of-work](videos/future-of-work/README.md). Исторические примеры движка находятся в `examples/`.
+Решение о публикации фиксируется отдельно от технической проверки. Последние подготовленные выпуски ждут полного просмотра и прослушивания владельцем; конкретный статус указан в `review.yaml` и `VERIFICATION.json`.
 
-```sh
-npm run storygro -- ideas content/ideas/backlog.yaml
-npm run storygro -- trends production/trends/sources.yaml --backlog content/ideas/backlog.yaml \
-  --out content/.signals/latest.json --md content/.signals/latest.md
-npm run storygro -- series content/series/business-explainers.yaml
-npm run storygro -- tracker content/videos --md content/TRACKER.md
-```
+Общий [TRACKER.md](TRACKER.md) унаследован и может отставать: его обновление блокирует отсутствующий старый рисунок Ronaldinho. Для новых выпусков есть собственные `TRACKER.md`; не считайте старый общий трекер единственным источником актуального состояния.
 
-Начальная аудитория: руководители, основатели и специалисты, внедряющие ИИ в работу. Каналы — Instagram и YouTube Shorts, языки — RU/EN; текущая проба на русском. Перед публикацией нужны просмотр, прослушивание и редакционное одобрение. Ничего автоматически в соцсети не отправляется.
+## Наследие движка
+
+Старые деловые ролики, [«Открытая дверь»](series/open-door.md), [современные фото-спецвыпуски](series/football-now.md) и [brand.yaml](brand.yaml) сохранены как история и технические примеры. Старый бренд-профиль относится к прежним проектам Storygro и не задаёт текущую аудиторию канала. [Производственный код](../production/README.md) и [документация движка](../docs/README.md) находятся отдельно.

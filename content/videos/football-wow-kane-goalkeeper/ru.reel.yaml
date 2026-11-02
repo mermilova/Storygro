@@ -1,0 +1,308 @@
+reel: 1
+style: cartoon
+title: Харри Кейн — нападающий, который стал вратарём!
+lang: ru
+data:
+  facts: facts.json
+images:
+  provider: manual
+  model: OpenAI built-in GPT Image (exact identifier undisclosed)
+  width: 1088
+  height: 1920
+  seed: 0
+  prompt: "{subject}. See images.json for exact per-shot prompts and reference hashes."
+post:
+  title: Харри Кейн — нападающий, который стал вратарём!
+  text: >-
+    Харри Кейн забил три гола, а затем встал в ворота: «Тоттенхэм» — «Астерас», 23 октября
+    2014, 5:1. Источник: Tottenham Hotspur, официальный отчёт о матче.
+
+
+    Маленькие большие дела · ФУТБОЛЬНЫЙ ВАУ-ФАКТ! София и Матвей, smart_little_toons. Голоса
+    синтетические: рассказчик — OmniVoice B, Матвей C и София A — Qwen3-TTS; иллюстрации
+    созданы встроенным GPT Image, действия — художественная интерпретация.
+
+
+    Фото: Harry Kane 2023 (cropped) — Simon Walker / No 10 Downing Street, UK Prime
+    Minister, 10.10.2023, CC BY 2.0,
+    https://commons.wikimedia.org/wiki/File:Harry_Kane_2023_(cropped).jpg ;
+    https://creativecommons.org/licenses/by/2.0/. Опубликованное кадрирование Stanley
+    Gordon, без дополнительной ретуши или обрезки. Это портрет 2023 года, не фото матча 2014
+    года. Гербы Tottenham Hotspur и Asteras Tripolis показаны для обозначения участников
+    матча; принадлежат соответствующим клубам. Источники:
+    https://en.wikipedia.org/wiki/File:Tottenham_Hotspur.svg ;
+    https://commons.wikimedia.org/wiki/File:Asteras_Tripolis_Logo.svg .
+  tags:
+    - футбол
+    - ХарриКейн
+    - мультфильм
+    - детям
+    - smart_little_toons
+scenes:
+  - id: hook
+    scene: series-cover
+    say: ФУТБОЛЬНЫЙ ВАУ-ФАКТ! {#role}Харри Кейн — нападающий, который стал вратарём!
+    pad:
+      - 0
+      - 0.3
+    props:
+      image: shots/cover-fixed.png
+      projectFrom: facts.series.project
+      titleFrom: facts.series.title
+      subtitleFrom: facts.series.episode
+      emblem: /rc/styles/cartoon/golden-ball.svg
+    voice:
+      source: assets/voice/kane-v2/hook.wav
+      speed: 1
+  - id: imagine
+    scene: illustration
+    say: "Представь: ты забиваешь три гола за один матч, {#change}а через несколько минут тебе
+      приходится защищать собственные ворота!"
+    pad:
+      - 0.05
+      - 0.3
+    props:
+      shots:
+        - image: shots/strike-fixed.png
+          move: in
+          zoom: 0.018
+        - image: shots/keeper.png
+          move: in
+          zoom: 0.018
+          at: change
+    voice:
+      source: assets/voice/kane-v2/imagine.wav
+      speed: 1
+  - id: context
+    scene: archive-photo
+    say: Именно это случилось с Харри Кейном [23](=двадцать третьего) октября [2014](=две тысячи
+      четырнадцатого) года
+    pad:
+      - 0.05
+      - 0
+    props:
+      image: shots/kane-2023.jpg
+      background: shots/cover-fixed.png
+      titleFrom: facts.archive.playerTitle
+      captionFrom: facts.archive.playerDate
+      portrait: true
+      fit: contain
+    voice:
+      source: assets/voice/kane-v2/context.wav
+      speed: 1
+  - id: venue
+    scene: photo-pair
+    say: в матче Лиги Европы между «Тоттенхэмом» и греческим «Астерасом».
+    pad:
+      - 0
+      - 0.65
+    props:
+      image: shots/cover-fixed.png
+      headingFrom: facts.teams.heading
+      portraits:
+        - image: shots/tottenham-card.svg
+          labelFrom: facts.teams.home
+          fit: contain
+        - image: shots/asteras-card.svg
+          labelFrom: facts.teams.away
+          fit: contain
+    voice:
+      source: assets/voice/kane-v2/venue.wav
+      speed: 1
+  - id: hat-trick
+    scene: illustration
+    say: «Тоттенхэм» уверенно вёл со счётом [5:0](=пять ноль), {#three}а Кейн уже оформил
+      хет-трик — забил три мяча за матч.
+    pad:
+      - 0.05
+      - 1.15
+    props:
+      shots:
+        - image: shots/celebrate.png
+          move: in
+          zoom: 0.018
+      labels:
+        - textFrom: facts.match.before
+          x: 0.46
+          y: 0.12
+          at: -1
+          until: three
+          tone: navy
+        - textFrom: facts.match.hattrick
+          x: 0.46
+          y: 0.12
+          at: three
+          tone: navy
+    voice:
+      source: assets/voice/kane-v2/hat-trick.wav
+      speed: 1
+  - id: red-card
+    scene: illustration
+    say: "Но на [87-й](=восемьдесят седьмой) минуте произошло неожиданное: вратарь «Тоттенхэма»
+      Уго Льорис получил красную карточку."
+    pad:
+      - 0.05
+      - 0.4
+    props:
+      shots:
+        - image: shots/red-card.png
+          move: in
+          zoom: 0.018
+      labels:
+        - textFrom: facts.match.minute
+          x: 0.46
+          y: 0.12
+          at: -1
+          tone: navy
+    voice:
+      source: assets/voice/kane-v3/red-card.wav
+      speed: 1
+  - id: bench
+    scene: illustration
+    say: Все замены команда уже использовала, поэтому заменить его было некем.
+    pad:
+      - 0.05
+      - 0
+    props:
+      shots:
+        - image: shots/bench.png
+          move: in
+          zoom: 0.018
+    voice:
+      source: assets/voice/kane-v2/bench.wav
+      speed: 1
+  - id: volunteer
+    scene: illustration
+    say: И тогда в ворота встал... Харри Кейн!
+    pad:
+      - 0
+      - 1.3
+    props:
+      shots:
+        - image: shots/volunteer.png
+          move: in
+          zoom: 0.018
+    voice:
+      source: assets/voice/kane-v2/volunteer.wav
+      speed: 1
+  - id: gloves
+    scene: illustration
+    say: "Он надел вратарскую форму и перчатки, {#kick}но долго постоять на ноль не получилось:
+      после штрафного удара {#net}соперник отправил мяч в сетку."
+    pad:
+      - 0.08
+      - 0.6
+    props:
+      shots:
+        - image: shots/gloves.png
+          move: in
+          zoom: 0.018
+        - image: shots/free-kick.png
+          at: kick
+          move: out
+          zoom: 0.018
+        - image: shots/concede.png
+          at: net
+          move: in
+          zoom: 0.018
+    voice:
+      source: assets/voice/kane-v2/gloves.wav
+      speed: 1
+  - id: result
+    scene: illustration
+    say: Матч закончился со счётом [5:1](=пять один).
+    pad:
+      - 0.05
+      - 1.7
+    props:
+      shots:
+        - image: shots/keeper.png
+          move: in
+          zoom: 0.018
+      labels:
+        - textFrom: facts.match.final
+          x: 0.46
+          y: 0.12
+          at: -1
+          tone: navy
+    voice:
+      source: assets/voice/kane-v2/result.wav
+      speed: 1
+  - id: matvey
+    scene: illustration
+    say: Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?!
+    pad:
+      - 0.12
+      - 0.8
+    props:
+      shots:
+        - image: shots/matvey.png
+          move: in
+          zoom: 0.018
+      labels:
+        - textFrom: facts.cast.matvey
+          x: 0.46
+          y: 0.12
+          at: -1
+          tone: navy
+    voice:
+      source: assets/voice/matvey-C-reply.wav
+      speed: 1
+    caption: "Матвей: «Подожди! Он сначала забил три гола, а потом ещё и в ворота встал?!»"
+  - id: sofia
+    scene: illustration
+    say: Да! Вот это универсальный футболист!
+    pad:
+      - 0.12
+      - 1.5
+    props:
+      shots:
+        - image: shots/sofia.png
+          move: in
+          zoom: 0.018
+      labels:
+        - textFrom: facts.cast.sofia
+          x: 0.46
+          y: 0.12
+          at: -1
+          tone: navy
+    voice:
+      source: assets/voice/sofia-A-reply.wav
+      speed: 1
+    caption: "София: «Да! Вот это универсальный футболист!»"
+voice:
+  engine: omnivoice
+  model: k2-fsa/OmniVoice
+  voice: assets/voice/narrator-ru.wav
+  speed: 0.82
+  stress: off
+format:
+  preset: vertical
+  width: 1080
+  height: 1920
+  fps: 30
+safe: reels
+captions:
+  show: true
+  maxWords: 4
+stills:
+  cover: hook@0
+music:
+  bpm: 108
+  key: D
+  progression:
+    - I
+    - V
+    - vi
+    - IV
+  gain: 0.075
+  drop: volunteer
+loudness: -14
+theme: theme.css
+transition:
+  kind: cut
+  dur: 0
+hooks:
+  - Кейн получает перчатки после хет-трика (выбрано; текст исходный)
+  - Один футболист — две роли (визуальная альтернатива)
+  - Кто защитит пустые ворота? (визуальная альтернатива)

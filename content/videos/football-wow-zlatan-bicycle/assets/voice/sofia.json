@@ -1,0 +1,22 @@
+{
+  "id": "sofia-A",
+  "text": "И ведь получилось! Настоящая футбольная магия!",
+  "provider": {
+    "engine": "qwen3",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/series/football-legends/cast/voices/sofia-A/reference.wav",
+    "language": "Russian",
+    "license": "Apache-2.0 (Qwen3-TTS), MIT (mlx-audio)"
+  },
+  "duration": 3.9021666666666666,
+  "referenceSha256": "98ecd0076b6723ebb245ba18682944f5c21c6bd904e3780f3f8ff30533eb9840",
+  "sha256": "7e4b74daa167f52f04993263204eb33946ed98ad45bb5305146539b4375748eb",
+  "newEpisodeReply": true,
+  "referenceUnchanged": true,
+  "scene": "sofia",
+  "originalSynthesisText": "И ведь получилось! Настоящая футбольная магия!",
+  "displayText": "И ведь получилось! Настоящая футбольная магия!",
+  "file": "assets/voice/sofia.wav",
+  "sourceSha256": "7e4b74daa167f52f04993263204eb33946ed98ad45bb5305146539b4375748eb",
+  "speed": 1
+}

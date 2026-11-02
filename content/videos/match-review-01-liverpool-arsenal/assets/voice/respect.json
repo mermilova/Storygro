@@ -1,0 +1,21 @@
+{
+  "text": "Обидно! Но выстояли вы крепко.",
+  "duration": 2.56,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "qwen3",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/series/football-legends/cast/voices/matvey-C/reference.wav",
+    "language": "Russian",
+    "license": "Apache-2.0 (Qwen3-TTS), MIT (mlx-audio)"
+  },
+  "referenceSha256": "a60c25c663b0c55288c4339a07ea5f404a2a32410e54985b80d5dd9163c51357",
+  "sha256": "b8490b73f192b1353f88e8b380349d0b44359f7c7353e288b68108ffd76f7d6b",
+  "speed": 1,
+  "role": "matvey",
+  "scene": "respect",
+  "originalSynthesisText": "Обидно! Но выстояли вы крепко.",
+  "displayText": "Обидно! Но выстояли вы крепко.",
+  "file": "assets/voice/respect.wav",
+  "sourceSha256": "b8490b73f192b1353f88e8b380349d0b44359f7c7353e288b68108ffd76f7d6b"
+}

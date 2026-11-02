@@ -1,0 +1,19 @@
+review: 1
+questions:
+  - id: watch-and-listen
+    ask: "Просмотреть и прослушать весь фильм: сходство Чарльтона, сдержанная трагедия, темп, ударения и голоса. Решение о релизе за владельцем."
+    for: owner
+    open: true
+notes: Commissioned full film, owner script2026-11-02. All text retained. No owner storyboard/release approvals or publication inferred.
+approvals:
+  ru:
+    script:
+      hash: ae57e4574a0c
+      at: 2026-11-02T09:33:35.497Z
+      by: agent
+      role: agent
+    storyboard:
+      hash: 5dc25bb9164e
+      at: 2026-11-02T09:33:35.709Z
+      by: agent
+      role: agent

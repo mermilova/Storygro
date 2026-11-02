@@ -1,0 +1,37 @@
+{
+  "text": "четырнадцатого ноября две тысячи двенадцатого года сборная Швеции принимала Англию в товарищеском матче на открытии нового национального стадиона Френдс Арена в городе СОльна, недалеко от СтокгОльма.",
+  "duration": 13.674,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "ee44815ab5c655c7958988e1e3705402ccc0070630904c65d418f4169f612d39",
+  "speed": 0.9,
+  "correction": {
+    "word": "Сольна",
+    "synthesisOnlyHint": "СОлна",
+    "originalSHA256": "e67484dffc77501a0b37ba359b7c88dfdf23634d44b37f6e51c82776652eb0ca",
+    "donorSHA256": "ffe2824c98e54bc3479b9e0e31829e686dd11efd3b387326bd694ab456487c9a",
+    "originalSpan": [
+      10.17,
+      10.57
+    ],
+    "donorSpan": [
+      10.11,
+      10.51
+    ],
+    "method": "Equal-length single-city-name replacement;bounded RMS match,8ms crossfades;all other raw samples retained. New full take is NOT used outside this word. Canonical captions unchanged."
+  },
+  "scene": "arena",
+  "originalSynthesisText": "четырнадцатого ноября две тысячи двенадцатого года сборная Швеции принимала Англию в товарищеском матче на открытии нового национального стадиона Френдс Арена в городе СОльна, недалеко от СтокгОльма.",
+  "displayText": "14 ноября 2012 года сборная Швеции принимала Англию в товарищеском матче на открытии нового национального стадиона Friends Arena в городе Сольна, недалеко от Стокгольма.",
+  "file": "assets/voice/arena.wav",
+  "sourceSha256": "2807787dbf315616d7769faa6e43710cd8ee39448cb702a8e7fbe6e81c3d5139"
+}

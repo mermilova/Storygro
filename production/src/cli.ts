@@ -15,10 +15,12 @@ import { seriesMarkdown, seriesStatus } from './brand.ts';
 import * as P from './publish.ts';
 import { collectTrends, loadIdeas, loadTrendsConfig, type TrendsReport, trendsMarkdown } from './ideas.ts';
 import { parse as parseYaml } from 'yaml';
-import { deliverables, packageEpisode, qaState, writeSubtitles } from './package.ts';
+import { instagramShape } from './instagram.ts';
+import { deliverables, packageEpisode, qaState, uploadNote, writeSubtitles } from './package.ts';
 import { qa } from './qa.ts';
 import { cards, frames, mux, stills } from './render.ts';
 import { serve } from './serve.ts';
+import { fitSocialVideo } from './social-fit.ts';
 import { loadSpec } from './spec.ts';
 import { appendEntries, entriesFor, type Found, LEXICON_PATH, loadLexicon, lookupStress, nameAround, spokenWithMarks, uncheckedNames, WORD as LEX_WORD } from './lexicon.ts';
 import { buildTimeline, resolveAt, type Timeline, workDir, workUrl, writeTimeline } from './timeline.ts';
@@ -42,13 +44,14 @@ const HELP = `storygro — explainer videos as code
   storygro tracker  <videos-dir> [--md f]   every episode: stage, whose move, approvals, QA, questions
   storygro preview  <reel.yaml>             live preview with sound in the browser
   storygro render   <reel.yaml> [--draft]   voice → score → frames → master + web MP4 → subtitles → QA
+  storygro social   <reel.yaml> <dir>      optional review copies with visible padding; native Reels use render
   storygro qa       <reel.yaml>             check the rendered file, scenes, numbers, safe area, speech
   storygro subs     <reel.yaml>             write <name>.srt and <name>.vtt from the timeline
   storygro carousel <carousel.yaml>         one PNG per scene at its key moment → carousel/
   storygro series   <series.yaml> [--md f]  episodes of a series: length, approval, QA verdict, latest package
   storygro capture  <x.capture.yaml>        record a scripted browser session (frames + finger) for a screencast scene
   storygro styles                           list the styles in production/styles/ (cartoon, cut-paper, …)
-  storygro new      <folder> --style <id> [--lang en] [--title "…"]
+  storygro new      <folder> --style <id> [--lang en] [--title "…"] [--target instagram-reels]
                                              start a content project in a style: episode, script template, facts
   storygro images   <reel.yaml> [--dry-run] [--force] [--only <scene>]
                                              generate the pictures its shots ask for (local mflux), record them in images.json
@@ -57,9 +60,10 @@ const HELP = `storygro — explainer videos as code
   storygro publish  plan <release-dir> --variant ru --platform instagram --account @handle
                     | approve <id> | mark <id> <state> [--url …] [--note …] | checklist <id> | list
                                              manual publication ledger: records uploads, uploads nothing
-  storygro metrics  add <id> --window 7d --source "…" views=1200 likes=80 | report
+  storygro metrics  add <id> --window 72h --distribution organic --source "…" views=1200 likes=80 | report
   storygro deliver  <reel.yaml> [dir]       copy the complete set + manifest.json to one folder
                                              (default ~/Downloads/<name>); refuses missing files
+  storygro instagram-check <post link>      after an upload: did Instagram keep the 9:16 frame or crop it
   storygro package  <episode.yaml> [dir]    all variants of an episode → one release folder + manifest
 
   A spec named <variant>.reel.yaml (e.g. ru.reel.yaml) works in .reel/<variant>/, so language
@@ -77,7 +81,7 @@ const opt = (f: string) => {
   const i = argv.indexOf(f);
   return i >= 0 ? argv[i + 1] : undefined;
 };
-const VALUED = ['--blur', '--from', '--to', '--out', '--port', '--backlog', '--md', '--variant', '--platform', '--account', '--note', '--url', '--external-id', '--window', '--source', '--at', '--ledger', '--metrics', '--style', '--lang', '--title', '--only', '--inbox', '--step', '--by'];
+const VALUED = ['--blur', '--from', '--to', '--out', '--port', '--backlog', '--md', '--variant', '--platform', '--account', '--note', '--url', '--external-id', '--window', '--source', '--at', '--ledger', '--metrics', '--distribution', '--style', '--lang', '--title', '--target', '--only', '--inbox', '--step', '--by'];
 const positional = argv.filter((a, i) => !a.startsWith('--') && !VALUED.includes(argv[i - 1] ?? ''));
 const [cmd, specPath, ...rest] = positional;
 if (flag('--allow-errors')) process.env.STORYGRO_ALLOW_ERRORS = '1';
@@ -132,6 +136,7 @@ if (cmd === 'publish' || cmd === 'metrics') {
     const r = P.addSnapshot(ledger, P.loadMetrics(metricsPath), {
       publicationId: rest[0] ?? '', window: opt('--window') ?? '', capturedAt: opt('--at') ?? new Date().toISOString(),
       source: opt('--source') ?? '', values: P.parseMetricPairs(pairs),
+      ...(opt('--distribution') ? { distribution: opt('--distribution') } : {}),
     });
     P.saveMetrics(metricsPath, r.store);
     console.log(`✔ snapshot ${r.snapshot.window} for ${rest[0]}`);
@@ -148,11 +153,18 @@ if (cmd === 'capture') {
   process.exit(0);
 }
 
+if (cmd === 'instagram-check') {
+  if (!specPath) throw new Error('usage: storygro instagram-check <post or reel link>');
+  const r = await instagramShape(specPath);
+  console.log(`${r.ok ? '✔' : '✖'} ${r.code}: stored ${r.width}×${r.height} (${r.ratio}) — ${r.note}`);
+  process.exit(r.ok ? 0 : 1);
+}
+
 if (cmd === 'new') {
   const id = opt('--style');
-  if (!id) throw new Error('usage: storygro new <folder> --style <id> [--lang en] [--title "…"] — see storygro styles');
+  if (!id) throw new Error('usage: storygro new <folder> --style <id> [--lang en] [--title "…"] [--target instagram-reels] — see storygro styles');
   const style = loadStyle(id);
-  for (const f of scaffold(specPath, style, { lang: opt('--lang'), title: opt('--title') })) console.log(`✔ ${f}`);
+  for (const f of scaffold(specPath, style, { lang: opt('--lang'), title: opt('--title'), target: opt('--target') })) console.log(`✔ ${f}`);
   console.log(`  next: write the script, then ${style.def.images ? `storygro images ${join(specPath, `${opt('--lang') ?? 'en'}.reel.yaml`)} and ` : ''}storygro board`);
   process.exit(0);
 }
@@ -263,6 +275,14 @@ const summary = (tl: Timeline) =>
   `${tl.scenes.length} scenes, ${tl.duration.toFixed(1)} s${tl.scenes.some((s) => s.wav) ? '' : ' (estimated)'}`;
 
 switch (cmd) {
+  case 'social': {
+    if (!rest[0]) throw new Error('usage: storygro social <reel.yaml> <new-output-dir>');
+    if (!approval(l).approved) throw new Error('source storyboard changed — approve and render the source first');
+    const q = qaState(l);
+    if (q.problem) throw new Error(`social export refused: ${q.problem}`);
+    await fitSocialVideo(join(out, `${l.name}.mp4`), resolve(rest[0]));
+    break;
+  }
   case 'voice': {
     const tl = await timeline();
     for (const s of tl.scenes) console.log(`  ${s.id.padEnd(12)} ${s.start.toFixed(1).padStart(5)}s +${s.duration.toFixed(1)}s`);
@@ -419,6 +439,12 @@ switch (cmd) {
       copyFileSync(src, join(dir, dst));
       files.push(fileEntry(join(dir, dst), dir));
       console.log(`✔ ${join(dir, dst)}`);
+    }
+    const note = uploadNote(l, tl);
+    if (note) {
+      writeFileSync(join(dir, 'UPLOAD.txt'), note);
+      files.push(fileEntry(join(dir, 'UPLOAD.txt'), dir));
+      console.log(`✔ ${join(dir, 'UPLOAD.txt')}`);
     }
     const manifest = {
       name: l.name,

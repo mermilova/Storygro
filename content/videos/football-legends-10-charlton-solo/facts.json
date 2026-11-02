@@ -1,0 +1,28 @@
+{
+  "series": {
+    "project": "Маленькие большие дела",
+    "title": "Легенды футбола",
+    "episode": "Бобби Чарльтон · сильный удар",
+    "_source": "Owner rubric/script2026-11-02;strong shot is an editorial trait, not nickname"
+  },
+  "archive": {
+    "player": "Бобби Чарльтон",
+    "playerDate": "Фото · 8 декабря 1964",
+    "venue": "Старый «Уэмбли»",
+    "venueDate": "Позднее фото · 2 ноября 1991",
+    "_source": "photos.json:P1,P2"
+  },
+  "history": {
+    "munich": "Мюнхен · 1958",
+    "victims": 23,
+    "players": 8,
+    "world": 1966,
+    "europe": 1968,
+    "_source": "sources.md:S1,S2,S3"
+  },
+  "match": {
+    "semi": "Англия — Португалия · 2:1",
+    "final": "Юнайтед — Бенфика · 4:1",
+    "_source": "sources.md:S2,S3,S4"
+  }
+}

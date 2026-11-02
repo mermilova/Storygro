@@ -1,0 +1,21 @@
+{
+  "text": "Тимбер тянул Исака за футболку! Но пенальти не назначили.",
+  "duration": 4.4,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "qwen3",
+    "model": "mlx-community/Qwen3-TTS-12Hz-1.7B-Base-bf16",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/series/football-legends/cast/voices/matvey-C/reference.wav",
+    "language": "Russian",
+    "license": "Apache-2.0 (Qwen3-TTS), MIT (mlx-audio)"
+  },
+  "referenceSha256": "a60c25c663b0c55288c4339a07ea5f404a2a32410e54985b80d5dd9163c51357",
+  "sha256": "aaf13943eb653b7821a3485d87ff70801189d936b063142f5eb4b296737fe3eb",
+  "speed": 1,
+  "role": "matvey",
+  "scene": "penalty",
+  "originalSynthesisText": "Тимбер тянул Исака за футболку! Но пенальти не назначили.",
+  "displayText": "Тимбер тянул Исака за футболку! Но пенальти не назначили.",
+  "file": "assets/voice/penalty.wav",
+  "sourceSha256": "aaf13943eb653b7821a3485d87ff70801189d936b063142f5eb4b296737fe3eb"
+}

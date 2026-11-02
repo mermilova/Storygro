@@ -1,0 +1,20 @@
+{
+  "photos": 1,
+  "files": {
+    "shots/cech-2013.jpg": {
+      "title": "Petr Čech Chelsea2013",
+      "originalUrl": "https://upload.wikimedia.org/wikipedia/commons/7/73/Petr_%C4%8Cech_Chelsea_2013.jpg",
+      "source": "https://commons.wikimedia.org/wiki/File:Petr_%C4%8Cech_Chelsea_2013.jpg",
+      "author": "Warrenfish",
+      "photoDate": "2013-08-10",
+      "uploadDate": "2020-10-20",
+      "publishedCrop": "Heiko Gerber, lossless crop from Petr Čech Chelsea vs AS-Roma10AUG2013.jpg",
+      "licence": "CC BY-SA3.0",
+      "licenceUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+      "presentation": "Entire published photo contained in card; no new crop,no AI retouch,no recolour. Documentary photograph distinct from illustrations.",
+      "width": 2935,
+      "height": 3507,
+      "sha256": "72ff88ad092b69395aa6dac8f3940971633ee116e97b5567b7b95b62c237ea83"
+    }
+  }
+}

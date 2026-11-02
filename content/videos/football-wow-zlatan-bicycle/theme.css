@@ -1,0 +1,18 @@
+@import url('/rc/styles/cartoon/football-legends.css');
+:root {--fl-ink:#112c48;--fl-paper:#fff8df;--fl-gold:#f3d15f;--fl-caption-bottom:490px;--ct-ink:#112c48;--ct-band:#fff8df;--ct-navy:#112c48;--ct-accent:#f3d15f;--kt-ink:#fff8df;--kt-accent:#f3d15f;}
+.fl-series-title {font-size:41px !important;line-height:1.05 !important;}
+.fl-series-subtitle {font-size:29px !important;}
+body:has(.rc-scene--hook:not([style*="display: none"])) .rc-caption {top:970px !important;bottom:auto !important;font-size:43px;}
+body:has(.rc-scene--hook:not([style*="display: none"]) .fl-series-cover[style*="visibility: visible"]) .rc-caption {top:675px !important;bottom:auto !important;}
+body:has(.rc-scene--bicycle:not([style*="display: none"])) .rc-caption {top:970px !important;bottom:auto !important;}
+body:has(.rc-scene--england:not([style*="display: none"])) .rc-caption {top:1050px !important;bottom:auto !important;}
+body:has(.rc-scene--arena:not([style*="display: none"])) .rc-caption {top:790px !important;bottom:auto !important;}
+body:has(.rc-scene--crowd:not([style*="display: none"])) .rc-caption {top:850px !important;bottom:auto !important;}
+body:has(.rc-scene--four:not([style*="display: none"])) .rc-caption {top:600px !important;bottom:auto !important;}
+body:has(.rc-scene--hart:not([style*="display: none"])) .rc-caption {top:970px !important;bottom:auto !important;}
+body:has(.rc-scene--hart:not([style*="display: none"]) div[style*="visibility: visible"] > div > img[src$="hart-run.png"]) .rc-caption {top:780px !important;bottom:auto !important;}
+body:has(.rc-scene--bicycle:not([style*="display: none"]) div[style*="visibility: visible"] > div > img[src$="turn.png"]) .rc-caption {top:500px !important;bottom:auto !important;}
+body:has(.rc-scene--four:not([style*="display: none"])) .rc-caption {top:330px !important;bottom:auto !important;font-size:46px;}
+body:has(.rc-scene--arena:not([style*="display: none"])) .rc-caption,
+body:has(.rc-scene--england:not([style*="display: none"])) .rc-caption,
+body:has(.rc-scene--award:not([style*="display: none"])) .rc-caption {top:330px !important;bottom:auto !important;font-size:46px;}

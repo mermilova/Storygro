@@ -1,0 +1,22 @@
+{
+  "text": "девятнадцатого ноября две тысячи пятого года на стадионе «СантьЯго БернабЕу» в Мадриде состоялось одно из самых знаменитых противостояний футбола — «Реал Мадрид» против «Барселоны».",
+  "duration": 12.35175,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldinho-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "d76ebf4579a2f0a862828be2d9ad6c1dd2ce49cc4ef83ae872b020b441ba32de",
+  "speed": 0.9,
+  "scene": "arena",
+  "originalSynthesisText": "девятнадцатого ноября две тысячи пятого года на стадионе «СантьЯго БернабЕу» в Мадриде состоялось одно из самых знаменитых противостояний футбола — «Реал Мадрид» против «Барселоны».",
+  "displayText": "19 ноября 2005 года на стадионе «Сантьяго Бернабеу» в Мадриде состоялось одно из самых знаменитых противостояний футбола — «Реал Мадрид» против «Барселоны».",
+  "file": "assets/voice/arena.wav",
+  "sourceSha256": "762df79e1b18160a02c7d4ada85f32ab0cdd36df8cf57bb9de2e4f2118d053f0"
+}

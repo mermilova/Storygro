@@ -1,0 +1,19 @@
+{
+  "series": {
+    "project": "Маленькие большие дела",
+    "title": "ФУТБОЛЬНЫЙ ВАУ-ФАКТ!",
+    "episode": "Роналду · овация соперников",
+    "_source": "Owner script2026-11-02;editorial description,not nickname"
+  },
+  "archive": {
+    "title": "Криштиану Роналду",
+    "date": "Настоящее фото · 15 июня 2018",
+    "_source": "photos.json:P1,Анна Нэсси/soccer.ru"
+  },
+  "story": {
+    "result": "Реал победил · 3:0",
+    "date": "3 апреля 2018",
+    "minute": 64,
+    "_source": "sources.md:S1,S2"
+  }
+}

@@ -1,0 +1,12 @@
+@import url('/rc/styles/cartoon/football-legends.css');
+:root {--fl-ink:#163044;--fl-paper:#fff8e8;--fl-gold:#f1ce70;--ct-ink:#163044;--ct-band:#fff8e8;--ct-accent:#e45644;}
+.fl-series-title {font-size:54px !important;line-height:1.05 !important;}
+.fl-series-project {font-size:30px !important;}
+.fl-series-subtitle {font-size:30px !important;}
+.fl-series-cover {padding:20px 24px !important;}
+.rc-caption {top:330px !important;bottom:auto !important;font-size:43px;}
+body:has(.rc-scene--cards:not([style*="display: none"])) .rc-caption,body:has(.rc-scene--result:not([style*="display: none"])) .rc-caption {top:1420px !important;}
+body:has(.rc-scene--hook:not([style*="display: none"])) .rc-caption {top:1420px !important;font-size:40px;}
+body:has(.rc-scene--sofia-goal:not([style*="display: none"])) .rc-caption {top:auto !important;bottom:490px !important;font-size:40px;}
+
+:root {--ct-liverpool:#ab1c2c;--ct-arsenal:#15324c;}
