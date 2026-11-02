@@ -73,7 +73,7 @@
 
 Владелица серии **smart_little_toons — Марина**, [@mermilova](https://github.com/mermilova).
 
-По вопросам серии, сотрудничества и предложений пишите Марине через [Issues этого репозитория](https://github.com/mermilova/Storygro/issues). Электронная почта для обращений не используется.
+По вопросам серии, сотрудничества и предложений пишите Марине в **[Instagram Direct · @smart_little_toons](https://www.instagram.com/smart_little_toons/)** или через [Issues этого репозитория](https://github.com/mermilova/Storygro/issues). Электронная почта для обращений не используется.
 
 ## Основа проекта и лицензия
 
