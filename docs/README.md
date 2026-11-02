@@ -1,4 +1,8 @@
-# Storygro documentation
+# Документация smart_little_toons / Storygro
+
+О нашей серии, героях и рубриках — в [главном README](../README.md). По собственным выпускам действуют [правила публикации](../PUBLICATION_POLICY.md): подробные производственные материалы остаются локально.
+
+Ниже сохранена общая техническая документация движка Storygro и его исторических примеров.
 
 > Structured by [Diátaxis](adr/0004-docs-structure-and-media.md): learn, do, look up, understand. Technical documentation is in English; product planning in [`planning/`](planning/README.md) is in Russian.
 

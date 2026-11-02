@@ -1,6 +1,12 @@
-# Контент Storygro
+# Материалы smart_little_toons
 
-Здесь находятся конкретные материалы для аудитории. [Производственные инструменты](../production/README.md) хранятся отдельно.
+Наша серия — футбольные истории с белкой Софией и енотом Матвеем: «Легенды футбола», «Футбольный вау-факт!» и «Обзор матчей». О героях и формате — в [главном README](../README.md).
+
+По новым собственным выпускам здесь допускаются краткие описания и согласованные ссылки. Полная рабочая основа хранится локально согласно [правилам публикации](../PUBLICATION_POLICY.md).
+
+## Исторические материалы Storygro
+
+Ниже сохранена навигация по материалам исходного движка. Эти примеры и их статусы относятся к истории Storygro; они не являются каталогом текущих выпусков smart_little_toons. [Производственные инструменты](../production/README.md) хранятся отдельно.
 
 | Каталог | Что внутри |
 |---|---|
@@ -15,7 +21,7 @@
 | `videos/<id>/.reel/` | Локальные рендеры, аудио, storyboard, QA и пакеты |
 | [media-assets.json](media-assets.json) | Ссылки, размер и SHA-256 исходников, хранящихся вне Git |
 
-Последний выпуск — мультфильм [agents-open-door](videos/agents-open-door/README.md), первый по [контент-процессу](../docs/explanation/content-workflow.md): план `PLAN.ru.md`, вопросы и одобрения в `review.yaml`. Ранее: [ai-agent-checks](videos/ai-agent-checks/README.md) — тема выбрана по сканированию трендов; [slidecraft-demo](videos/slidecraft-demo/README.md) — демо на записи экрана. Ранее: [micro1-work-data](videos/micro1-work-data/README.md) и [future-of-work](videos/future-of-work/README.md). Исторические примеры движка находятся в `examples/`.
+В исторической подборке Storygro — мультфильм [agents-open-door](videos/agents-open-door/README.md), первый по [контент-процессу](../docs/explanation/content-workflow.md): план `PLAN.ru.md`, вопросы и одобрения в `review.yaml`. Ранее: [ai-agent-checks](videos/ai-agent-checks/README.md) — тема выбрана по сканированию трендов; [slidecraft-demo](videos/slidecraft-demo/README.md) — демо на записи экрана. Ранее: [micro1-work-data](videos/micro1-work-data/README.md) и [future-of-work](videos/future-of-work/README.md). Исторические примеры движка находятся в `examples/`.
 
 ```sh
 npm run storygro -- ideas content/ideas/backlog.yaml
@@ -25,4 +31,4 @@ npm run storygro -- series content/series/business-explainers.yaml
 npm run storygro -- tracker content/videos --md content/TRACKER.md
 ```
 
-Начальная аудитория: руководители, основатели и специалисты, внедряющие ИИ в работу. Каналы — Instagram и YouTube Shorts, языки — RU/EN; текущая проба на русском. Перед публикацией нужны просмотр, прослушивание и редакционное одобрение. Ничего автоматически в соцсети не отправляется.
+Аудитория исторических деловых примеров Storygro: руководители, основатели и специалисты, внедряющие ИИ в работу. Каналы — Instagram и YouTube Shorts, языки — RU/EN; текущая проба на русском. Перед публикацией нужны просмотр, прослушивание и редакционное одобрение. Ничего автоматически в соцсети не отправляется.
