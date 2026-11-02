@@ -1,9 +1,0 @@
-episode: 1
-id: football-wow-kane-goalkeeper
-title: Харри Кейн — нападающий, который стал вратарём!
-sources: sources.md
-credits: CREDITS.md
-series: football-wow
-variants:
-  - id: ru
-    spec: ru.reel.yaml

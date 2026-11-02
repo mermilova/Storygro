@@ -1,9 +1,0 @@
-episode: 1
-id: football-wow-zlatan-bicycle
-title: Златан Ибрагимович — гол через себя почти с 30 метров!
-sources: sources.md
-credits: CREDITS.md
-series: football-wow
-variants:
-  - id: ru
-    spec: ru.reel.yaml

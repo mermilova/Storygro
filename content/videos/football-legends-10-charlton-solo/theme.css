@@ -1,7 +1,0 @@
-@import url('/rc/styles/cartoon/football-legends.css');
-:root {--fl-ink:#253b33;--fl-paper:#fff8e8;--fl-gold:#e9c764;--fl-caption-bottom:490px;--ct-ink:#253b33;--ct-band:#fff8e8;--ct-navy:#253b33;--ct-accent:#b83831;--kt-ink:#fff8e8;--kt-accent:#e9c764;}
-.fl-series-title {font-size:58px !important;line-height:1.05 !important;}
-.fl-series-subtitle {font-size:29px !important;}
-body:has(.rc-scene--hook:not([style*="display: none"])) .rc-caption {top:1235px !important;bottom:auto !important;font-size:40px;}
-body:has(.rc-scene--hook:not([style*="display: none"]) .fl-series-cover[style*="visibility: visible"]) .rc-caption {top:680px !important;bottom:auto !important;font-size:38px;}
-body:has(.rc-scene--strike:not([style*="display: none"]),.rc-scene--semi:not([style*="display: none"]),.rc-scene--rebuild:not([style*="display: none"])) .rc-caption {top:330px !important;bottom:auto !important;font-size:43px;}

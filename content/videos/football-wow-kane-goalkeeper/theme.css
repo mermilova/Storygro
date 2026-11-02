@@ -1,8 +1,0 @@
-@import url('/rc/styles/cartoon/football-legends.css');
-:root { --fl-ink:#112638; --fl-paper:#fff8e9; --fl-gold:#edc76e; --fl-caption-bottom:480px; --ct-ink:#112638; --ct-band:#fff8e9; --ct-navy:#112638; --ct-accent:#e9c15e; --kt-ink:#fff8e9; --kt-accent:#edc76e; --kt-accent2:#8ad2b0; }
-.fl-series-title { font-size:43px !important; line-height:1.05 !important; }
-.fl-series-subtitle { font-size:31px !important; }
-/* Keep the caption clear of the field action and hosts' feet. */
-body:has(.rc-scene--hook:not([style*="display: none"])) .rc-caption { top:700px !important; bottom:auto !important; font-size:46px; }
-/* Glove fastening and the free-kick/goal consequence must stay unobscured. */
-body:has(.rc-scene--gloves:not([style*="display: none"])) .rc-caption { top:340px !important; bottom:auto !important; }

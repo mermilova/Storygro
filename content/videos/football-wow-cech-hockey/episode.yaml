@@ -1,9 +1,0 @@
-episode: 1
-id: football-wow-cech-hockey
-title: Петр Чех — футбольный вратарь, который стал хоккейным голкипером!
-sources: sources.md
-credits: CREDITS.md
-series: football-wow
-variants:
-  - id: ru
-    spec: ru.reel.yaml

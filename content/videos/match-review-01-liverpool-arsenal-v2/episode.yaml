@@ -1,9 +1,0 @@
-episode: 1
-id: match-review-01-liverpool-arsenal-v2
-title: Обзор матчей · Ливерпуль — Арсенал · 01.11.2026 · V2
-sources: sources.md
-credits: CREDITS.md
-series: match-review
-variants:
-  - id: ru
-    spec: ru.reel.yaml
