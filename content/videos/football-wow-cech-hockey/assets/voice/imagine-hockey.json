@@ -1,0 +1,22 @@
+{
+  "text": "А после завершения футбольной карьеры надеваешь коньки, берёшь клюшку и выходишь защищать уже хоккейные ворота!",
+  "duration": 7.039416666666667,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-cech-hockey/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "b50accb79f6c2a9aa098421a506c61eab21f0966bc98dfb4179e06900cbea667",
+  "speed": 0.96,
+  "scene": "imagine-hockey",
+  "originalSynthesisText": "А после завершения футбольной карьеры надеваешь коньки, берёшь клюшку и выходишь защищать уже хоккейные ворота!",
+  "displayText": "А после завершения футбольной карьеры надеваешь коньки, берёшь клюшку и выходишь защищать уже хоккейные ворота!",
+  "file": "assets/voice/imagine-hockey.wav",
+  "sourceSha256": "4ee2a694b7faa09a87415b8e0f4a621cbffed962f1d01aca1a535159398f3a98"
+}

@@ -633,3 +633,147 @@ words:
   - word: Роналдиньо
     say: Роналд+иньо
     source: 'ru.wikipedia, «Роналдиньо»: «…[…], Порту-Алегри), более известный как Роналди́ньо (порт.-браз. Ronaldinho) и Роналди́ньо…» (storygro stress --lookup, 2026-10-31)'
+  - word: Харри
+    say: Х+арри
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Кейн,_Гарри: «Га́рри Э́двард Кейн»; owner spelling Харри retained, first-syllable stress. Reviewed 2026-11-01 for Kane V2; explicit episode audio hints, not a global engine override.'
+  - word: Кейн
+    say: К+ейн
+    forms: [Кейна, Кейну, Кейном, Кейне]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Кейн,_Гарри: Harry Edward Kane; one-syllable surname /keɪn/, case-form stress retained. Reviewed 2026-11-01.'
+  - word: Тоттенхэм
+    say: Т+оттенхэм
+    forms: [Тоттенхэма, Тоттенхэму, Тоттенхэмом, Тоттенхэме]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Тоттенхэм_Хотспур: «То́ттенхэм Хо́тспур», English [ˈtɒtənəm]. Preserve owner spelling; stress first syllable. Reviewed 2026-11-01.'
+  - word: Астерас
+    say: Аст+ерас
+    forms: [Астераса, Астерасу, Астерасом, Астерасе]
+    mark: false
+    source: 'Official club https://asterastripolis.gr/el/pae/viografiko: «Νέος Αστέρας»; written Greek tonos on έ supports stress Асте́рас. Russian case-form stress retained. Reviewed 2026-11-01.'
+  - word: Уго
+    say: Уг+о
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Льорис,_Уго: «Уго́ Адрие́н Домини́к Льори́с» (repository stress --lookup excerpt, 2026-11-01). French Hugo; do not use the unrelated first-name entry.'
+  - word: Льорис
+    say: Льор+ис
+    forms: [Льориса, Льорису, Льорисом, Льорисе]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Льорис,_Уго: «Льори́с», stress --lookup excerpt checked 2026-11-01. Episode hint ЛьорИс; ASR spelling alone is not a stress verdict.'
+  - word: хет-трик
+    say: хет-тр+ик
+    mark: false
+    source: 'Russian Orthographic Dictionary, https://gramota.ru/storage/public/normdicts/orfograficheskij_slovar.pdf: «хет-три́к, -а (спорт.)». Also https://gramota.ru/meta/khet-trik. Reviewed 2026-11-01.'
+  - word: некем
+    say: н+екем
+    mark: false
+    source: 'https://ru.wiktionary.org/wiki/некого: negative pronoun, instrumental не́кем; https://gramota.ru/poisk?query=некем&mode=slovari. Reviewed 2026-11-01 for «заменить его было некем».'
+  - word: ворота
+    say: вор+ота
+    mark: false
+    source: 'https://ru.wiktionary.org/wiki/ворота: football goal uses plural «воро́та», not the separate ворот/collar form. Reviewed 2026-11-01.'
+  - word: постоять
+    say: посто+ять
+    mark: false
+    source: 'https://ru.wiktionary.org/wiki/постоять: «постоя́ть», perfective of стоять. Reviewed 2026-11-01.'
+  - word: штрафного
+    say: штрафн+ого
+    mark: false
+    source: 'https://gramota.ru/meta/shtrafnoy: «штрафно́й», inflected form штрафно́го. Reviewed 2026-11-01 for «после штрафного удара».'
+  - word: Челси
+    say: Ч+елси
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Челси_(футбольный_клуб): «Че́лси»; repository stress --lookup fetched 2026-11-01. Norm record only; no automatic change to selected voices.'
+  - word: Арсенал
+    say: Арсен+ал
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Арсенал: «Арсена́л»; repository stress --lookup fetched 2026-11-01. Same word stress in club name; no automatic voice change.'
+  - word: Гилфорд
+    say: Г+илфорд
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Гилфорд: «Ги́лфорд», English Guildford [ˈɡɪlfə(r)d]; repository stress --lookup fetched 2026-11-01 for Guildford Phoenix. Norm only.'
+  - word: Феникс
+    say: Ф+еникс
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Феникс: «Фе́никс»; repository stress --lookup fetched 2026-11-01. Russian rendering of Phoenix in supplied club name; mark false preserves performances.'
+  - word: Хаскис
+    say: Х+аскис
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Кассель_Хаскис: «Ха́скис», English Huskies; repository stress --lookup fetched 2026-11-01. Evidence for the shared English word only, not the different club name Haringey; no automatic voice change.'
+  - word: Пушкаш
+    say: П+ушкаш
+    forms: [Пушкаша, Пушкашу, Пушкашем, Пушкаше]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Пушкаш,_Ференц: «Фе́ренц Пу́шкаш»; first syllable. Checked2026-11-02 for full Zlatan film. Contextual performance hint only; no global engine mark override.'
+  - word: Стокгольм
+    say: Стокг+ольм
+    forms: [Стокгольма, Стокгольму, Стокгольмом, Стокгольме]
+    mark: false
+    source: 'https://ru.wiktionary.org/wiki/Стокгольм: «Стокго́льм», «Стокго́льма». Checked2026-11-02; episode audio hint only.'
+  - word: Барселоне
+    say: Барсел+оне
+    mark: false
+    source: 'ru.wiktionary, «Барселона»: «…Барсело́ны Барсело́н Д. Барсело́не Барсело́нам В. Барсело́ну…» (storygro stress --lookup, 2026-11-02)'
+  - word: Сантьяго
+    say: Санть+яго
+    mark: false
+    source: 'ru.wikipedia, «Бернабеу, Сантьяго»: «…Сантья́го Бернабе́у де Йе́сте (исп. Santiago Bern…» (storygro stress --lookup, 2026-11-02)'
+  - word: Бернабеу
+    say: Бернаб+еу
+    mark: false
+    source: 'ru.wikipedia, «Бернабеу, Сантьяго»: «…Сантья́го Бернабе́у де Йе́сте (исп. Santiago Bernabéu de Ye…» (storygro stress --lookup, 2026-11-02)'
+  - word: Мадриде
+    say: Мадр+иде
+    mark: false
+    source: 'ru.wiktionary, «Мадрид»: «…Мадри́дом Мадри́дами Пр. Мадри́де Мадри́дах Мад - ри…» (storygro stress --lookup, 2026-11-02)'
+  - word: Икера
+    say: +Икера
+    mark: false
+    source: 'ru.wiktionary, «Икер»: «…Им. И́кер И́керы Р. И́кера И́керов Д. И́керу И́ке…» (storygro stress --lookup, 2026-11-02)'
+  - word: Касильяса
+    say: Кас+ильяса
+    mark: false
+    source: 'ru.wiktionary, «Касильяс»: «…Каси́льяс Каси́льясы Р. Каси́льяса Каси́льяс Каси́льясов Д.…» (storygro stress --lookup, 2026-11-02)'
+  - word: ЛЕГЕНДЫ
+    say: ЛЕГ+ЕНДЫ
+    source: 'ru.wikipedia, «Легенды осени»: «…«Леге́нды о́сени» (англ. Legends of the Fall) — а…» (storygro stress --lookup, 2026-11-02)'
+  - word: Мюнхене
+    say: М+юнхене
+    source: 'ru.wiktionary, «Мюнхен»: «…Мю́нхеном Мю́нхенами Пр. Мю́нхене Мю́нхенах Мю́н - х…» (storygro stress --lookup, 2026-11-02)'
+  - word: Белграде
+    say: Белгр+аде
+    source: 'ru.wiktionary, «Белград»: «…ра́дом Белгра́дами Пр. Белгра́де Белгра́дах Бел…» (storygro stress --lookup, 2026-11-02)'
+  - word: Лиги
+    say: Л+иги
+    source: 'ru.wiktionary, «лига»: «…ч. мн. ч. Им. ли́га ли́ги Р. ли́ги ли́г Д.…» (storygro stress --lookup, 2026-11-02)'
+  - word: Джанлуиджи
+    say: Джанлу+иджи
+    source: 'ru.wikipedia, «Буффон, Джанлуиджи»: «…Джанлуи́джи Буффо́н (итал. Gianluigi Buffon, италья…» (storygro stress --lookup, 2026-11-02)'
+  - word: Буффона
+    say: Буфф+она
+    mark: false
+    source: 'ru.wikipedia «Буффон, Джанлуиджи»: Джанлуи́джи Буффо́н; inflected Буффо́на, checked 2026-11-02 https://ru.wikipedia.org/wiki/Буффон,_Джанлуиджи'
+  - word: Карвахаля
+    say: Карвах+аля
+    mark: false
+    source: 'Spanish Carvajal, final-stress surname ending l; inflected Russian Карваха́ля. Name identity https://www.juventus.com/en/news/articles/real-madrid-victorious-at-the-allianz ; editorial pronunciation norm, auditory review pending, 2026-11-02'
+  - word: Хаверц
+    say: Х+аверц
+    forms: [Хаверца, Хаверцу, Хаверцем, Хаверце]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Хаверц,_Кай: «Кай Лу́кас Ха́верц», штатный stress --lookup, проверено2026-11-02 для match-review01. Письменная норма; автоматическая смена сохранённого аудио не выполняется.'
+  - word: Ливерпуль
+    say: Ливерп+уль
+    forms: [Ливерпуля, Ливерпулю, Ливерпулем, Ливерпуле]
+    mark: false
+    source: 'https://ru.wiktionary.org/wiki/Ливерпуль: «Ливерпу́ль», «Ливерпу́ля», штатный stress --lookup2026-11-02. Проверка аудио отдельно.'
+  - word: Ньони
+    say: Нь+они
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Ньони,_Трей: «Треймо́рис Ньо́ни», штатный stress --lookup2026-11-02.'
+  - word: Цолис
+    say: Ц+олис
+    forms: [Цолиса, Цолису, Цолисом, Цолисе]
+    mark: false
+    source: 'https://ru.wikipedia.org/wiki/Цолис,_Христос: «Хри́стос Цо́лис»/Greek Τζόλης, проверено2026-11-02; инфлексия Цо́лиса сохраняет ударение. Новые сохранённые WAV автоматически не меняются.'

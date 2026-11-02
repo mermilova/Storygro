@@ -1,0 +1,22 @@
+{
+  "text": "Погибли двадцать три человека, среди них — восемь футболистов клуба.",
+  "duration": 4.8529583333333335,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "6c7b63311ca9d3d2ce7b27a106276a41beaaec71f3b809fbf1e4893861822813",
+  "speed": 0.9,
+  "scene": "memory",
+  "originalSynthesisText": "Погибли двадцать три человека, среди них — восемь футболистов клуба.",
+  "displayText": "Погибли 23 человека, среди них — восемь футболистов клуба.",
+  "file": "assets/voice/memory.wav",
+  "sourceSha256": "8f3c1b5dfd879c3c7f45bde45d2582f40cd03450c4e5afdaa67decd30f533579"
+}

@@ -1,0 +1,19 @@
+review: 1
+questions:
+  - id: watch-v2
+    for: owner
+    open: true
+    ask: Просмотреть V2:прыжок недоступен после повторного отказа генератора,обе диалоговые реплики удалены;полное слушание и решение о релизе остаются за владельцем.
+notes: Explicit owner corrections2November2026. OriginalV1 preserved.
+approvals:
+  ru:
+    script:
+      hash: 36560fbd9a46
+      at: 2026-11-02T16:19:21.216Z
+      by: agent
+      role: agent
+    storyboard:
+      hash: 931eb7e397aa
+      at: 2026-11-02T16:19:21.460Z
+      by: agent
+      role: agent

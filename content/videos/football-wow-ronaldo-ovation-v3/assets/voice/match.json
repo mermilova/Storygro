@@ -1,0 +1,22 @@
+{
+  "text": "третьего апреля две тысячи восемнадцатого года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+  "duration": 8.286416666666666,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "c5200cdc5fd30463f0f6c834c09b8b671cd6adf1fa960b0f66c74dc7567f7f79",
+  "speed": 0.9,
+  "scene": "match",
+  "originalSynthesisText": "третьего апреля две тысячи восемнадцатого года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+  "displayText": "3 апреля 2018 года «Реал Мадрид» играл против «Ювентуса» в четвертьфинале Лиги чемпионов.",
+  "file": "assets/voice/match.wav",
+  "sourceSha256": "f53280c442ea660f3f999762a4dd76d1e09d0258e6103ddd44d3cab081889633"
+}

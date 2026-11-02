@@ -1,0 +1,9 @@
+episode: 1
+id: football-legends-10-charlton-solo
+title: Бобби Чарльтон — возвращение на вершину — без ведущих
+sources: sources.md
+credits: CREDITS.md
+series: football-legends
+variants:
+  - id: ru
+    spec: ru.reel.yaml

@@ -1,0 +1,317 @@
+reel: 1
+style: cartoon
+title: Обзор матчей · Ливерпуль — Арсенал · 01.11.2026 · V2
+lang: ru
+data:
+  facts: facts.json
+images:
+  provider: manual
+  model: OpenAI built-in image_gen (exact identifier undisclosed)
+  width: 1088
+  height: 1920
+  seed: 0
+  prompt: "{subject}. Original prompts and hashes:images.json."
+post:
+  title: Обзор матчей · Ливерпуль — Арсенал · 01.11.2026 · V2
+  text: >-
+    Маленькие большие дела · ОБЗОР МАТЧЕЙ. Новый выпуск smart_little_toons:
+    София за «Арсенал», Матвей за «Ливерпуль». Разные команды, одна любовь к
+    футболу!
+
+
+    Ливерпуль — Арсенал, 1 ноября 2026: 0:1, Хаверц, 16-я минута. Гол,
+    перекладина Вирца, спорный эпизод без назначенного пенальти, замены, сейв
+    Алиссона и нервный финал. Источники: Liverpool FC и Sky Sports, ссылки в
+    sources.md.
+
+
+    Подробные художественные AI-иллюстрации созданы встроенным image_gen, точный
+    ID модели инструмент не раскрывает. Смена нарисованных состояний и движение
+    камеры; не документальная видеозапись и не полная анимация персонажей.
+    Реакции Софии и Матвея — авторские. Озвучка синтетическая: OmniVoice B,
+    Qwen3 с точными выбранными голосами София A/Матвей C.
+
+
+    Настоящее фото Кая Хаверца: Chensiyuan, 24 мая 2026; кадрирование
+    NullReason, CC BY-SA 4.0 https://creativecommons.org/licenses/by-sa/4.0/ .
+    https://commons.wikimedia.org/wiki/File:1_kai_havertz_2026_(cropped).jpg .
+    Использован существующий опубликованный кроп, показан целиком, без ретуши;
+    это не фото матча 1 ноября. Фото сохраняет свою лицензию; остальные
+    материалы имеют отдельные условия.
+
+
+    Исправленная версия: София в жёлто-тёмно-синих цветах Арсенала, Матвей в
+    красных цветах Ливерпуля. Вступительная реплика Матвея объясняет переход к
+    сцене гола.
+  tags:
+    - ОбзорМатчей
+    - Арсенал
+    - Ливерпуль
+    - футбол
+    - smart_little_toons
+scenes:
+  - id: hook
+    scene: series-cover
+    say: Обзор матчей! [14](=четырнадцать) лет ожидания — и наконец-то «Арсенал»
+      снова побеждает на «Энфилде»!
+    voice:
+      source: assets/voice/hook.wav
+      speed: 1
+    pad:
+      - 0
+      - 0.6
+    props:
+      image: shots/cover-contrast.png
+      projectFrom: facts.series.project
+      titleFrom: facts.series.title
+      subtitleFrom: facts.series.episode
+      reveal: shots/cover-contrast.png
+      revealAt: 4.4
+  - id: rivalry
+    scene: illustration
+    say: Я за «Ливерпуль»… Как же мы пропустили?
+    voice:
+      source: assets/voice/rivalry.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      shots:
+        - image: shots/rivalry-v2-contrast-question.png
+          move: in
+          zoom: 0.012
+      fade: 0
+      labels:
+        - textFrom: facts.supporters.matvey
+          x: 0.27
+          y: 0.29
+          tone: liverpool
+          at: 0.1
+        - textFrom: facts.supporters.sofia
+          x: 0.7
+          y: 0.29
+          tone: arsenal
+          at: 0.1
+  - id: goal
+    scene: illustration
+    say: "Единственный гол встречи был забит на [16-й](=шестнадцатой) минуте:
+      {#finish}Кай Хаверц отправил мяч в ворота «Ливерпуля» и вывел гостей
+      вперёд."
+    voice:
+      source: assets/voice/goal.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.3
+    props:
+      shots:
+        - image: shots/cross-contrast.png
+          move: in
+          zoom: 0.012
+        - image: shots/goal-contrast.png
+          move: in
+          zoom: 0.012
+          at: finish
+      fade: 0
+  - id: sofia-goal
+    scene: archive-photo
+    say: Райс прострелил — Хаверц замкнул! Вот это начало!
+    voice:
+      source: assets/voice/sofia-goal.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      image: shots/havertz-2026.jpg
+      background: shots/goal-contrast.png
+      titleFrom: facts.archive.title
+      captionFrom: facts.archive.date
+      portrait: true
+      fit: contain
+  - id: pressure
+    scene: illustration
+    say: Хозяева пытались спасти матч. Флориан Вирц попал в перекладину,
+      {#appeal}были опасные моменты и споры вокруг возможного пенальти.
+    voice:
+      source: assets/voice/pressure.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.3
+    props:
+      shots:
+        - image: shots/bar-v2-contrast.png
+          move: in
+          zoom: 0.012
+        - image: shots/penalty-v2-contrast.png
+          move: in
+          zoom: 0.012
+          at: appeal
+      fade: 0
+  - id: penalty
+    scene: illustration
+    say: Тимбер тянул Исака за футболку! Но пенальти не назначили.
+    voice:
+      source: assets/voice/penalty.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      shots:
+        - image: shots/penalty-v2-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: changes
+    scene: illustration
+    say: После травмы вернулся Собослаи, сменив Ньони. Вместо Гакпо вышел Нгумоа.
+      «Ливерпуль» искал спасение.
+    voice:
+      source: assets/voice/changes.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      shots:
+        - image: shots/changes-v2-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: save
+    scene: illustration
+    say: Алиссон спас после удара Цолиса! Могло быть и два!
+    voice:
+      source: assets/voice/save.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.3
+    props:
+      shots:
+        - image: shots/save-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: cards
+    scene: illustration
+    say: "Напряжение росло: восемь жёлтых карточек, без удалений."
+    voice:
+      source: assets/voice/cards.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      shots:
+        - image: shots/cards-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+      title:
+        textFrom: facts.cards.title
+        size: 0.033
+  - id: defence
+    scene: illustration
+    say: Но оборона «Арсенала» выдержала давление.
+    voice:
+      source: assets/voice/defence.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.3
+    props:
+      shots:
+        - image: shots/defence-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: result
+    scene: illustration
+    say: Итог — [0:1](=ноль один)! Команда Микеля Артеты увозит три очка из
+      Ливерпуля и укрепляет свои позиции в чемпионской гонке.
+    voice:
+      source: assets/voice/result.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.3
+    props:
+      shots:
+        - image: shots/result-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+      title:
+        textFrom: facts.result.display
+        size: 0.028
+  - id: respect
+    scene: illustration
+    say: Обидно! Но выстояли вы крепко.
+    voice:
+      source: assets/voice/respect.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 0.6
+    props:
+      shots:
+        - image: shots/ending-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+  - id: ending
+    scene: illustration
+    say: «Энфилд» снова покорён!
+    voice:
+      source: assets/voice/ending.wav
+      speed: 1
+    pad:
+      - 0.15
+      - 1.8
+    props:
+      shots:
+        - image: shots/ending-contrast.png
+          move: in
+          zoom: 0.012
+      fade: 0
+voice:
+  engine: omnivoice
+  model: k2-fsa/OmniVoice
+  voice: assets/voice/narrator-ru.wav
+  speed: 0.9
+  stress: off
+theme: theme.css
+format:
+  preset: vertical
+  width: 1080
+  height: 1920
+  fps: 30
+safe: reels
+captions:
+  show: true
+  maxWords: 3
+transition:
+  kind: cut
+  dur: 0
+stills:
+  cover: hook@0
+music:
+  bpm: 108
+  key: D
+  progression:
+    - I
+    - V
+    - vi
+    - IV
+  gain: 0.045
+  drop: goal
+loudness: -14
+hooks:
+  - "София празднует, Матвей не верит: один гол завершил 14 лет ожидания —
+    выбранное"
+  - Перекладина Вирца и противоположные реакции друзей
+  - Как одного гола хватило, чтобы покорить Энфилд?

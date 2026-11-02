@@ -1,0 +1,22 @@
+{
+  "text": "На трибунах собрались почти пятьдесят тысяч зрителей.",
+  "duration": 3.8526666666666665,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "8f2f80bf0408372fd5f70d0e1e4e8681de36c28cd82708f1e7fbd78b51ac4be0",
+  "speed": 0.9,
+  "scene": "crowd",
+  "originalSynthesisText": "На трибунах собрались почти пятьдесят тысяч зрителей.",
+  "displayText": "На трибунах собрались почти 50 тысяч зрителей.",
+  "file": "assets/voice/crowd.wav",
+  "sourceSha256": "1e05aa5b841e7b59acea5b01e81c07d739545f3c7e54a94119b9d0fde7c91746"
+}

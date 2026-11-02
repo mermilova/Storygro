@@ -1,0 +1,22 @@
+{
+  "text": "Но ЗлАтан ИбрагИмович устроил настоящее шоу и забил все четыре гола Швеции!",
+  "duration": 5.352,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "48a3c7f40eac636687348f5309ff7c9861e571c6dadcce365ab31310d0c9e5b6",
+  "speed": 0.9,
+  "scene": "four",
+  "originalSynthesisText": "Но ЗлАтан ИбрагИмович устроил настоящее шоу и забил все четыре гола Швеции!",
+  "displayText": "Но Златан Ибрагимович устроил настоящее шоу и забил все четыре гола Швеции!",
+  "file": "assets/voice/four.wav",
+  "sourceSha256": "dbf7d5c9dd14c27195e9f0ed96d59843c66c9b7543367643dec6fe45ee1a0010"
+}

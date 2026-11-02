@@ -1,0 +1,14 @@
+brand: 1
+name: smart_little_toons
+audience: Дети и родители, которые вместе открывают мировой футбол через понятные истории, узнаваемых игроков и реакции Софии и Матвея.
+languages: [ru]
+# Baseline for new football episodes; each commissioned episode keeps explicit voice settings.
+# Exact narrator/host references stay in ignored local media with selection records and hashes.
+voice:
+  ru: { engine: omnivoice, voice: assets/voice/narrator-ru.wav, speed: 0.90 }
+disclosure:
+  ru: { mustMention: [синтет, синтез, OmniVoice, Qwen] }
+avoid:
+  - { phrase: гарантируем, reason: Не обещаем результаты, которые история и источники не подтверждают. }
+  - { phrase: гарантированн, reason: Не обещаем гарантированный эффект видео или методики. }
+# Episode specs opt in with brand:. Historical specs and their legacy brand profile are preserved.

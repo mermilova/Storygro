@@ -1,0 +1,22 @@
+{
+  "text": "В том же году БОбби получил «Золотой мяч»!",
+  "duration": 2.9088333333333334,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "5247a3e448c09ded48a8b87da4a3637146e846bd98aa619be3298463562829f4",
+  "speed": 0.9,
+  "scene": "award",
+  "originalSynthesisText": "В том же году БОбби получил «Золотой мяч»!",
+  "displayText": "В том же году Бобби получил «Золотой мяч»!",
+  "file": "assets/voice/award.wav",
+  "sourceSha256": "836e07a032fba9deacc7e513eb98a2a2563fc7bb4ef41db952a320f99f380bb4"
+}

@@ -1,0 +1,22 @@
+{
+  "text": "Особенно ярко он сыграл в полуфинале против Португалии: забил оба гола своей команды, которая победила два один.",
+  "duration": 7.807333333333333,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-legends-10-charlton/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "1a814cd336d891a535b416346467b9bc12bd14bba4bbd955100cb761b1e9e5eb",
+  "speed": 0.9,
+  "scene": "semi",
+  "originalSynthesisText": "Особенно ярко он сыграл в полуфинале против Португалии: забил оба гола своей команды, которая победила два один.",
+  "displayText": "Особенно ярко он сыграл в полуфинале против Португалии: забил оба гола своей команды, которая победила 2:1.",
+  "file": "assets/voice/semi.wav",
+  "sourceSha256": "499c96133d145a9542df0da92f9d0b84be1f3f1512d9d500e0c2272074617d69"
+}

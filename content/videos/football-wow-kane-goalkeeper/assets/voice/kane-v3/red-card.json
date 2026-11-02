@@ -1,0 +1,111 @@
+{
+  "duration": 8.981791666666666,
+  "words": [
+    {
+      "w": "Но",
+      "start": 0.0,
+      "end": 0.36
+    },
+    {
+      "w": "на",
+      "start": 0.36,
+      "end": 0.56
+    },
+    {
+      "w": "восемьдесят",
+      "start": 0.56,
+      "end": 1.26
+    },
+    {
+      "w": "седьмой",
+      "start": 1.26,
+      "end": 1.74
+    },
+    {
+      "w": "минуте",
+      "start": 1.74,
+      "end": 2.18
+    },
+    {
+      "w": "произошло",
+      "start": 2.18,
+      "end": 2.82
+    },
+    {
+      "w": "неожиданное:",
+      "start": 2.82,
+      "end": 3.72
+    },
+    {
+      "w": "вратарь",
+      "start": 3.94,
+      "end": 4.8
+    },
+    {
+      "w": "«ТОттенхэма»",
+      "start": 4.8,
+      "end": 5.6
+    },
+    {
+      "w": "УгО,",
+      "start": 5.6,
+      "end": 6.16
+    },
+    {
+      "w": "ЛьорИс",
+      "start": 6.56,
+      "end": 6.96
+    },
+    {
+      "w": "получил",
+      "start": 6.96,
+      "end": 7.52
+    },
+    {
+      "w": "красную",
+      "start": 7.52,
+      "end": 8.06
+    },
+    {
+      "w": "карточку.",
+      "start": 8.06,
+      "end": 8.78
+    }
+  ],
+  "cues": {},
+  "aligned": 1.0,
+  "stress": [],
+  "synthesisText": "Но на восемьдесят седьмой минуте произошло неожиданное: вратарь «ТОттенхэма» УгО, ЛьорИс получил красную карточку.",
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-kane-goalkeeper/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "sha256": "26ad669ff51afdcf0fbf5d78373a44576ea1f0dd97936d9a150917d51b521761",
+  "file": "assets/voice/kane-v3/red-card.wav",
+  "revision": "V3",
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "speed": 0.82,
+  "sourceTake": 7,
+  "sourceSha256": "5c9d12307b54dfcc7bf2681f2776ee404df41894497adc4c8afb606506dc074f",
+  "localProsody": {
+    "firstVowelRange": [
+      6.65,
+      6.755
+    ],
+    "firstVowelGain": 0.5,
+    "finalVowelRange": [
+      6.81,
+      6.895
+    ],
+    "finalVowelGain": 2.4,
+    "finalVowelTempo": 0.65,
+    "edgeGainRampSeconds": 0.015,
+    "pitchChanged": false
+  },
+  "selection": "Contextual take 7, explicit final-vowel prominence in actual waveform, original spoken/displayed name retained"
+}

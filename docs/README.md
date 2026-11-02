@@ -1,4 +1,8 @@
-# Storygro documentation
+# Документация smart_little_toons и движка Storygro
+
+Редакционная точка входа — [главная страница проекта](../README.md), [каталог выпусков](../content/videos/README.md) и [правила футбольных серий](how-to/football-series.md). Новая рубрика — [«Обзор матчей»](../content/series/match-review.md); персонажи и выбранные голоса описаны в материалах серий.
+
+Ниже сохранена техническая документация Storygro: CLI, сцены, звук, рендер и проверки. Универсальные уроки и прежние деловые примеры относятся к возможностям движка; текущий производственный фокус этого fork — smart_little_toons.
 
 > Structured by [Diátaxis](adr/0004-docs-structure-and-media.md): learn, do, look up, understand. Technical documentation is in English; product planning in [`planning/`](planning/README.md) is in Russian.
 

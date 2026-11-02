@@ -1,0 +1,113 @@
+{
+  "date": "2026-11-01",
+  "status": "Complete technical review cut;owner full-film viewing/listening and release approval pending",
+  "master": {
+    "file": ".reel/ru/football-wow-cech-hockey-ru.mp4",
+    "sha256": "3a3947662bccb4d0fe1a82976a4305552a95da5213295b15865ac0602abadb7f",
+    "bytes": 60206721,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "plannedDuration": 91.721,
+    "frames": 2750,
+    "plannedCaptureFrames": 2752,
+    "frameAccounting": "Muxed master/web decode2750 frames versus2752 planned capture frames;two-frame tail difference inspected,last full frame valid,all speech ends before final hold.",
+    "videoCodec": "h264",
+    "audioCodec": "aac",
+    "sampleRate": 48000
+  },
+  "sourceTextVerbatim": true,
+  "approvedExclusion": {
+    "text": "Cech stars on hockey debut+2",
+    "by": "owner",
+    "answer": "Да, убрать только эту строку"
+  },
+  "speakerLabels": "Matvey/Sofia prefixes retained in captions;not spoken by narrator",
+  "spokenWords": 186,
+  "captionWords": 188,
+  "visuals": {
+    "generated": 22,
+    "selectedIllustrations": 15,
+    "photoCount": 1,
+    "photoDate": "2013-08-10",
+    "photoSeconds": 6.276999999999999,
+    "photoStart": 22.165,
+    "illustratedSeconds": 85.444,
+    "animation": "Illustrated edit with camera movement and successive action states;not full skeletal animation"
+  },
+  "narrator": {
+    "id": "OmniVoice B",
+    "speed": 0.96,
+    "previousKaneSpeed": 0.82,
+    "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+    "globalPreferencesChanged": false
+  },
+  "hosts": [
+    {
+      "id": "matvey-C",
+      "newEpisodeReply": true,
+      "referenceUnchanged": true,
+      "referenceSha256": "a60c25c663b0c55288c4339a07ea5f404a2a32410e54985b80d5dd9163c51357",
+      "audioSha256": "7db42bb769fbedd18ae7f2de9cc2f77e14f84d6d148ce9ac123b766d5cd7fcfd",
+      "speed": 1
+    },
+    {
+      "id": "sofia-A",
+      "newEpisodeReply": true,
+      "referenceUnchanged": true,
+      "referenceSha256": "98ecd0076b6723ebb245ba18682944f5c21c6bd904e3780f3f8ff30533eb9840",
+      "audioSha256": "ea2bc63c4c7463eff0ae9081ea03912c765135a06e732a9116a915ffb96d90f5",
+      "speed": 1
+    }
+  ],
+  "checks": {
+    "qaVerdict": "pass",
+    "passed": 14,
+    "failed": 0,
+    "skipped": 0,
+    "fullDecode": [
+      {
+        "file": "football-wow-cech-hockey-ru.mp4",
+        "frames": 2750,
+        "status": "pass",
+        "allStreamsDecoded": true,
+        "countMethod": "Decoded frames with vsync0,passthrough;no CFR drop/duplicate in counting output"
+      },
+      {
+        "file": "football-wow-cech-hockey-ru-web.mp4",
+        "frames": 2750,
+        "status": "pass",
+        "allStreamsDecoded": true,
+        "countMethod": "Decoded frames with vsync0,passthrough;no CFR drop/duplicate in counting output"
+      }
+    ],
+    "frames": {
+      "sampled": 23,
+      "actualFirstAndLast": true,
+      "everySceneAndCueInspected": true,
+      "feedAndSquareCropsInspected": true
+    },
+    "asr": "every scene ≥ 85% of its words (lowest 100%)",
+    "repository": "npm ci, npm run check:133 passed,0 failed,0 skipped;links,TypeScript,media guard pass",
+    "subjectiveListening": "Not claimed;owner review remains open",
+    "pronunciation": "Sourced norms/read-only lookup and contextual phoneme evidence retained;not universal stress approval"
+  },
+  "tracker": {
+    "globalTracker": "Not rewritten:standard tracker command fails on pre-existing missing shots/cover-v4.png in football-wow-05-ronaldinho. Existing global tracker retained. No placeholder media or owner approval fabricated.",
+    "episodeTracker": "Episode-only TRACKER.md generated with unchanged repository variantStatus/trackerMarkdown functions."
+  },
+  "previousDeliveredKane": {
+    "file": "/Users/marinaermilova/Downloads/smart_little_toons-harry-kane-v3-2026-11-01/football-wow-kane-goalkeeper-ru.mp4",
+    "sha256": "06103963794c24bb83e3374d24901ede0e2d89faf0e0c50968dfece1a63fe5b3",
+    "unchanged": true
+  },
+  "delivery": "/Users/marinaermilova/Downloads/smart_little_toons-petr-cech-2026-11-01",
+  "publication": "Not requested;not performed",
+  "provenance": {
+    "images": "images.json",
+    "photos": "photos.json",
+    "voices": "assets/voice/provenance.json",
+    "voiceReview": "VOICE-REVIEW.md",
+    "sources": "sources.md"
+  }
+}

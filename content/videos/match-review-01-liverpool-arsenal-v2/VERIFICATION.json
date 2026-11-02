@@ -1,0 +1,123 @@
+{
+  "date": "2026-11-02",
+  "status": "Review film delivered;owner full viewing/listening and release decision pending",
+  "rubric": "Обзор матчей",
+  "revision": {
+    "version": 2,
+    "sofiaClothes": "Golden yellow/navy Arsenal supporter clothes throughout",
+    "matveyClothes": "Red Liverpool supporter clothes preserved",
+    "opening": "Я за «Ливерпуль»… Как же мы пропустили?",
+    "openingGesture": "Puzzled open palm replaces celebratory fist",
+    "clubLabels": true,
+    "retainedWAV": 12,
+    "newWAV": 1,
+    "originalFilesVerified": 178
+  },
+  "match": {
+    "date": "2026-11-01",
+    "home": "Liverpool",
+    "away": "Arsenal",
+    "result": "0:1",
+    "sources": "sources.md",
+    "statisticalUncertainty": "Aggregate shots on target differ between sources;excluded from film"
+  },
+  "master": {
+    "file": ".reel/ru/match-review-01-liverpool-arsenal-v2-ru.mp4",
+    "sha256": "4494117869b841b18cb8c3723c19550f7fa0f9d9b92cf2976acf06fc47c21266",
+    "bytes": 56534056,
+    "width": 1080,
+    "height": 1920,
+    "fps": 30,
+    "plannedDuration": 79.656,
+    "plannedCaptureFrames": 2390,
+    "actualMuxedFrames": 2386,
+    "finalSpeechEnd": 77.85600000000001,
+    "actualVideoHoldAfterSpeech": 1.6773333333333227
+  },
+  "narrative": {
+    "allOwnerSentencesPreservedInOrder": true,
+    "exclusions": [],
+    "additions": "Rubric identity;fictional host reactions;confirmed shirt-pull appeal,return after injury/substitutions,Tzolis/Alisson save and cards",
+    "newInMatchInjuryInvented": false
+  },
+  "hosts": {
+    "sofia": "Squirrel,Arsenal supporter for this episode,exact Sofia A voice reference",
+    "matvey": "Raccoon,Liverpool supporter for this episode,exact Matvey C voice reference",
+    "faces": "Approved references retained;club-colour clothing explicitly commissioned",
+    "permanentClubPreferenceEstablished": false,
+    "referencesModified": false
+  },
+  "narrator": {
+    "id": "OmniVoice B",
+    "speed": 0.9,
+    "stress": "off",
+    "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+    "performances": 8,
+    "hostReplies": 5
+  },
+  "visuals": {
+    "selectedIllustrations": 12,
+    "totalBuiltInGenerations": 13,
+    "rejectedOrSuperseded": 1,
+    "photos": 1,
+    "photo": {
+      "date": "2026-05-24",
+      "scene": "sofia-goal",
+      "seconds": 4.27,
+      "notMatchPhoto": true
+    },
+    "illustratedSeconds": 75.38600000000001,
+    "animation": "Camera movement and changed illustrated states;not full skeletal animation",
+    "limits": [
+      "Small AI wardrobe edits,not pixel-identical preservation of every unedited region;original files preserved separately.",
+      "Camera movement and changed illustrated states,not full skeletal animation.",
+      "Card scene conveys collective tension,not exact named booking."
+    ]
+  },
+  "checks": {
+    "qaVerdict": "pass",
+    "passed": 15,
+    "failed": 0,
+    "skipped": 0,
+    "fullDecode": [
+      {
+        "file": "match-review-01-liverpool-arsenal-v2-ru.mp4",
+        "frames": 2386,
+        "status": "pass",
+        "allStreamsDecoded": true
+      },
+      {
+        "file": "match-review-01-liverpool-arsenal-v2-ru-web.mp4",
+        "frames": 2386,
+        "status": "pass",
+        "allStreamsDecoded": true
+      }
+    ],
+    "actualFrameSamples": 18,
+    "exactLastFrameInspected": true,
+    "feedAndSquareInspected": true,
+    "assets": {
+      "status": "pass",
+      "allOwnerSentencesPreserved": true,
+      "oldOpeningAbsent": true,
+      "newOpening": "Я за «Ливерпуль»… Как же мы пропустили?",
+      "illustrations": 12,
+      "retainedWAV": 12,
+      "newWAV": 1,
+      "exactSelectedReferences": true,
+      "authenticPhotoUnchanged": true,
+      "originalFilesVerified": 178
+    },
+    "repository": "npm ci and npm run check;133 tests pass,0 fail;media,links,typecheck pass",
+    "asr": "every scene ≥ 85% of its words (lowest 85%)",
+    "subjectiveListening": "Not claimed;full owner listening and pronunciation approval pending"
+  },
+  "delivery": "/Users/marinaermilova/Downloads/smart_little_toons-match-review-liverpool-arsenal-v2-2026-11-02",
+  "publication": "Not requested;not performed",
+  "provenance": {
+    "images": "images.json",
+    "photos": "photos.json",
+    "voices": "assets/voice/provenance.json",
+    "sources": "sources.md"
+  }
+}

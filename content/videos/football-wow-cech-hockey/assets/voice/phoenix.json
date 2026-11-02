@@ -1,0 +1,22 @@
+{
+  "text": "Он подписал контракт с хоккейной командой ГИлфорд ФЕникс и стал настоящим хоккейным вратарём!",
+  "duration": 5.675666666666666,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-cech-hockey/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "d9424d97c1402632e29ed2eb95e073450b294ba6813030da511a4666346d4e9b",
+  "speed": 0.96,
+  "scene": "phoenix",
+  "originalSynthesisText": "Он подписал контракт с хоккейной командой ГИлфорд ФЕникс и стал настоящим хоккейным вратарём!",
+  "displayText": "Он подписал контракт с хоккейной командой Guildford Phoenix и стал настоящим хоккейным вратарём!",
+  "file": "assets/voice/phoenix.wav",
+  "sourceSha256": "ff7b58b6da6c72d054026681c5b97bc40997ebceecc8976a7a23a9e0cb9b2061"
+}

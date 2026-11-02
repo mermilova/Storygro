@@ -1,0 +1,23 @@
+{
+  "text": "Напряжение росло: восемь жёлтых карточек, без удалений.",
+  "duration": 4.01975,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/match-review-01-liverpool-arsenal/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "dcb18e9fa552d7dfee8227c68ca3e66783815a0e511fc07a698a9d25672530be",
+  "speed": 0.9,
+  "scene": "cards",
+  "role": "narrator",
+  "originalSynthesisText": "Напряжение росло: восемь жёлтых карточек, без удалений.",
+  "displayText": "Напряжение росло: восемь жёлтых карточек, без удалений.",
+  "file": "assets/voice/cards.wav",
+  "sourceSha256": "20dbac6b867bb025fe090358fcd1f63e71a205c73316929415aaa70f5246f36e"
+}

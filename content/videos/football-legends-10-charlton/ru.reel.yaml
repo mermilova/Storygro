@@ -1,0 +1,314 @@
+reel: 1
+style: cartoon
+title: Бобби Чарльтон — возвращение на вершину
+lang: ru
+data:
+  facts: facts.json
+images:
+  provider: manual
+  model: OpenAI built-in image_gen (exact identifier undisclosed)
+  width: 1088
+  height: 1920
+  seed: 0
+  prompt: "{subject}. Original prompts and hashes:images.json."
+post:
+  title: Легенды футбола · Бобби Чарльтон
+  text: |-
+    Маленькие большие дела · Легенды футбола. smart_little_toons, София и Матвей.
+
+    История Бобби Чарльтона: талант, мюнхенская трагедия1958 года, возвращение на поле и восстановление команды, чемпионство мира и «Золотой мяч»1966, Кубок европейских чемпионов1968. Полный сценарий владельца сохранён. Источники: Manchester United, England Football, UEFA, DFB; ссылки в sources.md.
+
+    Иллюстрации созданы встроенным image_gen, это художественная постановка истории с движением камеры и последовательными состояниями действий. Не документальные кадры матчей. Голоса синтетические: OmniVoice B, Матвей C и София A через Qwen3-TTS.
+
+    Фото Чарльтона: Jack de Nijs / Anefo / Nationaal Archief,08.12.1964, https://commons.wikimedia.org/wiki/File:Bobby_Charlton_Aankomst_Engelse_voetbalelftal_op_Schiphol,_Bestanddeelnr_917-2187_(cropped).jpg ; текущая лицензия CC0 https://creativecommons.org/publicdomain/zero/1.0/ . Показан существующий архивный портретный crop целиком, без ретуши.
+
+    Фото Wembley: Adrian Cable,02.11.1991, https://commons.wikimedia.org/wiki/File:The_old_Wembley_Stadium.jpg ; CC BY-SA2.0 https://creativecommons.org/licenses/by-sa/2.0/ . Снимок показан целиком без ретуши; поздняя фотография стадиона не изображает матч1966/1968. Фото сохраняет собственную лицензию, остальные материалы имеют отдельные условия.
+  tags:
+    - БоббиЧарльтон
+    - Легендыфутбола
+    - Золотоймяч
+    - футбол
+    - мультфильм
+    - smart_little_toons
+scenes:
+  - id: hook
+    scene: series-cover
+    say: ФУТБОЛЬНЫЕ ЛЕГЕНДЫ! Бобби Чарльтон — человек, который помог «Манчестер
+      Юнайтед» вернуться на вершину!
+    voice:
+      source: assets/voice/hook.wav
+      speed: 1
+    pad:
+      - 0
+      - 0.25
+    props:
+      image: shots/cover.png
+      projectFrom: facts.series.project
+      titleFrom: facts.series.title
+      subtitleFrom: facts.series.episode
+      emblem: /rc/styles/cartoon/golden-ball.svg
+      reveal: shots/strike-setup.png
+      revealAt: 3.3
+  - id: talent
+    scene: archive-photo
+    say: Бобби Чарльтон был одним из самых талантливых футболистов Англии.
+    voice:
+      source: assets/voice/talent.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      image: shots/charlton-1964.jpg
+      background: shots/cover.png
+      titleFrom: facts.archive.player
+      captionFrom: facts.archive.playerDate
+      portrait: true
+      fit: contain
+  - id: strike
+    scene: illustration
+    say: Он прославился мощными ударами издалека {#shot}и стал настоящей звездой
+      «Манчестер Юнайтед».
+    voice:
+      source: assets/voice/strike.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      shots:
+        - image: shots/strike-setup.png
+          move: in
+          zoom: 0.01
+        - image: shots/strike.png
+          move: in
+          zoom: 0.01
+          at: shot
+      fade: 0
+  - id: tragedy
+    scene: illustration
+    say: Но в [1958](=тысяча девятьсот пятьдесят восьмом) году случилась страшная
+      трагедия. Самолёт с командой потерпел катастрофу в Мюнхене после матча в
+      Белграде.
+    voice:
+      source: assets/voice/tragedy.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      shots:
+        - image: shots/airport.png
+          move: in
+          zoom: 0.01
+      fade: 0
+      labels:
+        - textFrom: facts.history.munich
+          x: 0.5
+          y: 0.19
+          at: -1
+          tone: navy
+  - id: memory
+    scene: illustration
+    say: Погибли [23](=двадцать три) человека, среди них — восемь футболистов клуба.
+    voice:
+      source: assets/voice/memory.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      shots:
+        - image: shots/memory.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: return
+    scene: illustration
+    say: Бобби Чарльтон выжил и спустя несколько недель вернулся на поле.
+    voice:
+      source: assets/voice/return.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.1
+    props:
+      shots:
+        - image: shots/return.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: rebuild
+    scene: illustration
+    say: Он помог «Манчестер Юнайтед» восстановиться и снова стать сильной командой.
+    voice:
+      source: assets/voice/rebuild.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      shots:
+        - image: shots/rebuild.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: world
+    scene: archive-photo
+    say: А в [1966](=тысяча девятьсот шестьдесят шестом) году Чарльтон стал
+      чемпионом мира со сборной Англии!
+    voice:
+      source: assets/voice/world.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.1
+    props:
+      image: shots/wembley-1991.jpg
+      background: shots/world.png
+      titleFrom: facts.archive.venue
+      captionFrom: facts.archive.venueDate
+      fit: contain
+  - id: semi
+    scene: illustration
+    say: "Особенно ярко он сыграл в полуфинале против Португалии: {#goal}забил оба
+      гола своей команды, которая победила [2:1](=два один)."
+    voice:
+      source: assets/voice/semi.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.1
+    props:
+      shots:
+        - image: shots/semi-setup.png
+          move: in
+          zoom: 0.01
+        - image: shots/semi-goal.png
+          move: in
+          zoom: 0.01
+          at: goal
+      fade: 0
+  - id: award
+    scene: illustration
+    say: В том же году Бобби получил «Золотой мяч»!
+    voice:
+      source: assets/voice/award.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.1
+    props:
+      shots:
+        - image: shots/award-safe.png
+          move: in
+          zoom: 0.01
+      fade: 0
+  - id: europe
+    scene: illustration
+    say: А через два года он помог «Манчестер Юнайтед» выиграть Кубок европейских
+      чемпионов, {#second}забив два гола в финале {#cup}против «Бенфики»!
+    voice:
+      source: assets/voice/europe.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.1
+    props:
+      shots:
+        - image: shots/europe-header.png
+          move: in
+          zoom: 0.01
+        - image: shots/europe-finish.png
+          move: in
+          zoom: 0.01
+          at: second
+        - image: shots/cup.png
+          move: in
+          zoom: 0.01
+          at: cup
+      fade: 0
+  - id: matvey
+    scene: illustration
+    say: Получается, он стал чемпионом мира, а потом ещё и чемпионом Европы с
+      клубом?!
+    voice:
+      source: assets/voice/matvey.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 0.25
+    props:
+      shots:
+        - image: shots/matvey.png
+          move: in
+          zoom: 0.01
+      fade: 0
+      labels:
+        - textFrom: facts.cast.matvey
+          x: 0.25
+          y: 0.29
+          at: -1
+          tone: navy
+    caption: "Матвей: «Получается, он стал чемпионом мира, а потом ещё и чемпионом
+      Европы с клубом?!»"
+  - id: sofia
+    scene: illustration
+    say: Именно! Бобби Чарльтон вошёл в историю как одна из величайших легенд
+      английского футбола!
+    voice:
+      source: assets/voice/sofia.wav
+      speed: 1
+    pad:
+      - 0.08
+      - 1.4
+    props:
+      shots:
+        - image: shots/sofia-blue.png
+          move: in
+          zoom: 0.01
+      fade: 0
+      labels:
+        - textFrom: facts.cast.sofia
+          x: 0.75
+          y: 0.29
+          at: -1
+          tone: navy
+    caption: "София: «Именно! Бобби Чарльтон вошёл в историю как одна из величайших
+      легенд английского футбола!»"
+voice:
+  engine: omnivoice
+  model: k2-fsa/OmniVoice
+  voice: assets/voice/narrator-ru.wav
+  speed: 0.9
+  stress: off
+format:
+  preset: vertical
+  width: 1080
+  height: 1920
+  fps: 30
+safe: reels
+captions:
+  show: true
+  maxWords: 3
+stills:
+  cover: hook@0
+theme: theme.css
+transition:
+  kind: cut
+  dur: 0
+music:
+  bpm: 92
+  key: C
+  progression:
+    - I
+    - V
+    - vi
+    - IV
+  gain: 0.035
+  drop: world
+loudness: -14
+hooks:
+  - Чарльтон приглашает команду вперёд на поле — выбранное
+  - Чарльтон с европейским кубком
+  - Молодой Чарльтон перед дальним ударом

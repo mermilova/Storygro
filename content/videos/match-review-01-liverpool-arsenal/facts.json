@@ -1,0 +1,133 @@
+{
+  "series": {
+    "project": "Маленькие большие дела",
+    "title": "ОБЗОР МАТЧЕЙ",
+    "episode": "Ливерпуль — Арсенал · 01.11.2026",
+    "_source": "Owner brief2026-11-02;S1,S2:match date and home/away order"
+  },
+  "archive": {
+    "title": "Кай Хаверц",
+    "date": "Настоящее фото · 24 мая 2026",
+    "_source": "photos.json:P1,Chensiyuan/NullReason"
+  },
+  "goal": {
+    "title": "16′ · Хаверц · 0:1",
+    "minute": 16,
+    "assist": "Деклан Райс",
+    "_source": "S1,S2: Havertz 16, Rice low cross"
+  },
+  "changes": {
+    "title": "Ньони → Собослаи · Гакпо → Нгумоа",
+    "_source": "S1: substitutions; minute58/59 discrepancy deliberately omitted"
+  },
+  "cards": {
+    "title": "8 жёлтых · без удалений",
+    "liverpool": 4,
+    "arsenal": 4,
+    "red": 0,
+    "_source": "S3:4yellow cards each,0red;S4cross-check"
+  },
+  "penalty": {
+    "title": "Пенальти не назначен",
+    "minute": 21,
+    "_source": "S2:Timber shirt pull on Isak, officials did not award penalty"
+  },
+  "result": {
+    "title": "Ливерпуль 0:1 Арсенал",
+    "display": "0:1 · Арсенал победил",
+    "waitYears": 14,
+    "awayPoints": 3,
+    "_source": "Owner text;S2:first Anfield win14years"
+  },
+  "events": {
+    "goal": [
+      {
+        "minute": 16,
+        "player": "Kai Havertz",
+        "assist": "Declan Rice"
+      }
+    ],
+    "chances": [
+      {
+        "minute": 21,
+        "event": "Isak/Timber shirt-pull appeal; no penalty"
+      },
+      {
+        "minute": 39,
+        "event": "Wirtz free-kick woodwork"
+      },
+      {
+        "minute": 43,
+        "event": "Mac Allister header over"
+      },
+      {
+        "minute": 73,
+        "event": "Tzolis shot saved by Alisson"
+      }
+    ],
+    "substitutionsLiverpool": [
+      {
+        "minuteSourceRange": "58/59",
+        "off": "Nyoni",
+        "on": "Szoboszlai"
+      },
+      {
+        "minute": 67,
+        "off": "Gakpo",
+        "on": "Ngumoha"
+      },
+      {
+        "minuteSourceRange": "81/82",
+        "off": "Kerkez",
+        "on": "Tsimikas"
+      },
+      {
+        "minuteSourceRange": "81/82",
+        "off": "Araujo",
+        "on": "Munoz"
+      },
+      {
+        "minuteSourceRange": "81/82",
+        "off": "Wirtz",
+        "on": "Koumas"
+      }
+    ],
+    "substitutionsArsenal": [
+      {
+        "minute": 62,
+        "off": "Bruno Guimaraes",
+        "on": "Lewis-Skelly"
+      },
+      {
+        "minute": 84,
+        "off": "Tzolis",
+        "on": "Hincapie"
+      },
+      {
+        "minute": 84,
+        "off": "Havertz",
+        "on": "Gyokeres"
+      },
+      {
+        "minute": 88,
+        "off": "Odegaard",
+        "on": "Merino"
+      }
+    ],
+    "bookingsLiverpool": [
+      "Barcola",
+      "Kerkez",
+      "Mac Allister",
+      "Van Dijk"
+    ],
+    "bookingsArsenal": [
+      "Madueke",
+      "Lewis-Skelly",
+      "Timber",
+      "Raya"
+    ],
+    "injuries": "Szoboszlai and Munoz returned after earlier injuries; no newly consequential injury established in studied reports",
+    "shotStatistics": "Disputed; aggregate shots on target excluded",
+    "_source": "S1,S2,S3,S4; all events research record, only story-relevant subset in film"
+  }
+}

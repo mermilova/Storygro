@@ -1,0 +1,22 @@
+{
+  "text": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+  "duration": 10.776,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "ffde90a97ab0fe7a03c7478a2b99dae2665f2409ecd82873c392ed71c546afda",
+  "speed": 0.9,
+  "scene": "imagine",
+  "originalSynthesisText": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+  "displayText": "Представьте: ты играешь на стадионе соперника, забиваешь невероятный гол… и вдруг тысячи болельщиков другой команды встают и начинают тебе аплодировать!",
+  "file": "assets/voice/imagine.wav",
+  "sourceSha256": "7f69b30010da79f51f20f3c55b7c80648eeaafc00f998762444a5345b673a9ff"
+}

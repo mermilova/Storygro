@@ -1,0 +1,22 @@
+{
+  "text": "А теперь самое невероятное. На последних минутах английский вратарь Джо Харт вышел далеко из ворот и головой выбил мяч.",
+  "duration": 8.242166666666666,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-zlatan-bicycle/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "efcbc0dfbf14316fc911026c192f120931633298dd7b40a6fb31a529d9088a3d",
+  "speed": 0.9,
+  "scene": "hart",
+  "originalSynthesisText": "А теперь самое невероятное. На последних минутах английский вратарь Джо Харт вышел далеко из ворот и головой выбил мяч.",
+  "displayText": "А теперь самое невероятное. На последних минутах английский вратарь Джо Харт вышел далеко из ворот и головой выбил мяч.",
+  "file": "assets/voice/hart.wav",
+  "sourceSha256": "64998ff82b6534bda61dee2ba27b58e2f552a39200ecf9e62ba967c5ebfd923b"
+}

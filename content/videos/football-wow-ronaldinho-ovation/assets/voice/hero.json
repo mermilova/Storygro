@@ -1,0 +1,22 @@
+{
+  "text": "Но настоящим героем вечера стал РоналдИньо!",
+  "duration": 3.208666666666667,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldinho-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "596e8aee5dd9dbf23af8109d7a94cfe662732226a1effb1cfb6f780874a03fd9",
+  "speed": 0.9,
+  "scene": "hero",
+  "originalSynthesisText": "Но настоящим героем вечера стал РоналдИньо!",
+  "displayText": "Но настоящим героем вечера стал Роналдиньо!",
+  "file": "assets/voice/hero.wav",
+  "sourceSha256": "dd35f5417b9b4b706de11a094ed5ba685dc10d51a49cbf2c385811092ed1b07e"
+}

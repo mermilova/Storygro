@@ -1,0 +1,22 @@
+{
+  "text": "Да! Когда гол настолько невероятный, даже соперники становятся зрителями футбольного чуда!",
+  "duration": 6.509333333333333,
+  "sampleRate": 24000,
+  "provider": {
+    "engine": "omnivoice",
+    "model": "k2-fsa/OmniVoice",
+    "voice": "/Users/marinaermilova/work/aiprojects/smart_little_toons_pr/Storygro-football/content/videos/football-wow-ronaldo-ovation/assets/voice/narrator-ru.wav",
+    "language": "ru",
+    "device": "mps",
+    "license": "Apache-2.0 (code); CC-BY-NC (model weights)",
+    "synthetic": true
+  },
+  "referenceSha256": "28881ea9cd8050a244837853a834c462df41e7889883f0ad2c699f686719f934",
+  "sha256": "4dd8f2cb64f501ff97f4aaf0ab2acd5717ae8e076295bd76872f179f331dc179",
+  "speed": 0.9,
+  "scene": "ending",
+  "originalSynthesisText": "Да! Когда гол настолько невероятный, даже соперники становятся зрителями футбольного чуда!",
+  "displayText": "Да! Когда гол настолько невероятный, даже соперники становятся зрителями футбольного чуда!",
+  "file": "assets/voice/ending.wav",
+  "sourceSha256": "edf991a7cf45171979dd0f94a8874952c4625a74238b1bdb6ad1348a6df65b28"
+}

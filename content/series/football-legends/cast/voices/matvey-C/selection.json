@@ -1,0 +1,18 @@
+{
+  "id": "matvey-C",
+  "character": "matvey",
+  "selectedBy": "owner",
+  "selectedDate": "2026-11-01",
+  "ownerQuote": "давай сделаем версию c",
+  "synthetic": true,
+  "reference": "reference.wav",
+  "transcript": "reference.txt",
+  "sha256": "a60c25c663b0c55288c4339a07ea5f404a2a32410e54985b80d5dd9163c51357",
+  "sourceAudition": "private/host-voice-auditions-matvey-v2-2026-11-01/matvey-C",
+  "seed": 83,
+  "instruct": "A distinctly MASCULINE BOY voice for an original young male raccoon character in a premium family cartoon. Native Russian, clear standard Russian diction. Compact lower-middle boyish register, solid chest resonance, a little dry sandy grain, firm consonants, rounded vowels. Clearly the voice of a smart football-loving BOY, with warmth, curious excitement and thoughtful little pauses. The owner found previous light voices too feminine: create a NEW deeper, fuller, slightly rough boyish identity with unmistakably male resonance. Keep youthful energy, not an adult announcer, not a deep old man. Natural medium pace, no falsetto, no squeak, no breathy softness. One original synthetic speaker, dry close studio recording, no music.",
+  "designModel": "mlx-community/Qwen3-TTS-12Hz-1.7B-VoiceDesign-bf16",
+  "designRevision": "7d3824abff87e49756bb0f83fb5411de75d160c4",
+  "terms": "Qwen3-TTS Apache-2.0; mlx-audio MIT",
+  "episodeApplication": "Kane V2 authorised; narrator intonation/stress revision in progress"
+}
