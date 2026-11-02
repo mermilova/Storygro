@@ -55,12 +55,12 @@
 - [Производственные инструменты Storygro](production/README.md).
 - [Правила работы с репозиторием](AGENTS.md).
 
-## License
+## Владелица и связь
 
-Storygro is **source-available** (not OSI open source) under the [PolyForm Shield License 1.0.0](LICENSE), following the SlideCraft licensing model:
+Владелица серии **smart_little_toons — Марина**, [@mermilova](https://github.com/mermilova).
 
-- **Free for individuals and companies** to make content — for yourself, your employer or paying clients — and to adapt the software for permitted uses.
-- **Don't compete with it** — no competing hosted content-generation service or white-label product built from Storygro.
-- **Commercial licence** for competing or embedding uses: [denis.ermilov@gmail.com](mailto:denis.ermilov@gmail.com). Details: [COMMERCIAL.md](COMMERCIAL.md).
+По вопросам серии, сотрудничества и предложений пишите Марине через [Issues этого репозитория](https://github.com/mermilova/Storygro/issues). Электронная почта для обращений не используется.
 
-Third-party models, voices and fonts keep their own terms ([NOTICE](NOTICE), [technology](docs/explanation/technology.md), [voices](docs/reference/voices.md)). `reel: 1`, `.reel/`, `npm run reel` and `REELCRAFT_*` remain supported from the engine's earlier name.
+## Основа проекта и лицензия
+
+Серия использует движок [Storygro](https://github.com/eiler2005/Storygro), доступный по [PolyForm Shield License 1.0.0](LICENSE). Условия использования исходного движка описаны в [COMMERCIAL.md](COMMERCIAL.md); сведения о сторонних компонентах сохранены в [NOTICE](NOTICE). Принадлежность серии Марине не меняет прав на исходный движок и сторонние материалы.
