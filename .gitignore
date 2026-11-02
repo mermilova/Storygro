@@ -9,6 +9,8 @@ __pycache__/
 .DS_Store
 .env
 .env.*
+# Provider-specific credential files also stay outside Git.
+*.env
 !.env.example
 coverage/
 out/
