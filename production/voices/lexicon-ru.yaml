@@ -1,0 +1,281 @@
+# How the Russian narrator says names and hard words, for every reel in every episode.
+#
+# py/stress.py applies an entry to every Russian line before synthesis (after the author's own marks,
+# which always win; before RUAccent's homographs). Engines get the stress in the form they read
+# (Qwen3: an uppercase vowel). Adding an entry re-voices only the lines that contain it.
+#
+#   word    the written form in the script (any case)
+#   say     the same word with `+` before the stressed vowel; letters may be respelled
+#   forms   other case forms: a list (the stress stays on the same letter as in `say`) or a map
+#           form → say for forms whose letters change
+#   source  where the stress was checked (a dictionary or an encyclopaedia, quoted) — required
+#   check   optional: espeak-IPA patterns (regex) for the right and the wrong reading, from the voice
+#           bench. Narration tries another take (up to three) when a checked word comes out wrong,
+#           and QA listens for it again in the final voice track.
+#   mark    true (default): engines that read dictionary marks well get it (Silero, Chatterbox, Yandex);
+#           Qwen3 does not — the owner found it cleaner unmarked (24.10.2026). false: no engine gets it,
+#           the stress is only recorded and checked. always: Qwen3 too, where a bench showed it helps
+#
+# Find words that need an entry: `storygro stress <spec>`; look them up online and add them with
+# `storygro stress <spec> --lookup --write` (ru.wikipedia, ru.wiktionary), then read the diff.
+lexicon: 1
+words:
+  - word: Месси
+    say: М+есси
+    source: 'ru.wikipedia, «Месси, Лионель»: «Лионе́ль Андре́с Ме́сси Куччитти́ни»'
+    # bench 24.10.2026, Qwen3 speed 1.12: unmarked 0/3 takes right (`m i s i`, `m i i`), marked 2/3
+    # (`m e s i`); the recogniser often drops the сс, so the pattern looks only at the vowel after м
+    check: { right: 'm [eɛ]', wrong: 'm [iɪ]' }
+    # the one word where the bench showed the mark helps Qwen3 (0/3 → 2/3), so it reaches Qwen3 too
+    mark: always
+  - word: Лионель
+    say: Лион+ель
+    forms: [Лионеля, Лионелю, Лионелем, Лионеле]
+    # bench 24.10.2026: marked 4/4 takes right (`e a ɲ e l` — the о reduces); the cartoon kept a wrong
+    # take (`i o ɲ`, «Лио́неля»), so the word is checked and re-voiced when it comes out wrong
+    check: { right: '[ie] [aɐəʌ]ː? ?[nɲ]', wrong: '[ie] [oʊu]ː? ?[nɲ]' }
+    source: 'ru.wikipedia, «Месси, Лионель»: «Лионе́ль Андре́с Ме́сси»'
+  - word: Платини
+    say: Платин+и
+    source: 'ru.wikipedia, «Платини, Мишель»: «Мише́ль Франсуа́ Платини́»'
+  - word: Кройф
+    say: Кр+ойф
+    forms: [Кройфа, Кройфу, Кройфом, Кройфе]
+    source: 'ru.wikipedia, «Кройф, Йохан»: «Хе́ндрик Йо́ханнес (Йо́хан) Кройф», нидерл. [ˈkrœyf] — один слог'
+  - word: Бонмати
+    say: Бонмат+и
+    source: 'ru.wikipedia, «Бонмати, Айтана»: «Айта́на Бонмати́ Ко́нка»'
+  - word: Айтана
+    say: Айт+ана
+    forms: [Айтаны, Айтане, Айтану, Айтаной]
+    source: 'ru.wikipedia, «Бонмати, Айтана»: «Айта́на Бонмати́ Ко́нка»'
+  - word: Золотой
+    say: Золот+ой
+    # bench 24.10.2026: unmarked 4/4 takes right (`z u l`, `z a l`), marked «ЗолотОй» only 2/4; the
+    # cartoon said «Зо́лотой» four times out of four. So: no mark, a check, another take when wrong
+    mark: false
+    check: { right: '[zs] [aɐəʌʊɨɪuei]ː? l', wrong: '[zs] oː? l' }
+    source: 'ru.wikipedia, «Золотой»: «…Золото́й — нечто, изготовленное из золота. Также…» (storygro stress --lookup, 2026-10-24)'
+  - word: Стэнли
+    say: Ст+энли
+    source: 'ru.wikipedia, «Кубрик, Стэнли»: «…Стэ́нли Ку́брик (англ. Stanley Kubrick [ˈkuːbrɪ…» (storygro stress --lookup, 2026-10-24)'
+  - word: Мэтьюз
+    say: М+этьюз
+    source: 'ru.wikipedia, «Мэтьюз»: «…Ма́тьюз, Мэ́тьюз (Мэ́тьюс, Ма́тьюс) (англ. Mathews) — ан…» (storygro stress --lookup, 2026-10-24)'
+  - word: Яшин
+    say: +Яшин
+    source: 'ru.wikipedia, «Яшин, Лев Иванович»: «…Лев Ива́нович Я́шин (22 октября 1929, Москва — 20 марта 199…» (storygro stress --lookup, 2026-10-24)'
+  - word: Золотых
+    say: Золот+ых
+    check: { right: '[zs] [aɐəʌʊɨɪuei]ː? l', wrong: '[zs] oː? l' }
+    source: 'ru.wiktionary, «золотой»: «…Р. золото́го золото́го золото́й золоты́х Д. золото́му золото́му золот…» (storygro stress --lookup, 2026-10-24)'
+  - word: Криштиану
+    say: Кришти+ану
+    source: 'ru.wikipedia, «Криштиану Роналду»: «…Криштиа́ну Рона́лду душ Са́нтуш Аве́йру (порт. Cri…» (storygro stress --lookup, 2026-10-24)'
+  - word: Роналду
+    say: Рон+алду
+    source: 'ru.wikipedia, «Криштиану Роналду»: «…Криштиа́ну Рона́лду душ Са́нтуш Аве́йру (порт. Cristiano Ro…» (storygro stress --lookup, 2026-10-24)'
+  - word: Бастен
+    say: Б+астен
+    source: 'ru.wikipedia, «Ван Бастен, Марко»: «…Ма́рсел ван Ба́стен (нид. Marcel van Basten; род. 31 октябр…» (storygro stress --lookup, 2026-10-24)'
+  - word: Париже
+    say: Пар+иже
+    source: 'ru.wikipedia, «Она была в Париже»: «…«Она́ была́ в Пари́же» (по первой строке известна как «Наверн…» (storygro stress --lookup, 2026-10-24)'
+  - word: Лондоне
+    say: Л+ондоне
+    source: 'ru.wiktionary, «Лондон»: «…Ло́ндоном Ло́ндонами Пр. Ло́ндоне Ло́ндонах Ло́н - д…» (storygro stress --lookup, 2026-10-24)'
+  - word: Клода
+    say: Кл+ода
+    source: 'ru.wiktionary, «Клод»: «…Им. Кло́д Кло́ды Р. Кло́да Кло́дов Д. Кло́ду Кло́…» (storygro stress --lookup, 2026-10-24)'
+  - word: Реплит
+    say: Р+еплит
+    # the lookup matched the verb «реплить» (ре́плит) — the same stress by coincidence, not a source for the brand
+    source: 'Replit (brand), English [ˈrɛplɪt]: stress on the first syllable; checked by hand 2026-10-24'
+  - word: Слайдкрафт
+    say: Сл+айдкрафт
+    source: 'SlideCraft (the owner''s product), English [ˈslaɪdkræft]: stress on the first syllable; added by hand 2026-10-24'
+  - word: Канаде
+    say: Кан+аде
+    source: 'ru.wiktionary, «Канада»: «…Р. Кана́ды Кана́д Д. Кана́де Кана́дам В. Кана́ду Ка…» (storygro stress --lookup, 2026-10-24)'
+  - word: Международной
+    say: Междунар+одной
+    source: 'ru.wikipedia, «Разрядка международной напряжённости»: «…Разря́дка междунаро́дной напряжённости (в средствах массовой инф…» (storygro stress --lookup, 2026-10-24)'
+  - word: Высшей
+    say: В+ысшей
+    source: 'ru.wikipedia, «Кубок Высшей лиги»: «…Ку́бок Вы́сшей ли́ги (латыш. Virslīgas kauss) — футбол…» (storygro stress --lookup, 2026-10-24)'
+  - word: России
+    say: Росс+ии
+    source: 'ru.wiktionary, «Россия»: «…мн. ч. Им. Росси́я Росси́и Р. Росси́и Росси́й…» (storygro stress --lookup, 2026-10-24)'
+  - word: Штатах
+    say: Шт+атах
+    source: 'ru.wiktionary, «Штаты»: «…— Шта́тами Пр. — Шта́тах Шта́ - ты Существ…» (storygro stress --lookup, 2026-10-24)'
+  - word: Бразилии
+    say: Браз+илии
+    source: 'ru.wikipedia, «Бразилия»: «…Брази́лия или Федерати́вная Респу́блика Брази́лии (порт. República Federativa do Brasil М…» (storygro stress --lookup, 2026-10-24)'
+  - word: Ямаль
+    say: Ям+аль
+    source: 'ru.wikipedia, «Ламин Ямаль»: «…Лами́н Яма́ль Насрауи Эбана (кат. и исп. Lamine Yamal…» (storygro stress --lookup, 2026-10-24)'
+  - word: Европы
+    say: Евр+опы
+    source: 'ru.wikipedia, «Лига Европы УЕФА»: «…Ли́га Евро́пы УЕФА (англ. UEFA Europa League) — ежего…» (storygro stress --lookup, 2026-10-24)'
+  - word: Олисе
+    say: Ол+исе
+    source: 'ru.wikipedia, «Олисе, Майкл»: «…Майкл Акпови́ Оли́се (англ. и фр. Michael Akpovie Olise, анг…» (storygro stress --lookup, 2026-10-24)'
+  - word: Дембеле
+    say: Дембел+е
+    source: 'ru.wikipedia, «Дембеле, Усман»: «…Масу́р Усма́н Дембеле́ (фр. Masour Ousmane Dembélé, французско…» (storygro stress --lookup, 2026-10-24)'
+  - word: Мартинес
+    say: Март+инес
+    source: 'ru.wikipedia, «Мартинес, Лаутаро»: «…Лаута́ро Хавье́р Марти́нес (исп. Lautaro Javier Martínez; род. 22…» (storygro stress --lookup, 2026-10-24)'
+  - word: Торо
+    say: Т+оро
+    source: 'ru.wikipedia, «Дель Торо, Гильермо»: «…Гилье́рмо дель То́ро Го́мес (исп. Guillermo del Toro Gómez;…» (storygro stress --lookup, 2026-10-24)'
+  - word: Альварес
+    say: +Альварес
+    source: 'ru.wikipedia, «Альварес, Хулиан»: «…Хулиа́н А́льварес (исп. Julián Álvarez, испанское произно…» (storygro stress --lookup, 2026-10-24)'
+  - word: Паук
+    say: Па+ук
+    source: 'ru.wikipedia, «Человек-паук»: «…Челове́к-пау́к (англ. Spider-Man), настоящее имя Пи́те…» (storygro stress --lookup, 2026-10-24)'
+  - word: Лукаку
+    say: Лук+аку
+    source: 'ru.wikipedia, «Лукаку, Ромелу»: «…Роме́лу Мена́ма Лука́ку Болинго́ли (нид. Romelu Menama Lukaku B…» (storygro stress --lookup, 2026-10-24)'
+  - word: Рому
+    say: Р+ому
+    # the lookup matched «ром» (rum) — the same stress by coincidence; the club is «Ро́ма»
+    source: 'ru.wikipedia, «Рома (футбольный клуб)»: «…«Ро́ма» (полное название — Спортивная ассоциация…» — accusative «Ро́му»; checked by hand 2026-10-24'
+  - word: Брюйне
+    say: Брю+йне
+    source: 'ru.wikipedia, «Де Брёйне, Кевин»: «…Ке́вин Де Брёйне (нид. Kevin De Bruyne…» — the stressed ё of Брёйне; Брюйне is the common spelling; added by hand 2026-10-24'
+  - word: Сент-Клэр
+    say: Сент-Кл+эр
+    source: 'Dayne St. Clair, English [seɪnt ˈklɛər]: stress on Clair; added by hand 2026-10-24 (no ru.wikipedia article)'
+  - word: Наполи
+    say: Н+аполи
+    source: 'ru.wikipedia, «Наполи»: «…«На́поли» (итал. Società Sportiva Calcio Napoli,…» (storygro stress --lookup, 2026-10-24)'
+  - word: Фенербахче
+    say: Фенерб+ахче
+    source: 'ru.wikipedia, «Фенербахче (футбольный клуб)»: «…«Фенерба́хче́» (тур. Fenerbahçe Spor Kulübü) — турецк…» (storygro stress --lookup, 2026-10-24)'
+  - word: Бельгии
+    say: Б+ельгии
+    source: 'ru.wikipedia, «Бельгия»: «…Короле́вство Бе́льгия, или Короле́вство Бе́льгии (нид. Koninkrijk België, фр. Royaume de…» (storygro stress --lookup, 2026-10-24)'
+  - word: Модрич
+    say: М+одрич
+    source: 'ru.wikipedia, «Модрич, Лука»: «…Лу́ка Мо́дрич (хорв. Luka Modrić, хорватское произнош…» (storygro stress --lookup, 2026-10-24)'
+  - word: Лигу
+    say: Л+игу
+    source: 'ru.wiktionary, «лига»: «…Д. ли́ге ли́гам В. ли́гу ли́ги Тв. ли́гой ли́гою…» (storygro stress --lookup, 2026-10-24)'
+  - word: Гюлер
+    say: Гюл+ер
+    source: 'ru.wikipedia, «Гюлер, Арда»: «…Арда́ Гюле́р (тур. Arda Güler, турецкое произношение…» (storygro stress --lookup, 2026-10-24)'
+  - word: Евро
+    say: +Евро
+    source: 'ru.wikipedia, «Евро»: «…Е́вро — денежная единица 21 из 27 государств-…» (storygro stress --lookup, 2026-10-24)'
+  - word: Канады
+    say: Кан+ады
+    source: 'ru.wikipedia, «Население Канады»: «…Населе́ние Кана́ды — народы, народности (население) прожив…» (storygro stress --lookup, 2026-10-24)'
+  - word: Нойер
+    say: Н+ойер
+    source: 'ru.wikipedia, «Нойер, Мануэль»: «…Ма́нуэль Пе́тер Но́йер (нем. Manuel Peter Neuer, немецкое прои…» (storygro stress --lookup, 2026-10-24)'
+  - word: Доннарумма
+    say: Доннар+умма
+    source: 'ru.wikipedia, «Доннарумма, Джанлуиджи»: «…Джанлуи́джи Доннару́мма (итал. Gianluigi Donnarumma; род. 25 фе…» (storygro stress --lookup, 2026-10-24)'
+  - word: Куртуа
+    say: Курту+а
+    source: 'ru.wikipedia, «Куртуа, Тибо»: «…Тибо́ Николя́ Марк Куртуа́ (фр. Thibaut Nicolas Marc Courtois; род…» (storygro stress --lookup, 2026-10-24)'
+  - word: Барселоны
+    say: Барсел+оны
+    source: 'ru.wiktionary, «Барселона»: «…мн. ч. Им. Барсело́на Барсело́ны Р. Барсело́ны Барсело́н…» (storygro stress --lookup, 2026-10-24)'
+  - word: Баварию
+    say: Бав+арию
+    source: 'ru.wiktionary, «Бавария»: «…Бава́рии Бава́риям В. Бава́рию Бава́рии Тв. Бава́рией Ба…» (storygro stress --lookup, 2026-10-24)'
+  - word: Хорватии
+    say: Хорв+атии
+    source: 'ru.wikipedia, «Война в Хорватии»: «…Война за независимость Хорва́тии (март 1991 — ноябрь 1995) — военный кон…» (storygro stress --lookup, 2026-10-24)'
+  - word: Майами
+    say: Май+ами
+    source: 'ru.wikipedia, «Майами»: «…Майа́ми (англ. Miami) — город в США, расположен…» (storygro stress --lookup, 2026-10-25)'
+  - word: Интер
+    say: +Интер
+    source: 'ru.wikipedia, «Интер Майами»: «…«И́нтер Майа́ми» (англ. Inter Miami CF) — амери…» (storygro stress --lookup, 2026-10-25)'
+  - word: Суарес
+    say: Су+арес
+    source: 'ru.wikipedia, «Суарес, Луис Альберто»: «…Луи́с Альбе́рто Суа́рес Ди́ас (исп. Luis Alberto Suárez Díaz, и…» (storygro stress --lookup, 2026-10-25)'
+  - word: Золотую
+    say: Золот+ую
+    source: 'ru.wiktionary, «золотой»: «…В. одуш. золото́го золото́е золоту́ю золоты́х неод. золото́й зо…» (storygro stress --lookup, 2026-10-25)'
+  - word: Пауль
+    say: П+ауль
+    source: 'ru.wikipedia, «Де Пауль, Родриго»: «…Родри́го Хавье́р де Па́уль (также встречается вариант де Поль; исп…» (storygro stress --lookup, 2026-10-25)'
+  - word: Реалом
+    say: Ре+алом
+    source: 'Real Madrid, Spanish Real [reˈal]; instrumental Реалом preserves the stress. Automatic lookup found the currency реал; reviewed and corrected for the club, 2026-10-25.'
+  - word: Аргентине
+    say: Аргент+ине
+    source: 'ru.wiktionary, «Аргентина»: «…Аргенти́ны Аргенти́н Д. Аргенти́не Аргенти́нам В. Аргенти́ну…» (storygro stress --lookup, 2026-10-25)'
+  - word: Мексики
+    say: М+ексики
+    source: 'ru.wiktionary, «Мексика»: «…мн. ч. Им. Ме́ксика Ме́ксики Р. Ме́ксики Ме́ксик…» (storygro stress --lookup, 2026-10-25)'
+  - word: Миннесоте
+    say: Миннес+оте
+    source: 'ru.wiktionary, «Миннесота»: «…Миннесо́ты Миннесо́т Д. Миннесо́те Миннесо́там В. Миннесо́ту…» (storygro stress --lookup, 2026-10-25)'
+  - word: Бертераме
+    say: Бертер+аме
+    source: 'Inter Miami official profile: Germán Berterame, https://es.intermiamicf.com/players/german-berterame/; inferred penultimate stress from the unaccented Spanish spelling ending in a vowel. Checked 2026-10-25; not an auditory bench.'
+  - word: Херман
+    say: Херм+ан
+    source: 'Inter Miami official profile: Germán Berterame, https://es.intermiamicf.com/players/german-berterame/; written acute in Germán marks the stressed syllable.'
+  - word: Каземиро
+    say: Казем+иро
+    source: 'ru.wikipedia, «Каземиро»: Portuguese pronunciation [ka.zeˈmi.ɾu], checked 2026-10-25.'
+  - word: Родриго
+    say: Родр+иго
+    source: 'ru.wikipedia, «Де Пауль, Родриго»: «Родри́го Хавье́р де Па́уль», checked 2026-10-25.'
+  - word: Спартак
+    say: Спарт+ак
+    source: 'ru.wikipedia, «Спартак»: «…Спарта́к (лат. Spartacus, греч. Σπάρτακος; погиб…» (storygro stress --lookup, 2026-10-25)'
+  - word: Аня
+    say: +Аня
+    source: 'ru.wikipedia, «Покров, Аня»: «…А́ня Покро́в (настоящее имя — А́нна Алекса́н…» (storygro stress --lookup, 2026-10-25)'
+  - word: Москвы
+    say: Москв+ы
+    source: 'ru.wiktionary, «Москва»: «…мн. ч. Им. Москва́ Москвы́ Р. Москвы́ Москв…» (storygro stress --lookup, 2026-10-25)'
+  - word: Спартака
+    say: Спарт+ака
+    source: 'ru.wikipedia, «Восстание Спартака»: «…Восста́ние Спарта́ка́ (лат. Bellum Spartacium или лат. Tertiu…» (storygro stress --lookup, 2026-10-25)'
+  - word: Кубок
+    say: К+убок
+    source: 'ru.wikipedia, «Кубок»: «…Ку́бок (др.-греч. κύβος) — большой сосуд для п…» (storygro stress --lookup, 2026-10-25)'
+  - word: Спортинг
+    say: Сп+ортинг
+    source: 'ru.wikipedia, «Спортинг»: «…Спо́ртинг (Sporting): Спортинг — вид спортивно-о…» (storygro stress --lookup, 2026-10-25)'
+  - word: Саша
+    say: С+аша
+    source: 'ru.wikipedia, «Саша Грей»: «…Са́ша Грей (англ. Sasha Grey, настоящее имя —…» (storygro stress --lookup, 2026-10-25)'
+  - word: Матвей
+    say: Матв+ей
+    source: 'ru.wikipedia, «Матвей»: «…Матве́й (от др.-евр. מתתיהו matityāhū, matityāh…» (storygro stress --lookup, 2026-10-25)'
+  - word: София
+    say: Соф+ия
+    source: 'ru.wikipedia, «София»: «…Софи́я (болг. Со́фия [ˈsɔfijə], от греч. σοφία…» (storygro stress --lookup, 2026-10-25)'
+  - word: Марина
+    say: Мар+ина
+    source: 'ru.wikipedia, «Голуб, Марина Григорьевна»: «…Мари́на Григо́рьевна Го́луб (8 декабря 1957, Мо…» (storygro stress --lookup, 2026-10-25)'
+  - word: Денис
+    say: Ден+ис
+    source: 'ru.wikipedia, «Денис»: «…Дени́с — мужское личное имя, распространённое…» (storygro stress --lookup, 2026-10-25)'
+  - word: Матвея
+    say: Матв+ея
+    source: 'ru.wiktionary, «Матвей»: «…м. Матве́й Матве́и Р. Матве́я Матве́ев Д. Матве́ю Ма…» (storygro stress --lookup, 2026-10-25)'
+  - word: свисток
+    say: свист+ок
+    # bench 25.10.2026, OmniVoice B: unmarked 0/4 takes right (`s v iː s t ʌ k`, «сви́сток»), marked 4/4;
+    # the check reads the last vowel: stressed о stays `o`, unstressed reduces
+    check: { right: 't [oɔ]ː? k', wrong: 't [ʌɐəaɨ]ː? k' }
+    source: 'ru.wikipedia, «Свисток»: «…Свисто́к — устройство (изделие), преобразующее к…» (storygro stress --lookup, 2026-10-25)'
+  - word: лиса
+    say: лис+а
+    # bench 25.10.2026, OmniVoice B: unmarked 3/4 (the cartoon kept «ли́са», `l i s ɐ`), marked 4/4 in a short
+    # line and 3/4 in the full one (take 1: `l i s e`), an acute «лиса́» 0/4; the check reads the vowel after с,
+    # also inside «Мама-лиса»: anything but a clear `a` is another take
+    check: { right: 's aː?', wrong: 's (?!a)\S' }
+    source: 'ru.wiktionary, «лиса»: «ли-са́ — Существительное, одушевлённое, женский род» (checked 2026-10-25; the online lookup found the singer «Ли́са» instead)'

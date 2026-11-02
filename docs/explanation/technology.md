@@ -1,0 +1,71 @@
+# Technology and product map
+
+This is the inventory of what Storygro actually uses and where. [The pipeline](pipeline.md) shows one run with real artefacts; [architecture](architecture.md) explains the internals; [workflows](workflow.md) gives commands. Snapshot: 19 October 2026.
+
+## Production path
+
+```mermaid
+flowchart LR
+  W[Google Trends RSS / Wikipedia / Hacker News] --> T[Interest signals + watchlist]
+  T --> I[Curated ideas / sources]
+  I --> S[YAML script + facts]
+  CAP[Chrome screen capture] --> S
+  S --> V[Kokoro RU/EN / Qwen3 / Silero]
+  V --> TL[Word timings + scene cues]
+  TL --> B[Storyboard and approval]
+  B --> C[DOM/SVG scenes in Chrome]
+  C --> F[ffmpeg + procedural audio]
+  F --> Q[Technical QA / Whisper]
+  Q --> R[Local release: MP4 + subtitles + post + manifest]
+  R --> L[Manual publication ledger + metric snapshots]
+```
+
+## Required and optional components
+
+| Technology / product | Used for | Code / files | Required? | Terms / constraints |
+|---|---|---|---|---|
+| Storygro | CLI, schemas, scenes, orchestration, QA and packaging | `production/src/`, `production/runtime/`, `production/scenes/` | Core | [PolyForm Shield](../../LICENSE), [commercial use](../../COMMERCIAL.md) |
+| Node ≥22.12, TypeScript, tsx | Run and check CLI code | `package.json`, `tsconfig.json` | Yes | MIT / Apache-2.0; JS versions pinned in lockfile |
+| yaml, zod | Parse/validate specs, backlog and trend config | `production/src/spec.ts`, `production/src/ideas.ts`, `production/src/package.ts` | Yes | ISC / MIT |
+| Chrome / Chromium | Lay out DOM, SVG, fonts and CSS; screenshots/PDF over CDP; scripted phone-browser recording | `production/src/cdp.ts`, `production/src/render.ts`, `production/src/capture.ts` | For pictures | Installed browser's terms; no Puppeteer/Playwright dependency |
+| Codex CLI image tool (GPT Image) | Recognisable, drawing-like pictures for illustrated reels (`images.provider: codex`, model `gpt-6-astra`) | `production/src/images.ts` | Optional, online | Signed-in Codex CLI ≥ 0.164; under the OpenAI terms the output belongs to the account holder; not seed-reproducible; the tool may decline a prompt |
+| wav2vec2-xlsr-53-espeak-cv-ft | Phonemes of a spoken word: stress checks in the voice bench, narration retakes and QA | `production/py/phonemes.py`, `production/py/stress_check.py` | Optional (checks skip without it) | Apache-2.0; read from the local Hugging Face cache |
+| Python 3.12 + uv | Isolated local voice/audio environment | `production/scripts/setup.sh`, `~/.storygro/venv` | For narration/video | Downloads runtime packages and models separately |
+| Kokoro-82M | English narration and native word timestamps | `production/py/voices/kokoro.py` | Choice | [Model](https://huggingface.co/hexgrad/Kokoro-82M), Apache-2.0 |
+| Kokoro-RU + RUAccent + model G2P | Russian Dima/Sveta/Masha, stress and pronunciation | `production/py/voices/kokoro.py`, setup `ru` | Default for new RU episode | [Model card](https://huggingface.co/zaakirio/kokoro-ru): OpenRAIL weights, Apache-2.0 code; not the official English model gaining RU merely from a flag |
+| Qwen3-TTS via mlx-audio | Optional synthetic narrator design/cloning from a supplied reference | `production/py/design_voice.py`, `production/py/voices/qwen3.py` | Optional | Apache-2.0 / MIT; Apple Silicon; reference rights required |
+| Silero CIS base + silero-stress | Optional fast Russian narration | `production/py/voices/silero.py` | Optional | MIT for the selected CIS base; other Silero voices can have different terms |
+| Whisper / mlx-whisper | Align non-native timings and check the final spoken words | `production/py/voice.py`, `production/py/asr.py`, `production/src/qa.ts` | On this Mac | MIT; MLX needs Apple Silicon; skipped checks stay explicit |
+| NumPy, SciPy, soundfile, pyloudnorm | Synthesize music/SFX, mix and measure loudness | `production/py/score.py` | For score/video | BSD / MIT terms; no downloaded music samples |
+| imageio-ffmpeg / ffmpeg | H.264/AAC encoding, mux, rescale and audio processing | `production/src/tools.ts`, `production/src/render.ts`, Python audio | For MP4 | BSD wrapper; ffmpeg build has its own LGPL/GPL terms |
+| Golos Text, Unbounded, Caveat, Oswald, Liberation | Typography in bundled projects and styles | Per-episode font folders, `production/styles/*/fonts/` | Per theme | SIL OFL 1.1 / Liberation licence; retained notices; no proprietary system fonts redistributed |
+| mflux + Z-Image-Turbo (8-bit) | Generated comic illustrations for the `cartoon` style | `production/src/images.ts`, `production/styles/cartoon/style.yaml`, `~/.storygro/image-venv` | Optional, Apple silicon | mflux MIT; [Z-Image-Turbo](https://huggingface.co/Tongyi-MAI/Z-Image-Turbo) Apache-2.0 via [mflux-community q8](https://huggingface.co/mflux-community/z-image-turbo-mflux-q8); ~11 GB download; separate venv so MLX/Pillow versions never move under the voices |
+| yt-dlp | Download audio of a page URL for `storygro transcript` | `production/src/transcript.ts` | Optional, user-installed | Unlicense; the platform's terms apply — pasting the page transcript avoids downloading |
+| Wikipedia pageviews / HN official API + Algolia search / Google Trends RSS | Public attention snapshots and per-idea watchlist without credentials | `production/src/ideas.ts`, `production/trends/sources.yaml` | Optional | Retain source URLs and dates; interest signals, not factual verification; the Trends RSS is a public feed, not an API, and can change |
+| GitHub / Actions | Source control, tests and downloadable release assets | `.github/workflows/check.yml` | Collaboration/distribution | No social-account publication implied |
+
+Kokoro-RU downloads and imports its community G2P frontend from the model repository. The runtime uses model/provider assets outside the Git tree; record the provider metadata with each line. See [voices](../reference/voices.md) for exact setup and pronunciation controls.
+
+## What is implemented
+
+- Idea backlog with transparent scoring; interest snapshots (Google Trends, Wikipedia, HN) with visible errors and data dates, focus matching, a per-idea watchlist and a Markdown report.
+- Source-backed scripts, separate language variants, 19 built-in scenes (including editorial collage, `illustration` for the cartoon style and `screencast` for real recordings), native vertical formats and captions.
+- `storygro capture`: scripted phone-browser recording in virtual time with the finger path.
+- Styles (`cartoon`, `cut-paper`, `editorial-collage`) with `storygro new`; generated illustrations with recorded provenance (`storygro images`); transcripts and pace statistics of reference videos (`storygro transcript`).
+- Local voice, music/SFX, arbitrary seeking, storyboard and input approval.
+- MP4/web copy, covers, standalone carousel specs, SRT/VTT and post text.
+- Technical QA (including speech and brand rules) and packages with checksums/provider metadata; no network publication during render/package.
+- Brand profile and series status; manual publication ledger and metric snapshots (`publish`, `metrics`).
+
+## Evaluated or planned products
+
+| Product | Status | Decision |
+|---|---|---|
+| HyperFrames | Bounded comparison completed | Keep current DOM renderer; [ADR 0001](../adr/0001-renderer.md) and pilot findings explain why |
+| Remotion | Researched alternative | Not a runtime dependency; separate licensing applies if adopted |
+| Ryze | UX/guide reference | Inspiration for the agent-first workflow, no service dependency |
+| Postiz | Candidate publishing adapter | Not integrated; account capabilities and integration terms still need checking |
+| ElevenLabs / OpenAI TTS / Yandex / other paid generators | Possible provider adapters | Not required or connected in the current workflow; needs a specific use case and budget |
+| Instagram / YouTube Shorts | Target distribution channels | Native layouts/export work; a person uploads and the ledger records it; API publishing, scheduling and analytics not implemented |
+
+There is no hidden hosted LLM or generation bill in the CLI. The authoring agent can be Claude, Codex or another tool; it writes files and runs commands. Research and creative decisions remain the agent/editor's responsibility.
