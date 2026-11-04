@@ -39,7 +39,7 @@
 - [Toolkit](reference/toolkit.md) — every method and tool for making content, by stage (generated from `production/toolkit.yaml`)
 - [Registry](reference/registry.md) — every reel with its scene sequence, story structures and visual components (generated)
 - [CLI](reference/cli.md) — every command, option, environment variable and npm script
-- [Scene catalog](reference/scenes.md) — twenty-three scenes with their props · [Scene contract](reference/scene-contract.md)
+- [Scene catalog](reference/scenes.md) — scene props and examples · [Scene contract](reference/scene-contract.md)
 - [Styles](reference/styles.md) — `style.yaml`, picture generation, cast and approval
 - [Formats, safe areas and captions](reference/formats.md) · [Voices](reference/voices.md)
 - [Publication ledger](reference/publication-ledger.md) · [Media policy](reference/media-policy.md)
